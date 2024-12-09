@@ -70,6 +70,12 @@ import Upihalfyearpremium from "./Subscription/Upihalfyearpremium/Upihalfyearpre
 import UpiPaymentFormelite from "./Subscription/Upiannualelite/Upiannualelite";
 import UpihalfyearFormelite from "./Subscription/Upihalfyearelite/Upihalfyearelite";
 import Premiumplanhalfyear from "./Subscription/Premiumplanhalfyear/Premiumplanhalfyear";
+import Bestsmallcapregular from "./MutualFund/Bestsmallcapregular/Bestsmallcapregular";
+import Bestsmallcapdirect from "./MutualFund/Smallcapdirect/Smallcapdirect";
+import { MutualCandleStickChart } from "./MutualFund/Mutualcandlestick/Mutualcandlestick";
+import MutualkeyIndicators from "./MutualFund/Mutualkeyindicator/Mutualkeyindicator";
+import Mutualxray from "./MutualFund/Mutualxray/Mutualxray";
+import Mutualfund from "./MutualFund/Mutualfundall/Mutualfundall";
 
 
 
@@ -118,8 +124,7 @@ function App() {
       <Route path="/stockwatchlistall" element={<StockWatchportall/>} />
       <Route path="/pricehalf" element={<SubscriptionPlans/>} />
       <Route path="/annualplan" element={<SubscriptionannualPlans/>} />
-      <Route path="/mutualfund" element={<TopRatedFunds/>} />
-      <Route path="/mutualfunddirect" element={<TopRatedFundsdirect/>} />
+     
       <Route path="/goldWatchlistall" element={<GoldWatchportall/>} />
       <Route path="/portfoliogoldtoppage" element={<Portfoliogoldaccount />} />
      <Route path="/payment" element={<PaymentForm/>} />
@@ -139,6 +144,14 @@ function App() {
       <Route path="/upiPaymentFormelite" element={<UpiPaymentFormelite/>}/>
       <Route path="/upihalfyearFormelite" element={<UpihalfyearFormelite/>}/>
       <Route path="/premiumplanhalfyear" element={<Premiumplanhalfyear/> }/>
+      <Route path="/bestsmallcapregular" element={<Bestsmallcapregular/> }/>
+      <Route path="/bestsmallcapdirect" element={<Bestsmallcapdirect/> }/>
+      <Route path="/mutualCandleStickChart" element={<MutualCandleStickChart/> }/>
+      <Route path="/MutualkeyIndicators" element={<MutualkeyIndicators/> }/>
+      <Route path="/mutualxray" element={<Mutualxray/> }/> 
+      <Route path="/mutualfund" element={<Mutualfund/> }/>
+      <Route path="/topRatedFunds" element={<TopRatedFunds/>} />
+      <Route path="/mutualfunddirect" element={<TopRatedFundsdirect/>} />
 
 
 

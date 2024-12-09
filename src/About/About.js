@@ -21,6 +21,15 @@ const About = () => {
       </p>
       <p>
         The company is manufacturing a diverse range of Information and Communication Technology (ICT) products/solutions to hone its competitive edge in the convergence market by deploying its rich telecom expertise and vast infrastructure. Company is diversifying towards IoT, Smart city, other allied telecom products and services including turnkey project execution to offer solutions in diversified fields. Encryption Products are the company’s forte. Extensive in-house R&D work is devoted towards design and development of encryption solutions to Indian Defence forces.
+        ITI Ltd (Indian Telephone Industries) has been making significant strides in India’s telecommunications sector, with its diverse portfolio that includes everything from digital mobile radios to solar energy products and smart card solutions. The company's stock has seen substantial growth recently, with a notable 13.46% surge on December 6, 2024, bringing the share price to ₹321.25. This is part of a broader upward trend, as the stock has risen 38.33% over the past month and 18.33% in the last year. Over the past three years, ITI’s stock has soared by an impressive 189%, reflecting the company’s strong performance and market confidence.
+
+The company has also seen success in securing major government contracts, further bolstering its financials. For instance, it recently bagged a ₹95 crore order from the Uttarakhand government. ITI’s involvement in defense and public infrastructure projects, such as ruggedized telephones for the armed forces and telecom infrastructure, has also contributed to its growing reputation and revenue stream. This combination of strategic partnerships, diverse product offerings, and government contracts has helped ITI maintain a strong market presence and solid investor confidence, positioning it well for future growth​
+MINT
+​
+BUSINESS INDIA NEWS
+.
+
+For more on ITI Ltd's latest developments and stock performance, you can check resources like Business Standard and Livemint.
       </p>
 
       {isReadMore && (

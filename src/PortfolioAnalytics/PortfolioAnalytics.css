@@ -13,6 +13,32 @@
 .chart-container{
     height: 200px;
 }
+.time-range-selector {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.time-range-button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.time-range-button.active {
+    background-color: #22c55e;
+    color: white;
+    border-color: #22c55e;
+}
+
+
+
 
 /* Responsive adjustment if the sidebar is hidden on smaller screens */
 @media (max-width: 768px) {
@@ -24,6 +50,7 @@
 
     .portfolio-welcome {
         font-size: 20px; /* Reduce font size */
+        margin-top: 100px;
     }
 
     .portfolio-subtitle {
@@ -45,6 +72,15 @@
 
     .chart-container {
         height: 250px; /* Reduce chart height */
+    }
+    .time-range-selector {
+        justify-content: center; /* Center the buttons */
+        gap: 8px;
+    }
+
+    .time-range-button {
+        padding: 6px 12px; /* Slightly smaller padding */
+        font-size: 13px; /* Reduce font size */
     }
 }
 
@@ -81,5 +117,15 @@
     .chart-container {
         height: 200px; /* Further reduce chart height */
         width: 320px;
+    }
+    .time-range-selector {
+        flex-direction: row; /* Stack buttons vertically */
+        gap: 10px;
+    }
+
+    .time-range-button {
+        padding: 8px; /* Smaller padding for better fit */
+        font-size: 12px; /* Reduce font size further */
+        width: 100%; /* Full-width buttons */
     }
 }
