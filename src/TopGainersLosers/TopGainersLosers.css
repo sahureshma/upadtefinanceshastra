@@ -1,24 +1,24 @@
 .top-gainers-losers {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     
-    font-family: Calibri, Arial, sans-serif;
+    font-family: 'Calibri';
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
-    height: 550px;
+    height: 520px;
     margin-left: 10px;
   }
   
   .top-gainers-losers h2 {
-    font-size: 1.2em;
+ 
     color: #333;
     text-align: center;
-    margin: 0;
-    padding: 10px 0;
+font-size: 24px;
+   
   }
   
   /* Container for the tables */
@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 0; /* Remove padding to eliminate gaps */
+     /* Remove padding to eliminate gaps */
     gap: 0; /* Remove gap between tables */
   }
   
@@ -46,8 +46,8 @@
     grid-template-columns: 1fr 1fr 1fr; /* 3 equal-width columns */
     align-items: center;
     text-align: center;
-    font-size: 0.9em;
-    padding: 0; /* Remove padding for tighter fit */
+    font-size:14px;
+   /* Remove padding for tighter fit */
   }
   
   /* Header specific styling */
@@ -60,7 +60,7 @@
   /* Row styling */
   .row {
     border-top: 1px solid #ddd;
-    padding: 10px 0; /* Consistent row padding for alignment */
+    padding: 4px 0; /* Consistent row padding for alignment */
     margin: 0;
   }
   

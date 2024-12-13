@@ -6,23 +6,31 @@
   font-family: 'calibri';
   
 }
+.stock-table td a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Optionally match text color with surrounding content */
+}
+
+.stock-table td a:hover {
+  color: #24b676; /* Optional: Add hover effect to change text color */
+}
 
 /* Header styling */
-.header {
+.headerstocklist {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  margin-top: 30px;
- 
+  margin-top: 50px;
 }
 
-.header h2 {
+.headerstocklist h2 {
   font-size: 30px; /* Default font size for larger screens */
   text-align: left;
   flex: 1;
   margin: 0;
   color: #000;
   margin-top: 50px;
+ 
   
 }
 

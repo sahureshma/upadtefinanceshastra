@@ -15,6 +15,7 @@ const Navbar = () => {
   const [mutualFundsDropdownOpen, setMutualFundsDropdownOpen] = useState(false);
   const [footerMutualFundsDropdownOpen, setFooterMutualFundsDropdownOpen] = useState(false);
   const [footerPortfolioDropdownOpen, setFooterPortfolioDropdownOpen] = useState(false);
+  
 const footerPortfolioDropdownRef = useRef(null);
   const footerMutualFundsDropdownRef = useRef(null);
   const stockDropdownRef = useRef(null);
@@ -157,6 +158,22 @@ const footerPortfolioDropdownRef = useRef(null);
     </div>
   );
 
+  const renderUserDropdown = () => (
+    <div className="user-menu">
+       <div className="dropdown-item">
+       <Link to="/profile"><FaUser className="dropdown-icon" />
+       My Profile</Link>
+      </div>
+      <div className="dropdown-item">
+      <Link to="/help"><FaCircleQuestion className="dropdown-icon" />
+      Help Center</Link>
+      </div>
+      <div className="dropdown-item">
+      <Link to="/"> <FaUserCircle className="dropdown-icon" />
+      Logout</Link>
+      </div>
+    </div>
+  );
 
 
   const renderMutualFundsDropdown = () => (
@@ -165,14 +182,14 @@ const footerPortfolioDropdownRef = useRef(null);
       <ul>
       <li>
       <div className="dropdown-item">
-        <Link to="/mutualfund">Top Rated Funds
+        <Link to="/topRatedFunds">Top Rated Funds
         <p>Focus on risk management and long-term growth.</p>
         </Link>
         </div>
       </li>
     <li>
     <div className="dropdown-item">
-        <Link to="/fund-screener">Fund Screener
+        <Link to="/fundscreenerregular">Fund Screener
         <p>Efficient filter and compare investment options.</p></Link>
         </div>
         </li>
@@ -182,6 +199,11 @@ const footerPortfolioDropdownRef = useRef(null);
         <Link to="/bestsmallcapregular">Best Small Cap Fund
         <p>Strong returns by investing in high-growth opportunities.</p></Link>
         </div>
+        <div className="dropdown-item">
+      
+        <Link to="/market">Equity (ETFs)
+        </Link>
+        </div>
         </li>
         </ul>
         </div>
@@ -189,21 +211,26 @@ const footerPortfolioDropdownRef = useRef(null);
         <ul>
       <li>
       <div className="dropdown-item">
-        <Link to="/growth-funds">Best Growth Fund
+        <Link to="/bestgrowthregular">Best Growth Fund
         <p>Focus on high-potential growth.</p></Link>
         </div>
         </li>
       <li>
       <div className="dropdown-item">
-        <Link to="/flex-cap-funds">Best Flex Cap Fund
+        <Link to="/mutualflex">Best Flex Cap Fund
         <p>Invest in companies poised for future and today’s growth.</p></Link>
         </div>
         </li>
       <li>
       <div className="dropdown-item">
-        <Link to="/etf-funds">Best ETF Fund
+        <Link to="/etfregular">Best ETF Fund
         <p>Diverse and cost-effective investment strategy.</p></Link>
         </div>
+        <div className="dropdown-item">
+      
+      <Link to="/gold"> Gold (ETFs)
+      </Link>
+      </div>
         </li>
         </ul>
     </div>
@@ -222,7 +249,7 @@ const footerPortfolioDropdownRef = useRef(null);
 
         <ul className="navbar-links">
           <li><Link to="/home">Home</Link></li>
-          <li><Link to="/market">Markets <FaChevronDown className="chevron-icon" /></Link></li>
+         
 
           <li className="stock-dropdown" ref={stockDropdownRef}>
             <Link to="#"onClick={toggleStockDropdown}>
@@ -258,22 +285,21 @@ const footerPortfolioDropdownRef = useRef(null);
             Subscribe
         </h4>
         <div className="navbar-icons">
-       
-          <FaBell className="icon bell-icon" />
+  <FaBell className="icon bell-icon" />
+  <div className="profile-section">
+  <li className="" ref={userDropdownRef}>
+    <Link to="#" onClick={toggleUserDropdown}>
+      <FaUserCircle className="iconuser-icon" />
+ 
+    </Link>
+    <span className="willamname">William</span>
+    {userDropdownOpen && renderUserDropdown()}
+  </li>
+</div>
 
-          <div className="profile-section">
-            <div className="user-dropdown" onClick={toggleUserDropdown} ref={userDropdownRef}>
-              <FaUserCircle className="icon user-icon" />
-              {userDropdownOpen && (
-                <ul className="dropdown-menu">
-                  <li><FaUser className="dropdown-icon" /> <a href="#profile">My Profile</a></li>
-                  <li><FaCircleQuestion className="dropdown-icon" /> <a href="#help">Help Center</a></li>
-                </ul>
-              )}
-            </div>
-            <span>William</span>
-          </div>
-        </div>
+    </div>
+  
+
       </nav>
 
       <ul className="footer-nav">

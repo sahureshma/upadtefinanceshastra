@@ -1,4 +1,4 @@
-.container {
+.financial-container {
     font-family: 'calibri';
     background-color: #f9f9f9;
     padding: 20px;
@@ -33,14 +33,14 @@
     
 }
 
-table {
+.financialanalysis{
     width: 45%;
     border-collapse: collapse;
     background-color: white;
     margin: 0 auto;
 }
 
-.tables {
+.tablesfinance {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -49,7 +49,7 @@ table {
     margin-bottom: 50px;
 }
 
-th {
+.tablesfinance th {
     background-color:#24b676;
     color: white;
     padding: 15px;
@@ -60,13 +60,13 @@ th {
     /* Only bottom border for header */
 }
 
-td {
+.tablesfinance td {
     padding: 15px;
     text-align: center;
     border-top: 1px solid #e0e0e0; /* Only top border for rows */
 }
 
-table thead th[colspan="2"] {
+.tablesfinance thead th[colspan="2"] {
     text-align: center;
 }
 

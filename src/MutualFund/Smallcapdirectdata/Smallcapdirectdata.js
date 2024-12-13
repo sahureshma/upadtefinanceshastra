@@ -1,4 +1,14 @@
 export const fundsmalldirectData = [
+    {
+        name: "ICICI Prudential Smallcap Fund",
+        url: "/mutualfund",
+        nav: "₹78.91",
+        aum: "₹18,450.21 Cr",
+        sip: "₹500",
+        expRatio: "0.70%",
+    
+        returns: { "1Y": "48.34%", "3Y": "31.23%", "5Y": "34.21%" },
+    },
 
     {
         name: "Motilal Oswal Midcap Fund",
@@ -56,14 +66,7 @@ export const fundsmalldirectData = [
     expRatio: "0.64%",
     returns: { "1Y": "25.19%", "3Y": "17.45%", "5Y": "19.34%" },
 },
-{
-    name: "ICICI Prudential Smallcap Fund",
-    nav: "₹78.91",
-    aum: "₹18,450.21 Cr",
-    sip: "₹500",
-    expRatio: "0.70%",
-    returns: { "1Y": "48.34%", "3Y": "31.23%", "5Y": "34.21%" },
-},
+
 {
     name: "DSP Flexicap Fund",
     nav: "₹54.23",

@@ -27,7 +27,7 @@ const FollowedStock = () => {
 
   return (
     <div className="followed-stock-container">
-      <h2>Followed Stock</h2>
+      <h2 className='followedhead'>Followed Stock</h2>
       <p>Monitor popular stocks for strategic investments.</p>
       <div className="stock-list-container">
         <button onClick={scrollLeft} className="scroll-left-btn">←</button>

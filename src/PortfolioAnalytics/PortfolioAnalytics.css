@@ -7,27 +7,32 @@
     margin: 0 auto; /* Center the container */
     margin-left: 300px; /* Add left margin to prevent overlap with sidebar */
     font-family: 'Calibri';
-    margin-top: 50px;
+    margin-top: 80px;
     background-color: white;
 }
-.chart-container{
-    height: 200px;
+.chartportfolio-container{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+  width: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 350px;
 }
 .time-range-selector {
     display: flex;
     gap: 5px;
     margin-bottom: 20px;
-    margin-left: 10px;
+  
 }
 
 .time-range-button {
-    padding: 8px 16px;
-    border: 1px solid #ccc;
+  
+    border: 1px solid #4c4a4a;
     background-color: white;
     color: #333;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 13px;
     transition: all 0.3s ease;
 }
 

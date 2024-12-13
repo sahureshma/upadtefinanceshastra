@@ -72,10 +72,22 @@ import UpihalfyearFormelite from "./Subscription/Upihalfyearelite/Upihalfyeareli
 import Premiumplanhalfyear from "./Subscription/Premiumplanhalfyear/Premiumplanhalfyear";
 import Bestsmallcapregular from "./MutualFund/Bestsmallcapregular/Bestsmallcapregular";
 import Bestsmallcapdirect from "./MutualFund/Smallcapdirect/Smallcapdirect";
-import { MutualCandleStickChart } from "./MutualFund/Mutualcandlestick/Mutualcandlestick";
+
 import MutualkeyIndicators from "./MutualFund/Mutualkeyindicator/Mutualkeyindicator";
 import Mutualxray from "./MutualFund/Mutualxray/Mutualxray";
 import Mutualfund from "./MutualFund/Mutualfundall/Mutualfundall";
+import Mutualgraphtop from "./MutualFund/Mutualgraphtop/Mutualgraphtop";
+import MutualFundsSipCalculator from "./MutualFund/MutualFundsSipCalculator/MutualFundsSipCalculator";
+import Flexdirect from "./MutualFund/Mutualflexdirect/Mutualflexdirect";
+import Flexregular from "./MutualFund/Mutualflexregular/Mutualflexregular";
+import FundContactInfo from "./FundContactInfo/FundContactInfo";
+import RiskOMeter from "./MutualFund/Fundriskometer/Fundriskometer";
+import Fundscreenerdirect from "./MutualFund/Fundscreenerdirect/Fundscreenerdirect";
+import Fundscreenerregular from "./MutualFund/Fundscreenerregular/Fundscreenerregular";
+import Bestgrowthregular from "./MutualFund/Bestgrowth/Bestgrowth";
+import Bestgrowthdirect from "./MutualFund/Bestgrowthdirect/Bestgrowthdirect";
+import Etfregular from "./MutualFund/Etfmutualfundregular/Etfmutualfundregular";
+import Etfdirect from "./MutualFund/Etfmutualfunddirect/Etfmutualfunddirect";
 
 
 
@@ -146,12 +158,24 @@ function App() {
       <Route path="/premiumplanhalfyear" element={<Premiumplanhalfyear/> }/>
       <Route path="/bestsmallcapregular" element={<Bestsmallcapregular/> }/>
       <Route path="/bestsmallcapdirect" element={<Bestsmallcapdirect/> }/>
-      <Route path="/mutualCandleStickChart" element={<MutualCandleStickChart/> }/>
+    
       <Route path="/MutualkeyIndicators" element={<MutualkeyIndicators/> }/>
       <Route path="/mutualxray" element={<Mutualxray/> }/> 
       <Route path="/mutualfund" element={<Mutualfund/> }/>
       <Route path="/topRatedFunds" element={<TopRatedFunds/>} />
       <Route path="/mutualfunddirect" element={<TopRatedFundsdirect/>} />
+      <Route path="/mutualgraphtop" element={<Mutualgraphtop/>} />
+      <Route path="/mutualFundsSipCalculator" element={<MutualFundsSipCalculator/>} />
+      <Route path="/mutualflex" element={<Flexdirect/>} />
+      <Route path="/mutualflexregular" element={<Flexregular/>} />
+      <Route path="/fundcontactinfo" element={<FundContactInfo/>} />
+      <Route path="/fundriskometer" element={<RiskOMeter/>} />
+      <Route path="/fundscreenerdirect" element={<Fundscreenerdirect/>} />
+      <Route path="/fundscreenerregular" element={<Fundscreenerregular/>} />
+      <Route path="/bestgrowthregular" element={<Bestgrowthregular/>} />
+      <Route path="/bestgrowthdirect" element={<Bestgrowthdirect/>} />
+      <Route path="/etfregular" element={<Etfregular/>} />
+      <Route path="/etfdirect" element={<Etfdirect/>} />
 
 
 

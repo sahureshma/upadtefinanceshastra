@@ -21,9 +21,9 @@ const TopHoldings = () => {
       <div className="left-panel">
         <PortfolioAnalytics />
         
-        <div className="top-holdings">
-          <h2>Top Holdings</h2>
-          <table>
+        <div className='top-holdings'>
+          <h2 >Top Holdings</h2>
+          <table >
             <thead>
               <tr>
                 <th>Symbol</th>
