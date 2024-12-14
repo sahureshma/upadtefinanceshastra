@@ -51,6 +51,7 @@
         margin-left: 0; /* Reset left margin on small screens */
         padding: 15px; /* Reduce padding */
         margin-top: 20px; /* Adjust top margin */
+       
     }
 
     .portfolio-welcome {
@@ -73,19 +74,33 @@
 
     .time-range-selector span {
         font-size: 14px; /* Adjust font size for selector */
+
     }
 
     .chart-container {
         height: 250px; /* Reduce chart height */
+      
     }
     .time-range-selector {
         justify-content: center; /* Center the buttons */
         gap: 8px;
     }
+    .chartportfolio-container{
+        width: 380px;
+        height: 280px;
+     
+    }
 
     .time-range-button {
         padding: 6px 12px; /* Slightly smaller padding */
-        font-size: 13px; /* Reduce font size */
+       
+        border: 1px solid #4c4a4a;
+        background-color: white;
+        color: #333;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 13px;
+        transition: all 0.3s ease;
     }
 }
 
@@ -123,6 +138,11 @@
         height: 200px; /* Further reduce chart height */
         width: 320px;
     }
+    .chartportfolio-container{
+        width: 300px;
+        height: 280px;
+    }
+
     .time-range-selector {
         flex-direction: row; /* Stack buttons vertically */
         gap: 10px;

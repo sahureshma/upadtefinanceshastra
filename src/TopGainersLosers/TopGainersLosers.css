@@ -94,7 +94,7 @@ font-size: 24px;
       margin-top: 100px; /* Adjust top margin for smaller screens */
       height: auto; /* Allow height to adjust automatically */
       padding: 10px; /* Add padding for better layout */
-      
+      width: 400px;
   }
   .table-container {
     display: flex;

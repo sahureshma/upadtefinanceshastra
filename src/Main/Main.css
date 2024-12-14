@@ -77,10 +77,15 @@ height: 400px;
 /* Responsive styles for 768px and below */
 @media (max-width: 768px) {
   .top-holdings {
-      margin-left: 0; /* Center the container */
-      max-width: 100%; /* Full width for smaller screens */
-      padding: 15px;
-  }
+    margin-left: 10px; /* Center the container */
+    max-width: 98%; /* Full width for smaller screens */
+    padding: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of child elements */
+  
+    
+}
+
 
   .top-holdings h2 {
       font-size: 22px; /* Slightly reduce heading size */
@@ -100,7 +105,7 @@ height: 400px;
   .left-panel,
   .right-panel {
       margin-right: 0; /* Remove margin */
-      margin-bottom: 10px; /* Add spacing between stacked panels */
+      /* Add spacing between stacked panels */
   }
 }
 

@@ -46,30 +46,38 @@
 /* Responsive styles for 768px and below */
 @media (max-width: 768px) {
     .investment-container {
-        flex-direction: column; /* Stack elements vertically */
-        margin: 40px auto; /* Adjust margin for smaller screens */
         width: 80%; /* Increase width for better readability */
-        margin-left: 0; /* Center horizontally */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px; /* Add padding for proper spacing */
+    margin-top: 30px; /* Set top margin */
+    position: relative; /* Ensure it stays within the layout flow */
+    bottom: auto; /* Remove any bottom positioning */
+   
     }
+    
 
     .investment-details {
-        align-items: center; /* Center align items for vertical layout */
+        align-items: center; /* Center align items */
         max-width: none; /* Remove max-width restriction */
         text-align: center; /* Center text */
+        margin-top: 20px; /* Add margin to prevent overlapping */
     }
 
     .investment-title {
         font-size: 16px; /* Slightly reduce font size */
+        margin-bottom: 10px; /* Add spacing */
     }
 
     .investment-amount {
         font-size: 20px; /* Adjust size for readability */
+        margin-bottom: 10px;
     }
 
     .investment-percentage {
         font-size: 14px; /* Reduce font size for smaller screens */
     }
 }
+
 
 /* Responsive styles for 480px and below */
 @media (max-width: 480px) {
