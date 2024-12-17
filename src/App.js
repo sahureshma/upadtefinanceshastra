@@ -88,6 +88,13 @@ import Bestgrowthregular from "./MutualFund/Bestgrowth/Bestgrowth";
 import Bestgrowthdirect from "./MutualFund/Bestgrowthdirect/Bestgrowthdirect";
 import Etfregular from "./MutualFund/Etfmutualfundregular/Etfmutualfundregular";
 import Etfdirect from "./MutualFund/Etfmutualfunddirect/Etfmutualfunddirect";
+import StockNewsComponent from "./Learn/StockNewsComponent/StockNewsComponent";
+import StockNewsCard from "./Learn/StockNewsCard/StockNewsCard";
+import StocknewsAdanigroup from "./Learn/StocknewsAdanigroup/StocknewsAdanigroup";
+import BlogsComponent from "./Learn/Bolgs/Blogscomponent/Blogscomponent";
+import ScreenerStockList from "./Login/Stock/ScreenerStockList/ScreenerStockList";
+import Bloginvestment from "./Learn/Bolgs/Blogsinvestment/Blogsinvestment";
+import BlogFilter from "./Learn/Bolgs/Blogsfilter/Blogsfilter";
 
 
 
@@ -158,7 +165,7 @@ function App() {
       <Route path="/premiumplanhalfyear" element={<Premiumplanhalfyear/> }/>
       <Route path="/bestsmallcapregular" element={<Bestsmallcapregular/> }/>
       <Route path="/bestsmallcapdirect" element={<Bestsmallcapdirect/> }/>
-    
+   
       <Route path="/MutualkeyIndicators" element={<MutualkeyIndicators/> }/>
       <Route path="/mutualxray" element={<Mutualxray/> }/> 
       <Route path="/mutualfund" element={<Mutualfund/> }/>
@@ -176,6 +183,15 @@ function App() {
       <Route path="/bestgrowthdirect" element={<Bestgrowthdirect/>} />
       <Route path="/etfregular" element={<Etfregular/>} />
       <Route path="/etfdirect" element={<Etfdirect/>} />
+      <Route path="/stockNewsComponent" element={<StockNewsComponent/>} />
+      <Route path="/stockNewsCard/:id" element={<StockNewsCard/>} />
+      <Route path="/stocknewsAdanigroup/:id" element={<StocknewsAdanigroup/>} />
+      <Route path="/blogsComponent" element={<BlogsComponent/>} />
+      <Route path="/screenerStockList" element={<ScreenerStockList/>}/>  
+      <Route path="/bloginvestment/:id" element={<Bloginvestment/>}/> 
+      <Route path="/blogFilter" element={<BlogFilter/>}/>  
+
+
 
 
 

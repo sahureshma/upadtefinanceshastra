@@ -1,0 +1,103 @@
+.stocknewsss {
+ margin-top: 90px;
+    padding: 10px;
+    border-radius: 10px;
+ 
+    font-family: 'calibri';
+    background-color: #fff;
+  }
+  
+  .stocknewsss-headline {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 60px;
+  }
+  
+  .stocknewsss-subtext {
+    color: #666;
+    margin-bottom: 15px;
+width: 950px;
+    font-size: 17px;
+   
+    box-shadow: 0px 4px 6px rgba(247, 245, 245, 0.973);
+    height: 30px;
+    margin-left: 60px;
+    text-align: center;
+  }
+  
+  .stocknewsss-image {
+    width: 900px;
+    
+
+    height: 450px;
+    margin-left: 200px;
+    margin-top: 10px;
+  }
+  
+  .stocknewsss-stock-section {
+   margin-left: 100px;
+  }
+  
+  .stocknewsss-company-name {
+    font-size: 20px;
+  }
+  .nsepara{
+    font-weight:bold;
+  }
+  
+  .stocknewsss-stock-price {
+    font-size: 15px;
+    color:black;
+  }
+  .iconnewss {
+    color: #28a745; /* Green for up */
+    margin-left: 5px;
+    vertical-align: middle;
+    font-size: 25px;
+  }
+  
+  .iconnewss.down {
+    color:red; /* Red for down */
+    font-size: 25px;
+  }
+  .stocknewsss-change {
+    color: #28a745;
+    font-size: 15px;
+  
+  }
+  .stocknewsss-trading-info {
+    display: flex; /* Use Flexbox to align columns in a row */
+    justify-content: space-between; /* Add space between columns */
+    gap: 20px; /* Add space between columns */
+    margin-right: 800px; /* Apply a right margin */
+     /* Add a grey border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Apply a subtle box shadow */
+    padding: 20px; /* Optional padding for spacing inside the container */
+    background-color: #fbf7f7; /* Optional background color */
+  }
+  .newsscolumnn{
+    display: flex;
+   
+  }
+  .stocknewsssheadone{
+    font-size: 24px;
+    margin-left: 60px;
+  }
+  
+  .stocknewsss-description {
+    font-family: 'calibri'; /* Use a clean, modern font */
+    font-size: 17px; /* Adjust text size for readability */
+    line-height: 1.6; /* Add proper spacing between lines */
+    color: #333; /* Use a dark gray for better readability */
+    margin: 20px 0; /* Add some vertical spacing */
+    padding: 10px 15px; /* Add padding around the text */
+
+    /* Add a colored border for emphasis */
+    border-radius: 5px; /* Round the corners for a softer look */
+    margin-left: 80px;
+  }
+  
+  .negative{
+color: red;
+  }
