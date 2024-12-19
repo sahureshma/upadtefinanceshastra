@@ -24,11 +24,12 @@ const StockNewsComponent = () => {
       highlight: true,
     },
     {
-      id: 2,
-      title: "Acme Solar Holdings shares in focus post 250 MW project win from NHPC",
-      description: "Acme Solar Holdings Share Price | With this project, company's total capacity now stands at 8,750 MW.",
-      image: img2,
+      id: 9,
+      title: "Adani Group: How The World’s 3rd Richest Man Is Pulling The Largest Con In Corporate History",
+      description: "Indian conglomerate Adani Group has engaged in a brazen stock manipulation and accounting fraud scheme.",
+      image: img9,
     },
+   
     {
       id: 3,
       title: "First Tick: Here are the top global cues for today’s trade",
@@ -66,11 +67,12 @@ const StockNewsComponent = () => {
       image: img8,
     },
     {
-      id: 9,
-      title: "Adani Group: How The World’s 3rd Richest Man Is Pulling The Largest Con In Corporate History",
-      description: "Indian conglomerate Adani Group has engaged in a brazen stock manipulation and accounting fraud scheme.",
-      image: img9,
+      id: 2,
+      title: "Acme Solar Holdings shares in focus post 250 MW project win from NHPC",
+      description: "Acme Solar Holdings Share Price | With this project, company's total capacity now stands at 8,750 MW.",
+      image: img2,
     },
+  
   ];
 
   const handleArticleClick = (id) => {

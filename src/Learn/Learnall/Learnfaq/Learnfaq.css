@@ -1,0 +1,70 @@
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5px;
+  
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    width: 100%; /* Ensure it adapts to container width */
+    max-width: 1000px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the items */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth animation */
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+    transform: translateY(-3px); /* Lift the item slightly on hover */
+}
+
+.faq-question {
+    background-color: white;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px; /* Add slight space on the left */
+    margin-right: 10px; /* Add slight space on the right */
+}
+
+.faq-icon {
+    font-size: 20px; /* Adjust the size of the icon */
+    color: #555; /* Ensure a visible dark gray color */
+    transition: transform 0.3s ease; /* Smooth animation for rotation */
+}
+
+.faq-icon.open {
+    transform: rotate(180deg); /* Rotates the icon when the answer is expanded */
+}
+
+.faq-answer {
+    padding: 10px 15px; /* Adjust padding for readability */
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    margin-left: 20px; /* Add space on the left */
+    margin-right: 20px; /* Add space on the right */
+    line-height: 1.5; /* Improve readability */
+    border-top: 1px solid #eee; /* Add a subtle divider */
+}

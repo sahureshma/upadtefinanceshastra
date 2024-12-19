@@ -54,7 +54,7 @@ const StocknewsAdanigroup = () => {
             <h2 className='stocknewsssheadone'>Stock News</h2>
 
             <h2 className="stocknewsss-headline">{newsData.headline}</h2>
-            <p className="stocknewsss-subtext">{newsData.subtext}</p>
+            <p className="stocknewsss-subtextt">{newsData.subtext}</p>
             <img src={newsData.imageUrl} alt="Stock News" className="stocknewsss-image" />
             <div className="stocknewsss-stock-section">
                 <div>

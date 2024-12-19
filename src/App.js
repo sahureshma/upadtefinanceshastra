@@ -96,9 +96,13 @@ import ScreenerStockList from "./Login/Stock/ScreenerStockList/ScreenerStockList
 import Bloginvestment from "./Learn/Bolgs/Blogsinvestment/Blogsinvestment";
 import BlogFilter from "./Learn/Bolgs/Blogsfilter/Blogsfilter";
 import Blogpmscard from "./Learn/Bolgs/Pmsblogcard/Pmsblogcard";
-import Learncard from "./Learn/Learncard/Learncard";
+import Learncard from "./Learn/Learnall/Learncard/Learncard";
 import CommentSection from "./Learn/Bolgs/Comment/Comment";
 import ScreenerStock from "./Login/Stock/Stockscreen/Stockscreen";
+import Learncardaftersignup from "./Learn/Learnall/Learncardaftersignup/Learncardaftersignup";
+import LearnCourseDetails from "./Learn/Learnall/Learncoursedetail/Learncoursedetail";
+import ModulecourseDetails from "./Learn/Learnall/Modulelearncourse/Modulelearncourse";
+
 
 
 
@@ -198,6 +202,10 @@ function App() {
       <Route path="/learncard" element={< Learncard/>}/>
       <Route path="/commentSection" element={< CommentSection/>}/>
       <Route path="/screenerStock" element={< ScreenerStock/>}/>
+      <Route path="/learncardaftersignup" element={<Learncardaftersignup/>}/>
+      <Route path="/learnCourseDetails" element={<LearnCourseDetails/>}/>
+      <Route path="/modulecourseDetails" element={<ModulecourseDetails/>}/>
+     
     
 
 

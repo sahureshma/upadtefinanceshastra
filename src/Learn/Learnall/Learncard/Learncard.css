@@ -133,3 +133,17 @@
     background-color: #218838;
   }
   
+  .startlearnsignup-button{
+    background-color: white;
+    color: green;
+    padding: 8px 12px;
+    border: 1px solid green;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .startlearnsignup-button:hover {
+    background-color: #218838;
+    color: white;
+  }

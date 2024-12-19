@@ -1,9 +1,10 @@
 import React from "react";
-import "./Learncard.css";
-import learning1 from "../../assest/learn1.jpeg";
-import learning2 from "../../assest/learn2.jpeg";
+
+import learning1 from "../../../assest/learn1.jpeg";
+import learning2 from "../../../assest/learn2.jpeg";
 import { LuClock9 } from "react-icons/lu";
-import Navbar from '../../../src/Navbar/Navbar'
+import Navbar from '../../../Navbar/Navbar';
+import { useNavigate } from 'react-router-dom';
 // Course Data
 const courses = [
   {
@@ -12,7 +13,7 @@ const courses = [
     duration: "3:15 Hours",
     description:
       "Mastering trading psychology is essential for success in the stock market, as it impacts every aspect of a trader's decisions, actions, and performance.",
-    buttonText: "Signup Now",
+    buttonText: "Start Learning",
     img: learning2,
   },
   {
@@ -21,7 +22,7 @@ const courses = [
     duration: "2:00 Hours",
     description:
       "Our Stock Market Basics course is designed to introduce you to essential concepts such as indices and strategic investments.",
-    buttonText: "Signup Now",
+    buttonText: "Start Learning",
     img: learning2,
   },
   {
@@ -30,7 +31,7 @@ const courses = [
     duration: "2:30 Hours",
     description:
       "These stock trading courses explain key terms like Equity Funds, NFO, NAV, Debt Fund, Beta, Alpha, and more.",
-    buttonText: "Signup Now",
+    buttonText: "Start Learning",
     img: learning2,
   },
   {
@@ -39,7 +40,7 @@ const courses = [
     duration: "3:00 Hours",
     description:
       "This thoughtfully crafted stock market beginner course helps learners understand fundamental market concepts and technologies.",
-    buttonText: "Signup Now",
+    buttonText: "Start Learning",
     img: learning2,
   },
   {
@@ -48,7 +49,7 @@ const courses = [
     duration: "2:00 Hours",
     description:
       "This online market course provides a deeper understanding of equity and derivative investment strategies.",
-    buttonText: "Signup Now",
+    buttonText: "Start Learning",
     img: learning2,
   },
   {
@@ -57,12 +58,13 @@ const courses = [
     duration: "2:15 Hours",
     description:
       "The Commodity Trading course offers valuable insights into different types, investment methods, and benefits of trading commodities.",
-    buttonText: "Signup Now",
+    buttonText: "Start Learning",
     img: learning2,
   },
 ];
 
-const Learncard = () => {
+const Learncardaftersignup = () => {
+     const navigate = useNavigate();
   return (
     <div className="course-container">
       {/* Header Section */}
@@ -93,7 +95,9 @@ const Learncard = () => {
             {/* Footer Row: Image and Button */}
             <div className="learncard-footer">
              
-              <button className="learnsignup-button">{course.buttonText}</button>
+              <button className="startlearnsignup-button" 
+              onClick={() => navigate('/learnCourseDetails')}
+              >{course.buttonText}</button>
               <img src={course.img} alt={course.title} className="course-image" />
             </div>
           </div>
@@ -104,4 +108,4 @@ const Learncard = () => {
   );
 };
 
-export default Learncard;
+export default Learncardaftersignup;
