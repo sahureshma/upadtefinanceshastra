@@ -6,6 +6,14 @@ a span {
   text-decoration: none; /* This will remove the underline from the span inside the link */
 }
 
+.navbar-links li.active > a {
+  color: green;
+  font-weight: bold;
+}
+
+.navbar-links li.active {
+  border-bottom: 2px solid green; /* Optional underline */
+}
 /* Style for the stock dropdown */
 .stock-dropdown {
   position: relative; /* Necessary for positioning the dropdown */

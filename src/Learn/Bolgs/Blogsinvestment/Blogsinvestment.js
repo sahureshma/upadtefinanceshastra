@@ -5,6 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { MdDateRange } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
 import Navbar from "../../../Navbar/Navbar";
+import CommentSection from "../Comment/Comment";
 
 function Bloginvestment() {
   return (
@@ -14,7 +15,7 @@ function Bloginvestment() {
        <div className="investblog-meta">
       <span className="meta-item">
         <MdDateRange className="blogdate" />
-        Published Date: 01 Dec 2024
+       Published Date: 01 Dec 2024 , 11:20(IST)
         <GoDotFill className="dotted" />
       </span>
       <span className="meta-item">
@@ -72,6 +73,7 @@ function Bloginvestment() {
         <li>Enter bank information and complete the required form details.</li>
       </ul>
       <Navbar/>
+      <CommentSection/>
     </div>
   );
 }

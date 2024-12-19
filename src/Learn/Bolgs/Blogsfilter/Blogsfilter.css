@@ -6,7 +6,11 @@
     font-family: 'calibri';
     margin-top: 80px;
   }
-  
+  .blogDateall{
+margin-left: 20px;
+font-size: 14px;
+font-weight: bold;
+  }
   .blogFilterTitle {
     font-size: 2rem;
     font-weight: bold;
@@ -131,8 +135,9 @@
     font-size: 14px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 80px;
+    margin-top: 50px;
     margin-left: 50px;
+ 
   }
   .highlightReadArticle {
  
@@ -140,14 +145,14 @@
     font-size: 14px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 50px;
   }
   .readArticleLinkall:hover{
     text-decoration: underline;
   }
   
-  .readArticleLinkall:hover {
+  .highlightReadArticle:hover {
     text-decoration: underline;
   }
   

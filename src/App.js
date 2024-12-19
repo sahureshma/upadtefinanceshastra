@@ -95,6 +95,10 @@ import BlogsComponent from "./Learn/Bolgs/Blogscomponent/Blogscomponent";
 import ScreenerStockList from "./Login/Stock/ScreenerStockList/ScreenerStockList";
 import Bloginvestment from "./Learn/Bolgs/Blogsinvestment/Blogsinvestment";
 import BlogFilter from "./Learn/Bolgs/Blogsfilter/Blogsfilter";
+import Blogpmscard from "./Learn/Bolgs/Pmsblogcard/Pmsblogcard";
+import Learncard from "./Learn/Learncard/Learncard";
+import CommentSection from "./Learn/Bolgs/Comment/Comment";
+import ScreenerStock from "./Login/Stock/Stockscreen/Stockscreen";
 
 
 
@@ -189,7 +193,12 @@ function App() {
       <Route path="/blogsComponent" element={<BlogsComponent/>} />
       <Route path="/screenerStockList" element={<ScreenerStockList/>}/>  
       <Route path="/bloginvestment/:id" element={<Bloginvestment/>}/> 
-      <Route path="/blogFilter" element={<BlogFilter/>}/>  
+      <Route path="/blogFilter" element={<BlogFilter/>}/>   
+      <Route path="/blogpmscard/:id" element={<Blogpmscard/>}/>
+      <Route path="/learncard" element={< Learncard/>}/>
+      <Route path="/commentSection" element={< CommentSection/>}/>
+      <Route path="/screenerStock" element={< ScreenerStock/>}/>
+    
 
 
 

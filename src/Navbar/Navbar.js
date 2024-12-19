@@ -189,7 +189,7 @@ const Navbar = () => {
           <p>Monitor thorough quarterly earnings summaries</p></Link>
       </div>
       <div className="dropdown-item">
-        <Link to="/stockwatchlist">Learn
+        <Link to="/learncard">Learn
           <p> Knowledge is the key to successful trading—learn, adapt, and grow</p></Link>
       </div>
     </div>
@@ -387,4 +387,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 
