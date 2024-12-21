@@ -73,7 +73,7 @@ function Bloginvestment() {
         <li>Enter bank information and complete the required form details.</li>
       </ul>
       <Navbar/>
-      <CommentSection/>
+      
     </div>
   );
 }

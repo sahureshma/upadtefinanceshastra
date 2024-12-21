@@ -138,7 +138,7 @@ function Blogpmscard() {
         while capitalizing on enduring market trends.
       </p>
       <Navbar/>
-      <CommentSection/>
+   
     </div>
   );
 }

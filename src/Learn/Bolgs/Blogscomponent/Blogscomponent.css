@@ -278,21 +278,25 @@
     .tabsContainer {
       display: flex;
       overflow-x: auto;  /* Enables horizontal scrolling */
-      scroll-behavior: smooth; /* Optional: Smooth scrolling effect */
-      padding: 10px; /* Add some padding if necessary */
+      scroll-behavior: smooth; /* Smooth scrolling effect */
       flex-direction: row;
+      margin-right: 0; /* Removed margin to fix issue */
+      margin-left: 0;
+      width: 100%;  /* Set width to 100% for better responsiveness */
+      margin-bottom: 20px;
+      padding-bottom: 10px; /* Optional: Padding for aesthetics */
     }
     
+    /* Optional: Styling for the individual tab buttons if needed */
     .tabButton {
-      flex-shrink: 0; /* Prevent the tabs from shrinking */
-      padding: 10px 12px;
-      font-size: 13px;
-      border-radius: 5px;
-     
-      white-space: nowrap; /* Prevent text from wrapping inside the tab */
-      text-align: center;
+      flex-shrink: 0; /* Prevents tab buttons from shrinking */
+      padding: 10px 20px;
+      font-size: 14px;
+      white-space: nowrap; /* Prevents text from wrapping */
     }
-     
+    
+    /* Optional: Style to hide the scrollbar for a cleaner look */
+   
 
   .blogsGrid {
     grid-template-columns: 1fr;
@@ -304,11 +308,12 @@
     width: 100%;
     height: 320px;
     margin: 10px 0;
+ 
   }
 
   .blogImage {
     width: 80%;
-    height: 180px;
+    height: 190px;
     object-fit: cover;
     margin-top: 10px;
     align-items: center;
@@ -351,15 +356,15 @@
   }
   .blogsContainer {
     font-family: 'calibri';
-margin-top: 60px;
+margin-top: 70px;
   }
   .blogsContainer {
-    margin: 20px;
+  
     padding: 15px;
   }
 
   .blogsTitle {
-    font-size: 20px;
+    font-size: 22px;
     margin-left: 10px;
     margin-top: 40px;
   }
@@ -371,7 +376,8 @@ margin-top: 60px;
 
   .blogsTagline {
     font-size: 22px;
-    margin-left: 10px;
+    margin-left: 8px;
+   
   }
 
   .blogsFeatures {
@@ -382,6 +388,9 @@ margin-top: 60px;
 
   .blogsFeatures li {
     font-size: 13px;
-    margin: 5px 0;
+  margin-left: 30px;
+  }
+  .checkAllBlogs{
+margin-bottom: 30px;
   }
   }
