@@ -206,7 +206,71 @@
   }
 
   /* Read more button */
-  
+  .readMoreblogs {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  /* Blog section buttons */
+  .blogbutton {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Check all blogs button */
+  .checkAllBlogs {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  /* Adjust margin for specific blog links */
+  .marginLeftReadMore {
+    margin-left: 10px; /* Adjust this value if needed */
+  }
+
+  .marginLeftCategory {
+    margin-left: 30px;
+  }
+
+  /* General styles for the blogs container */
+  .blogsContainer {
+    font-family: 'calibri';
+    margin: 20px;
+    padding: 15px;
+    margin-top: 60px;
+  }
+
+  /* Title styles */
+  .blogsTitle {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+
+  /* Subtitle styles */
+  .blogsSubtitle {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  /* Tagline styles */
+  .blogsTagline {
+    font-size: 22px;
+    margin-left: 10px;
+  }
+
+  /* Features styles */
+  .blogsFeatures {
+    margin-left: 0;
+    padding: 0;
+    margin-top: 5px;
+  }
+
+  /* Feature list item styles */
+  .blogsFeatures li {
+    font-size: 13px;
+    margin: 5px 0;
+  }
 }
 
 
