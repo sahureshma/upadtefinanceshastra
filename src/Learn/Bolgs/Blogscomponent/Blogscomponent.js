@@ -127,7 +127,12 @@ const BlogsComponent = () => {
             <img src={blog.image} alt={blog.title} className="blogImage" />
             <div className="blogContent">
               <h4 className="blogTitle">{blog.title}</h4>
-              <span className="blogCategory">{blog.category}</span>
+              <span
+  className={`blogCategory ${blog.id === 3 ? "marginLeftCategory" : ""}`}
+>
+  {blog.category}
+</span>
+
               <a
                 href="#"
                 className={`readMoreblogs ${
