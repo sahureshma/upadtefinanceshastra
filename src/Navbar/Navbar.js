@@ -95,7 +95,7 @@ const Navbar = () => {
         <ul>
           <li>
             <div className="dropdown-item">
-              <Link to="/stock">Stock Screener
+              <Link to="/screenerStock">Stock Screener
                 <p>Discover stocks based on various filters and criteria to make informed decisions.</p></Link>
             </div>
           </li>
@@ -177,7 +177,7 @@ const Navbar = () => {
           <p>Investment Knowledge Hub</p></Link>
       </div>
       <div className="dropdown-item">
-        <Link to="/stockwatchlist">IPO Details
+        <Link to="/ipoComponent">IPO Details
           <p>Key Information on the Latest IPO Trends</p></Link>
       </div>
       <div className="dropdown-item">

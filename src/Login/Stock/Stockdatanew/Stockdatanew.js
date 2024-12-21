@@ -102,7 +102,7 @@ export const screenerStockListData = [
     sector: "Consumer durables",
     roe: 28.7, // Added ROE value
     revenueGrowth: "+15.6%", // Revenue Growth %
-    peg: 1.8, // PEG Ratio
+    peg: 18, // PEG Ratio
   },
   {
     symbol: "ULTRATECH CEMENT LTD",
@@ -117,7 +117,7 @@ export const screenerStockListData = [
     sector: "Non-energy minerals",
     roe: 25.5, // Added ROE value
     revenueGrowth: "+13.2%", // Revenue Growth %
-    peg: 1.9, // PEG Ratio
+    peg: 21.9, // PEG Ratio
   },
   {
     symbol: "NTPC LTD.",

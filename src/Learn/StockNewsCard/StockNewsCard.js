@@ -65,7 +65,7 @@ const StockNewsCard = () => {
         <div className='newsscolumn'>
         <p className='nsepara'>NSELIVE</p>
         <p className="stocknewsss-date">{currentDate}</p> {/* Current Date */}
-          <p><strong>Volume: </strong>{newsData.volume}</p>
+          <p className='strongnewsvol'><strong>Volume: </strong>{newsData.volume}</p>
         
           </div>
           <div>
@@ -82,7 +82,7 @@ const StockNewsCard = () => {
             {change.value >= 0 ? `+${change.value} (+${change.percentage}%)` : `${change.value} (${change.percentage}%)`}
           </p>
           </div><label>
-  <p><strong>Today L/H:</strong> <span>{newsData.low}</span> / <span>{newsData.high}</span></p>
+  <p className='strongnewsvol'><strong>Today L/H:</strong> <span>{newsData.low}</span> / <span>{newsData.high}</span></p>
 </label>
           </div>
         </div>

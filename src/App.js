@@ -102,6 +102,9 @@ import ScreenerStock from "./Login/Stock/Stockscreen/Stockscreen";
 import Learncardaftersignup from "./Learn/Learnall/Learncardaftersignup/Learncardaftersignup";
 import LearnCourseDetails from "./Learn/Learnall/Learncoursedetail/Learncoursedetail";
 import ModulecourseDetails from "./Learn/Learnall/Modulelearncourse/Modulelearncourse";
+import IpoComponent from "./Learn/IPO/Ipopage/Ipopage";
+import IpoDetails from "./Learn/IPO/Ipocarddetail/Ipocarddetail";
+import IpoDetailsubscribe from "./Learn/IPO/Ipoaftersubscribe/Ipoaftersubscribe";
 
 
 
@@ -205,6 +208,9 @@ function App() {
       <Route path="/learncardaftersignup" element={<Learncardaftersignup/>}/>
       <Route path="/learnCourseDetails" element={<LearnCourseDetails/>}/>
       <Route path="/modulecourseDetails" element={<ModulecourseDetails/>}/>
+      <Route path="/ipoComponent" element={<IpoComponent/>}/>
+      <Route path="/ipoDetails/:id" element={<IpoDetails/>}/>
+      <Route path="/ipoDetailsubscribe" element={<IpoDetailsubscribe/>}/>
      
     
 

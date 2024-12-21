@@ -72,3 +72,40 @@ background-color:  #f0f0f0;
   }
   
   /* Highlighted News */
+  @media (max-width: 768px) {
+.stockNewsContainer {
+  margin-bottom: 100px;
+}
+  
+    .newsTitle {
+      font-size: 16px; /* Adjust font size */
+    }
+  
+    .newsDescription {
+      font-size: 13px; /* Adjust font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .stockNewsContainer {
+      margin-top: 130px; /* Adjust top margin for smaller devices */
+      padding: 0 10px; /* Adjust padding for very small screens */
+    }
+  
+    .stockNewsTitle {
+      font-size: 20px; /* Reduce title size */
+    }
+  
+    .stockNewsItem {
+      gap: 10px;
+      padding: 8px; /* Adjust padding */
+    }
+  
+    .newsTitle {
+      font-size: 15px;
+    }
+  
+    .newsDescription {
+      font-size: 12px;
+    }
+  }
