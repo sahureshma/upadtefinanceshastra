@@ -1,0 +1,100 @@
+.declaredquatralyearnging {
+    padding: 20px;
+    font-family: 'calibri';
+    width: 1230px;
+    margin-left: 130px;
+  }
+  
+ /* Styles for the declared header */
+.declaredheadertop {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  margin-right: 40px;
+
+  
+    
+  }
+  .headerdeclareearning {
+    display: flex;
+gap: 680px;
+    align-items: center;
+
+  }
+  .result-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .result-card {
+    border: 1px solid rgb(238, 238, 238);
+    box-shadow: 0 2px 5px rgba(231, 228, 228, 0.901);
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(33.33% - 20px); /* Three cards per row with spacing */
+    background-color: white;
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .result-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .filterdeclaredquaterly {
+    width: 230px;
+    cursor: pointer;
+    margin-left: 100px;
+ 
+  }
+  
+  .filterdeclaredquaterly select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+   
+  }
+  
+
+  .result-card table {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .result-card th,
+  .result-card td {
+    text-align: left;
+  }
+  
+  .result-card th {
+    background-color:white;
+  
+    margin-bottom: 30px; /* Fixed the typo here */
+    font-size: 14px;
+   color: rgb(32, 32, 189);
+  }
+  
+  .result-card td {
+    background-color: #fff;
+    margin-top: 10px;
+    font-size: 14px;
+   
+  }
+   .result-card h4{
+font-size: 18px;
+  }
+  /* Style the select dropdown */
+/* Style for the custom dropdown container */
+/* Ensure the dropdown container is correctly positioned */
+
+  
+  /* Dropdown options container */
+  .CustomDropdown .dropdownOptions {
+    text-align: center;
+  }

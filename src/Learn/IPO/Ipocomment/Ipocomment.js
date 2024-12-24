@@ -20,10 +20,7 @@ const IpoComment = () => {
           <input type="email" id="email" placeholder="Type here" required />
         </div>
         </div>
-        <div className="ipocomment-group">
-          <label htmlFor="website">Website</label>
-          <input type="url" id="website" placeholder="Type here" />
-        </div>
+        
         <div className="ipocomment-group">
           <label htmlFor="comment">Comment*</label>
           <textarea id="comment" placeholder="Comment here" required></textarea>

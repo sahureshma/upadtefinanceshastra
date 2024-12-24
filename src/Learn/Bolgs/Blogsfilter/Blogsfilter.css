@@ -191,7 +191,7 @@ font-weight: bold;
     cursor: pointer;
     background-color: #f9f9f9;
     color: black;
-    width: 130px;
+    width: 140px;
   }
   .dropdownOption:hover {
     background-color: #24b676; /* Change the background color on hover */
@@ -311,7 +311,7 @@ font-weight: bold;
 @media (max-width: 480px) {
   .blogFilterContainer {
     padding: 10px;
-    margin: 0 10px;
+
   }
 
   .blogDateall {
@@ -323,13 +323,24 @@ font-weight: bold;
   }
 
   .filterDropdowns {
-    flex-direction: column;  /* Stack dropdowns vertically */
-    gap: 8px;
+    display: flex;          /* Enable flexbox layout */
+    flex-direction: row;    /* Arrange dropdowns horizontally */
+    gap: 50px;              /* Space between dropdowns */
+    margin-bottom: 15px;    /* Add space below the dropdown container */
+    flex-wrap: wrap; 
+    margin-left: 15px; 
+    
+         /* Allow wrapping of dropdowns if necessary */
+  }
+  
+  .filterDropdown {
+    display: flex;
+    flex-direction: column; /* Stack the label and select box vertically inside each dropdown */
+    width: 300px;           /* Set a fixed width for each dropdown */
   }
 
-  .filterDropdown {
-    width: 100%;  /* Full width */
-  }
+  
+
 
   .dropdownLabel {
     font-size: 12px;  /* Adjust label font size */
@@ -389,8 +400,10 @@ font-weight: bold;
   }
 
   .dropdownSelect {
-    width: 100%;  /* Full width */
-    padding: 6px;
-    font-size: 12px;
+    width: 150%; /* Make the dropdown fully responsive to the parent container */
+    max-width: 350px; /* Optional: Set a max-width to avoid it being too wide */
+    padding: 8px;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
   }
 }

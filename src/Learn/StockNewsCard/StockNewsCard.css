@@ -155,6 +155,15 @@ color: red;
     order: 3; /* Ensure this comes below the headline */
     margin-top: 5px;
   }
+  .stocknewsss-subtextt{
+    width: 100%;
+    font-size: 14px;
+    margin-left: 0;
+    text-align: left;
+    box-shadow: none;
+    order: 3; /* Ensure this comes below the headline */
+    margin-top: 5px;
+  }
 
   .stocknewsss-trading-info {
     width: 75%;
@@ -216,8 +225,8 @@ margin-bottom: 5px;
   }
 
   .stocknewsss-image {
-    width: 120%;
-    height: auto;
+    width: 90%;
+    height: 200px;
     margin-left: 0;
     order: 1; /* Ensure the image comes first */
   }
@@ -238,6 +247,14 @@ margin-bottom: 5px;
     margin-top: 5px;
   }
 
+  .stocknewsss-subtextt{
+    width: 100%;
+    font-size: 13px;
+    margin-left: 0;
+    text-align: left;
+    order: 3; /* Ensure this comes below the headline */
+    margin-top: 5px;
+  }
   .stocknewsss-stock-section {
     margin-left: 0;
   }
@@ -255,7 +272,7 @@ margin-bottom: 5px;
   }
 
   .stocknewsss-trading-info {
-    width: 77%;
+    width: 57%;
     font-size: 14px;
     margin-left: 0;
     text-align: left;

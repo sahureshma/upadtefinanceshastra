@@ -25,13 +25,16 @@ const ScreenerStockList = () => {
   });
   
   const [isDivYieldDropdownVisible, setDivYieldDropdownVisible] = useState(false);
+  const [filteredData, setFilteredData] = useState(screenerStockListData); 
 
   const toggleDivYieldDropdown = () => {
     setDivYieldDropdownVisible(!isDivYieldDropdownVisible);
    
   };
   const [isEPSDropdownVisible, setEPSDropdownVisible] = useState(false);
-    
+
+  
+
   
   const toggleEPSDropdown = () => {
     setEPSDropdownVisible(!isEPSDropdownVisible);
@@ -278,7 +281,10 @@ const resetRange = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSectors, setSelectedSectors] = useState([]);
-  
+  const [isIndexDropdownVisible, setIndexDropdownVisible] = useState(false);
+  const [selectedIndexes, setSelectedIndexes] = useState([]);
+  const [selectedMcap, setSelectedMcap] = useState([]);
+  const [selectedPe, setSelectedPe] = useState([]);
 
   const sectors = [
     "Agriculture and Chemicals",
@@ -306,10 +312,8 @@ const resetRange = () => {
     "Real Estate",
     "Textiles",
   ];
-  const [isIndexDropdownVisible, setIndexDropdownVisible] = useState(false);
-  const [selectedIndexes, setSelectedIndexes] = useState([]);
-  
 
+ 
   const indexes = [
     "Nifty 50",
     "Nifty 500",
@@ -330,16 +334,19 @@ const resetRange = () => {
     "Nifty Auto",
     "Nifty CPSE",
   ];
+  const marketCapCategory = ["Large Cap", "Mid Cap", "Small Cap", "Micro Cap", "Other"];
+  const peFilterOptions = [
+    { value: "50-above", label: "50 and above" },
+    { value: "25-50", label: "25 to 50" },
+    { value: "15-25", label: "15 to 25" },
+    { value: "15-below", label: "15 and below" },
+    { value: "0-above", label: "0 and above" }
+  ];
+
   const toggleIndexDropdown = () => {
     setIndexDropdownVisible(!isIndexDropdownVisible);
   };
-  const handleCheckboxChange = (sector) => {
-    setSelectedSectors((prev) =>
-      prev.includes(sector)
-        ? prev.filter((s) => s !== sector)
-        : [...prev, sector]
-    );
-  };
+;
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -351,18 +358,157 @@ const resetRange = () => {
   const filteredIndexes = indexes.filter((index) =>
     index.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  const filteredmarketCapCategory = marketCapCategory.filter((marketCapCategory) =>
+    marketCapCategory.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const handleReset = () => {
-    setSelectedSectors([]);
-    setSearchTerm("");
+    setSelectedSectors([]); // Reset selected sectors
+    setSearchTerm(""); // Reset search term
+     setSelectedIndexes([]);
+     setSelectedMcap([]);
+     setSelectedPe([])
   };
 
   const handleApply = () => {
-    console.log("Selected Sectors:", selectedSectors);
-    setIsOpen(false);
-    setFilters((prev) => ({ ...prev, sector: selectedSectors.join(", ") }));
-    applyFilters({ ...filters, sector: selectedSectors.join(", ") });
+    // Update the filters with the selected indexes and sectors
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      index: selectedIndexes,
+    
+    }));
+  
+    // Apply the filter based on the selected indexes and sectors
+    const filteredStocks = screenerStockListData.filter((stock) =>
+      selectedIndexes.includes(stock.index) 
+    );
+    // Update the stocks with the filtered data
+    setStocks(filteredStocks);
+  
+    // Close the dropdown
+    setIsDropdownVisible(false);
+  
+    // Optionally, scroll to the table (assuming your table has an id or ref)
+    const tableElement = document.getElementById('stocks-table');
+    if (tableElement) {
+      tableElement.scrollIntoView({ behavior: 'smooth' });
+    }
   };
+
+  const handlesectorApply = () => {
+    // Update the filters with the selected indexes and sectors
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+     
+      sector: selectedSectors, // Assuming selectedSectors is an array of selected sectors
+    }));
+  
+    // Apply the filter based on the selected indexes and sectors
+    const filteredStocks = screenerStockListData.filter((stock) =>
+       selectedSectors.includes(stock.sector)
+    );
+  
+    // Update the stocks with the filtered data
+    setStocks(filteredStocks);
+  
+    // Close the dropdown
+    setIsDropdownVisible(false);
+  
+    // Optionally, scroll to the table (assuming your table has an id or ref)
+    const tableElement = document.getElementById('stocks-table');
+    if (tableElement) {
+      tableElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handlemcapApply = () => {
+    // Update the filters with the selected market cap categories
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      marketCapCategory: selectedMcap, // Assuming selectedMcap is an array of selected categories
+    }));
+  
+    // Filter the stocks based on the selected market cap categories
+    const filteredStocks = screenerStockListData.filter((stock) =>
+      selectedMcap.includes(stock.marketCapCategory)
+    );
+  
+    // Update the stocks with the filtered data
+    setStocks(filteredStocks);
+  
+    // Close the dropdown
+    setIsDropdownVisible(false);
+  
+    // Optionally, scroll to the table (assuming your table has an id or ref)
+    const tableElement = document.getElementById('stocks-table');
+    if (tableElement) {
+      tableElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+ 
+  const handlePeApply = () => {
+    // Filter stocks based on the selected P/E range
+    const filteredStocks = screenerStockListData.filter((stock) => {
+      const stockPe = parseFloat(stock.pToE);
+      return selectedPe.some((range) => {
+        switch (range) {
+          case "50-above":
+            return stockPe >= 50;
+          case "25-50":
+            return stockPe >= 25 && stockPe < 50;
+          case "15-25":
+            return stockPe >= 15 && stockPe < 25;
+          case "15-below":
+            return stockPe < 15;
+          case "0-above":
+            return stockPe >= 0; // Includes all positive values
+          default:
+            return false;
+        }
+      });
+    });
+  
+    // Update the stocks with the filtered data
+    setStocks(filteredStocks);
+  
+    // Close the dropdown
+    setPEDropdownVisible(false);
+  
+    // Optionally scroll to the table
+    const tableElement = document.getElementById("stocks-table");
+    if (tableElement) {
+      tableElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
+  
+  
+  
+  
+  const handleCheckboxChange = (index, sector,marketCapCategory,pToE) => {
+    setSelectedIndexes((prev) => 
+      prev.includes(index) 
+      ? prev.filter((s) => s !== index) 
+      : [...prev, index]
+    );
+    setSelectedSectors((prev) =>
+      prev.includes(sector) // Check if the sector is already in the selected list
+        ? prev.filter((s) => s !== sector) // If so, remove it
+        : [...prev, sector] // Otherwise, add it
+    );
+    setSelectedMcap((prev) =>
+      prev.includes(marketCapCategory) // Check if the category is already selected
+        ? prev.filter((s) => s !== marketCapCategory) // If it is, remove it
+        : [...prev, marketCapCategory] // If it isn't, add it to the list
+    );
+    setSelectedPe((prev) =>
+      prev.includes( pToE) // Check if the category is already selected
+        ? prev.filter((s) => s !== pToE) // If it is, remove it
+        : [...prev,pToE] // If it isn't, add it to the list
+    );
+  }
+
+
 
   return (
     <div className="screener-container">
@@ -374,16 +520,16 @@ const resetRange = () => {
       <button
         onClick={toggleIndexDropdown}
         style={{
-          backgroundColor: "white", // Corrected CSS property
-    border: "1px solid #333",
-    padding: "4px 10px", // Added horizontal padding for better spacing
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: "6px", // Space between the text and the icon
-    borderRadius: "5px",
-  }}
+          backgroundColor: "white",
+          border: "1px solid #333",
+          padding: "4px 10px",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "6px",
+          borderRadius: "5px",
+        }}
       >
         Index <RiArrowDropDownLine size={24} />
       </button>
@@ -403,7 +549,6 @@ const resetRange = () => {
             boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
             zIndex: 1000,
           }}
-       
         >
           {/* Search Box */}
           <div
@@ -414,7 +559,7 @@ const resetRange = () => {
               padding: "2px",
               border: "1px solid black",
               borderRadius: "12px",
-              width:"400px"
+              width: "400px",
             }}
           >
             <FaSearch style={{ marginRight: "4px", color: "#333" }} />
@@ -435,10 +580,9 @@ const resetRange = () => {
           <div
             style={{
               display: "grid",
-                  gridTemplateColumns: "1fr 1fr 1fr",
-                  gap: "10px",
-                 
-                  overflowY: "auto",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: "10px",
+              overflowY: "auto",
             }}
           >
             {filteredIndexes.map((index) => (
@@ -446,15 +590,18 @@ const resetRange = () => {
                 key={index}
                 style={{
                   display: "flex",
-                      alignItems: "center",
-                      gap: "5px",
-                      cursor: "pointer",
+                  alignItems: "center",
+                  gap: "5px",
+                  cursor: "pointer",
                 }}
               >
                 <input
                   type="checkbox"
                   checked={selectedIndexes.includes(index)}
-                  onChange={() => handleCheckboxChange(index)}
+                  onChange={(e) => {
+                    e.stopPropagation();
+                    handleCheckboxChange(index);
+                  }}
                   style={{ width: "18%" }}
                 />
                 {index}
@@ -466,20 +613,19 @@ const resetRange = () => {
           <div
             style={{
               display: "flex",
-                  justifyContent: "space-between",
-                  marginTop: "10px",
+              justifyContent: "space-between",
+              marginTop: "10px",
             }}
           >
             <button
               onClick={handleReset}
               style={{
                 padding: "5px 10px",
-                    border: "1px solid #24b676",
-                    borderRadius: "4px",
-                    color: "#24b676",
-                    backgroundColor: "white",
-                    cursor: "pointer",
-                    marginLeft:"320px"
+                border: "1px solid #24b676",
+                borderRadius: "4px",
+                color: "#24b676",
+                backgroundColor: "white",
+                cursor: "pointer",
               }}
             >
               Reset
@@ -493,7 +639,6 @@ const resetRange = () => {
                 color: "white",
                 backgroundColor: "#24b676",
                 cursor: "pointer",
-                marginRight:"50px",
               }}
             >
               Apply
@@ -501,6 +646,21 @@ const resetRange = () => {
           </div>
         </div>
       )}
+
+      {/* Display Filtered Data */}
+      <div>
+        {filteredData.length > 0 ? (
+          filteredData.map((item) => (
+            <div key={item.id}>
+              <p>{item.name}</p>
+            </div>
+          ))
+        ) : (
+          <p>No data available for the selected index.</p>
+        )}
+      </div>
+         
+      
     </div>
         <div className="filter-group">
           <select
@@ -572,146 +732,304 @@ const resetRange = () => {
         )}
       </div>
     </div>
+    <div className="screener-filters">
+        {/* Filter for each parameter */}
+        <div style={{ position: "relative"}}>
+      {/* Dropdown Button */}
+      <button
+        onClick={toggleMarketCapDropdown}
+        style={{
+          backgroundColor: "white",
+          border: "1px solid #333",
+          padding: "4px 10px",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "6px",
+          borderRadius: "5px",
+        }}
+      >
+            Market Cap <RiArrowDropDownLine size={24} />
+      </button>
 
-        <div className="market-cap-filter">
-      <div className="dropdown-market-cap-wrapper">
-        <button className="dropdown-market-cap-toggle" onClick={toggleMarketCapDropdown}>
-          Market Cap<RiArrowDropDownLine size={24} />
-        </button>
-        {isMarketCapDropdownVisible && (
-          <div className="dropdown-market-cap-options">
-            <label className="dropdown-market-cap-label">
-              <input
-                type="checkbox"
-                value="large"
-                checked={marketCapFilters.includes("large")}
-                onChange={() => handleMarketCapChange("large")}
-                style={{ width: "40%" }}
-              />
-              Large Cap
-            </label>
-            <label className="dropdown-market-cap-label">
-              <input
-                type="checkbox"
-                value="mid"
-                checked={marketCapFilters.includes("mid")}
-                onChange={() => handleMarketCapChange("mid")}
-                style={{ width: "40%" }}
-              />
-              Mid Cap
-            </label>
-            <label className="dropdown-market-cap-label">
-              <input
-                type="checkbox"
-                value="small"
-                checked={marketCapFilters.includes("small")}
-                onChange={() => handleMarketCapChange("small")}
-                style={{ width: "40%" }}
-              />
-              Small Cap
-            </label>
-            <label className="dropdown-market-cap-label">
-              <input
-                type="checkbox"
-                value="micro"
-                checked={marketCapFilters.includes("micro")}
-                onChange={() => handleMarketCapChange("micro")}
-                style={{ width: "40%" }}
-              />
-              Micro Cap
-            </label>
-            <label className="dropdown-market-cap-label">
-              <input
-                type="checkbox"
-                value="others"
-                checked={marketCapFilters.includes("others")}
-                onChange={() => handleMarketCapChange("others")}
-                style={{ width: "40%" }}
-              />
-              Others
-            </label>
-            <div className="dropdown-market-cap-actions">
-              <button className="dropdown-market-cap-reset" onClick={resetMarketCapFilters}>
-                Reset
-              </button>
-              <button className="dropdown-market-cap-apply" onClick={applyMarketCapFilters}>
-                Apply
-              </button>
-            </div>
+      {/* Dropdown Menu */}
+      {isMarketCapDropdownVisible && (
+        <div
+          style={{
+            position: "absolute",
+            top: "40px",
+            left: "0",
+            width: "600%",
+            backgroundColor: "white",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+            padding: "10px",
+            boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
+            zIndex: 1000,
+          }}
+        >
+          {/* Search Box */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: "10px",
+              padding: "2px",
+              border: "1px solid black",
+              borderRadius: "12px",
+              width: "400px",
+            }}
+          >
+            <FaSearch style={{ marginRight: "4px", color: "#333" }} />
+            <input
+              type="text"
+              placeholder="Search Index"
+              value={searchTerm}
+              onChange={handleSearchChange}
+              style={{
+                border: "none",
+                outline: "none",
+                flex: 1,
+              }}
+            />
           </div>
+
+          {/* Checkbox List */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: "10px",
+              overflowY: "auto",
+            }}
+          >
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", overflowY: "auto" }}>
+  {marketCapCategory.map((category) => (
+    <label key={category} style={{ display: "flex", alignItems: "center", gap: "5px", cursor: "pointer" }}>
+      <input
+        type="checkbox"
+        checked={selectedMcap.includes(category)} // Check if the category is selected
+        onChange={(e) => {
+          e.stopPropagation();
+          setSelectedMcap((prev) =>
+            prev.includes(category)
+              ? prev.filter((item) => item !== category) // Remove category from selected
+              : [...prev, category] // Add category to selected
+          );
+        }}
+        style={{ width: "18%" }}
+      />
+      {category}
+    </label>
+  ))}
+</div>
+
+           
+          </div>
+
+          {/* Buttons */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "10px",
+            }}
+          >
+            <button
+              onClick={handleReset}
+              style={{
+                padding: "5px 10px",
+                border: "1px solid #24b676",
+                borderRadius: "4px",
+                color: "#24b676",
+                backgroundColor: "white",
+                cursor: "pointer",
+              }}
+            >
+              Reset
+            </button>
+            <button
+              onClick={handlemcapApply}
+              style={{
+                padding: "5px 10px",
+                border: "none",
+                borderRadius: "4px",
+                color: "white",
+                backgroundColor: "#24b676",
+                cursor: "pointer",
+              }}
+            >
+              Apply
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Display Filtered Data */}
+      <div>
+        {filteredData.length > 0 ? (
+          filteredData.map((item) => (
+            <div key={item.id}>
+              <p>{item.name}</p>
+            </div>
+          ))
+        ) : (
+          <p>No data available for the selected index.</p>
         )}
       </div>
+         </div>
     </div>
-        <div className="filter-group pe-filter">
-      <div className="dropdown-pe-wrapper">
-        <button className="dropdown-pe-toggle" onClick={togglePEDropdown}>
-          P/E <RiArrowDropDownLine size={24} />
-        </button>
-        {isPEDropdownVisible && (
-          <div className="dropdown-pe-options">
-            <label className="dropdown-pe-label">
-              <input
-                type="checkbox"
-                value="50-above"
-                checked={filters.pe.includes("50-above")}
-                onChange={() => handleFilterChange("pe", "50-above")}
-                style={{ width: "40%" }}
-              />
-              50 and above
-            </label>
-            <label className="dropdown-pe-label">
-              <input
-                type="checkbox"
-                value="25-50"
-                checked={filters.pe.includes("25-50")}
-                onChange={() => handleFilterChange("pe", "25-50")}
-                style={{ width: "40%" }}
-              />
-              25 to 50
-            </label>
-            <label className="dropdown-pe-label">
-              <input
-                type="checkbox"
-                value="15-25"
-                checked={filters.pe.includes("15-25")}
-                onChange={() => handleFilterChange("pe", "15-25")}
-                style={{ width: "40%" }}
-              />
-              15 to 25
-            </label>
-            <label className="dropdown-pe-label">
-              <input
-                type="checkbox"
-                value="15-below"
-                checked={filters.pe.includes("15-below")}
-                onChange={() => handleFilterChange("pe", "15-below")}
-                style={{ width: "40%" }}
-              />
-              15 and below
-            </label>
-            <label className="dropdown-pe-label">
-              <input
-                type="checkbox"
-                value="0-above"
-                checked={filters.pe.includes("0-above")}
-                onChange={() => handleFilterChange("pe", "0-above")}
-                style={{ width: "40%" }}
-              />
-              0 and above
-            </label>
-            <div className="dropdown-pe-actions">
-              <button className="dropdown-pe-reset" onClick={resetFilters}>
-                Reset
-              </button>
-              <button className="dropdown-pe-apply" onClick={applyFilters}>
-                Apply
-              </button>
-            </div>
+    <div className="screener-filters">
+        {/* Filter for each parameter */}
+        <div style={{ position: "relative"}}>
+      {/* Dropdown Button */}
+      <button
+        onClick={togglePEDropdown}
+        style={{
+          backgroundColor: "white",
+          border: "1px solid #333",
+          padding: "4px 10px",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "6px",
+          borderRadius: "5px",
+        }}
+      >
+           P/E <RiArrowDropDownLine size={24} />
+      </button>
+
+      {/* Dropdown Menu */}
+      {isPEDropdownVisible && (
+        <div
+          style={{
+            position: "absolute",
+            top: "40px",
+            left: "0",
+            width: "600%",
+            backgroundColor: "white",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+            padding: "10px",
+            boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
+            zIndex: 1000,
+          }}
+        >
+          {/* Search Box */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: "10px",
+              padding: "2px",
+              border: "1px solid black",
+              borderRadius: "12px",
+              width: "400px",
+            }}
+          >
+            <FaSearch style={{ marginRight: "4px", color: "#333" }} />
+            <input
+              type="text"
+              placeholder="Search Index"
+              value={searchTerm}
+              onChange={handleSearchChange}
+              style={{
+                border: "none",
+                outline: "none",
+                flex: 1,
+              }}
+            />
           </div>
+
+          {/* Checkbox List */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: "10px",
+              overflowY: "auto",
+            }}
+          >
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", overflowY: "auto" }}>
+  {peFilterOptions.map((category) => (
+    <label key={category.value} style={{ display: "flex", alignItems: "center", gap: "5px", cursor: "pointer" }}>
+      <input
+        type="checkbox"
+        checked={selectedPe.includes(category.value)} // Check by the category value
+        onChange={(e) => {
+          e.stopPropagation();
+          setSelectedPe((prev) =>
+            prev.includes(category.value)
+              ? prev.filter((item) => item !== category.value) // Remove category
+              : [...prev, category.value] // Add category
+          );
+        }}
+        style={{ width: "18%" }}
+      />
+      {category.label} {/* Correctly render the label */}
+    </label>
+  ))}
+</div>
+
+
+
+           
+          </div>
+
+          {/* Buttons */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "10px",
+            }}
+          >
+            <button
+              onClick={handleReset}
+              style={{
+                padding: "5px 10px",
+                border: "1px solid #24b676",
+                borderRadius: "4px",
+                color: "#24b676",
+                backgroundColor: "white",
+                cursor: "pointer",
+              }}
+            >
+              Reset
+            </button>
+            <button
+              onClick={handlePeApply}
+              style={{
+                padding: "5px 10px",
+                border: "none",
+                borderRadius: "4px",
+                color: "white",
+                backgroundColor: "#24b676",
+                cursor: "pointer",
+              }}
+            >
+              Apply
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Display Filtered Data */}
+      <div>
+        {filteredData.length > 0 ? (
+          filteredData.map((item) => (
+            <div key={item.id}>
+              <p>{item.name}</p>
+            </div>
+          ))
+        ) : (
+          <p>No data available for the selected index.</p>
         )}
       </div>
+         </div>
     </div>
-
         <div className="filter-group eps-dil-growth-filter">
       <div className="dropdown-eps-wrapper">
         <button
@@ -940,36 +1258,26 @@ const resetRange = () => {
                 />
               </div>
 
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr 1fr",
-                  gap: "10px",
-                 
-                  overflowY: "auto",
-                }}
-              >
-                {filteredSectors.map((sector) => (
-                  <label
-                    key={sector}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "5px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedSectors.includes(sector)}
-                      onChange={() => handleCheckboxChange(sector)}
-                      style={{ width: "18%" }}
-                    />
-                    {sector}
-                  </label>
-                ))}
-              </div>
-
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", overflowY: "auto" }}>
+  {filteredSectors.map((sector, index) => (
+    <label key={sector} style={{ display: "flex", alignItems: "center", gap: "5px", cursor: "pointer" }}>
+      <input
+  type="checkbox"
+  checked={selectedSectors.includes(sector)} // Check if the sector is selected
+  onChange={(e) => {
+    e.stopPropagation();
+    setSelectedSectors((prev) => 
+      prev.includes(sector) 
+        ? prev.filter((s) => s !== sector) 
+        : [...prev, sector]
+    );
+  }}
+  style={{ width: "18%" }}
+/>
+      {sector}
+    </label>
+  ))}
+</div>
               <div
                 style={{
                   display: "flex",
@@ -992,7 +1300,7 @@ const resetRange = () => {
                   Reset
                 </button>
                 <button
-                  onClick={handleApply}
+                  onClick={handlesectorApply}
                   style={{
                     padding: "5px 10px",
                     border: "none",
@@ -1009,6 +1317,17 @@ const resetRange = () => {
             </div>
           )}
         </div>
+        <div>
+        {filteredData.length > 0 ? (
+          filteredData.map((item) => (
+            <div key={item.id}>
+              <p>{item.name}</p>
+            </div>
+          ))
+        ) : (
+          <p>No data available for the selected index.</p>
+        )}
+      </div>
       
 
         <div className="filter-group performance-filter">

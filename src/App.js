@@ -105,6 +105,11 @@ import ModulecourseDetails from "./Learn/Learnall/Modulelearncourse/Modulelearnc
 import IpoComponent from "./Learn/IPO/Ipopage/Ipopage";
 import IpoDetails from "./Learn/IPO/Ipocarddetail/Ipocarddetail";
 import IpoDetailsubscribe from "./Learn/IPO/Ipoaftersubscribe/Ipoaftersubscribe";
+import QuarterlyEarningdashboard from "./Learn/Quaterlyearning/QuarterlyEarningdashboard/QuarterlyEarningdashboard";
+import Quarterlydeclaredpage from "./Learn/Quaterlyearning/Quaterlydeclaredpage/Quaterlydeclaredpage";
+import Quarterlysector from "./Learn/Quaterlyearning/Quaterlyearningsector/Quaterlyearningsector";
+import EarningsInsightLearn from "./Learn/Quaterlyearning/EarningsInsightLearn/EarningsInsightLearn";
+
 
 
 
@@ -211,6 +216,11 @@ function App() {
       <Route path="/ipoComponent" element={<IpoComponent/>}/>
       <Route path="/ipoDetails/:id" element={<IpoDetails/>}/>
       <Route path="/ipoDetailsubscribe" element={<IpoDetailsubscribe/>}/>
+      <Route path="/quarterlyEarningdashboard" element={<QuarterlyEarningdashboard/>}/>
+      <Route path="/quarterlydeclaredpage" element={<Quarterlydeclaredpage/>}/>
+      <Route path="/quarterlysector" element={<Quarterlysector/>}/>
+      <Route path="/earningsInsightLearn" element={<EarningsInsightLearn/>}/>
+    
      
     
 

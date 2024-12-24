@@ -5,14 +5,16 @@ export const screenerStockListData = [
     change: "-0.31%",
     volume: "408.75 K",
     marketCap: "₹3.6T",
-    pToE: "23.22", // Added P/E Ratio data
+    pToE: "23.22",
     eps: "₹62.02",
     epsDilGrowth: "+8.88%",
     divYield: "2.74%",
-    sector: "Technology services",
-    roe: 30.5, // Added ROE value
-    revenueGrowth: "+12.5%", // Revenue Growth %
-    peg: 2.6, // PEG Ratio
+    sector: "Technology Services",
+    roe: 30.5,
+    revenueGrowth: "+12.5%",
+    peg: 2.6,
+    index: "Nifty 50",
+    marketCapCategory: "small Cap"
   },
   {
     symbol: "BAJAJ FINANCE LIMITED",
@@ -20,14 +22,16 @@ export const screenerStockListData = [
     change: "+0.49%",
     volume: "378.77 K",
     marketCap: "₹4.45T",
-    pToE: "30.50", // Added P/E Ratio data
+    pToE: "30.50",
     eps: "₹248.51",
     epsDilGrowth: "+15.04%",
     divYield: "0.50%",
-    sector: "Finance",
-    roe: 22.3, // Added ROE value
-    revenueGrowth: "+18.7%", // Revenue Growth %
-    peg: 2.0, // PEG Ratio
+    sector: "Financial Services",
+    roe: 22.3,
+    revenueGrowth: "+18.7%",
+    peg: 2.0,
+    index: "Nifty 500",
+    marketCapCategory: "Large Cap"
   },
   {
     symbol: "SUN PHARMACEUTICAL IND L",
@@ -35,14 +39,16 @@ export const screenerStockListData = [
     change: "-1.02%",
     volume: "392.85 K",
     marketCap: "₹2.35T",
-    pToE: "26.42", // Added P/E Ratio data
+    pToE: "26.42",
     eps: "₹246.07",
     epsDilGrowth: "+29.31%",
     divYield: "0.74%",
-    sector: "Health technology",
-    roe: 18.4, // Added ROE value
-    revenueGrowth: "+10.8%", // Revenue Growth %
-    peg: 0.9, // PEG Ratio
+    sector: "Healthcare",
+    roe: 18.4,
+    revenueGrowth: "+10.8%",
+    peg: 0.9,
+    index: "Nifty Midcap 100",
+    marketcapcategory: "Large Cap"
   },
   {
     symbol: "MAHINDRA & MAHINDRA LTD.",
@@ -50,14 +56,16 @@ export const screenerStockListData = [
     change: "-0.76%",
     volume: "875.84 K",
     marketCap: "₹2.6T",
-    pToE: "18.20", // Added P/E Ratio data
+    pToE: "18.20",
     eps: "₹106.00",
     epsDilGrowth: "+6.13%",
     divYield: "0.68%",
-    sector: "Consumer durables",
-    roe: 16.2, // Added ROE value
-    revenueGrowth: "+14.1%", // Revenue Growth %
-    peg: 3.0, // PEG Ratio
+    sector: "Consumer Durables",
+    roe: 16.2,
+    revenueGrowth: "+14.1%",
+    peg: 3.0,
+    index: "Nifty Smallcap 100",
+    marketCapCategory: "Large Cap"
   },
   {
     symbol: "KOTAK MAHINDRA BANK LTD.",
@@ -65,14 +73,16 @@ export const screenerStockListData = [
     change: "-0.44%",
     volume: "1.32 M",
     marketCap: "₹2.2T",
-    pToE: "21.75", // Added P/E Ratio data
+    pToE: "21.75",
     eps: "₹110.94",
     epsDilGrowth: "+28.37%",
     divYield: "0.11%",
-    sector: "Finance",
-    roe: 18.1, // Added ROE value
-    revenueGrowth: "+12.3%", // Revenue Growth %
-    peg: 0.8, // PEG Ratio
+    sector: "Financial Services",
+    roe: 18.1,
+    revenueGrowth: "+12.3%",
+    peg: 0.8,
+    index: "Nifty Alpha 50",
+    marketCapCategory: "Large Cap"
   },
   {
     symbol: "AXIS BANK LTD",
@@ -80,14 +90,16 @@ export const screenerStockListData = [
     change: "-0.20%",
     volume: "1.03 M",
     marketCap: "₹2.12T",
-    pToE: "19.45", // Added P/E Ratio data
+    pToE: "19.45",
     eps: "₹89.87",
     epsDilGrowth: "+113.11%",
     divYield: "0.09%",
-    sector: "Finance",
-    roe: 14.7, // Added ROE value
-    revenueGrowth: "+9.4%", // Revenue Growth %
-    peg: 0.2, // PEG Ratio
+    sector: "Financial Services",
+    roe: 14.7,
+    revenueGrowth: "+9.4%",
+    peg: 0.2,
+    index: "Nifty Bank",
+    marketCapCategory: "Large Cap"
   },
   {
     symbol: "MARUTI SUZUKI INDIA LTD",
@@ -95,14 +107,16 @@ export const screenerStockListData = [
     change: "-0.16%",
     volume: "78.58 K",
     marketCap: "₹3.5T",
-    pToE: "35.25", // Added P/E Ratio data
+    pToE: "35.25",
     eps: "₹450.13",
     epsDilGrowth: "+19.78%",
     divYield: "1.11%",
-    sector: "Consumer durables",
-    roe: 28.7, // Added ROE value
-    revenueGrowth: "+15.6%", // Revenue Growth %
-    peg: 18, // PEG Ratio
+    sector: "Automobile and Auto Components",
+    roe: 28.7,
+    revenueGrowth: "+15.6%",
+    peg: 18,
+    index: "Nifty 100",
+    marketCapCategory: "Large Cap"
   },
   {
     symbol: "ULTRATECH CEMENT LTD",
@@ -110,14 +124,16 @@ export const screenerStockListData = [
     change: "-1.27%",
     volume: "83.5 K",
     marketCap: "₹2.3T",
-    pToE: "28.92", // Added P/E Ratio data
+    pToE: "28.92",
     eps: "₹227.17",
     epsDilGrowth: "+15.09%",
     divYield: "0.58%",
-    sector: "Non-energy minerals",
-    roe: 25.5, // Added ROE value
-    revenueGrowth: "+13.2%", // Revenue Growth %
-    peg: 21.9, // PEG Ratio
+    sector: "Construction & Materials",
+    roe: 25.5,
+    revenueGrowth: "+13.2%",
+    peg: 21.9,
+    index: "Nifty Next 50",
+    marketCapCategory: "Large Cap"
   },
   {
     symbol: "NTPC LTD.",
@@ -125,13 +141,168 @@ export const screenerStockListData = [
     change: "-0.88%",
     volume: "160.57 K",
     marketCap: "₹1.56T",
-    pToE: "12.15", // Added P/E Ratio data
+    pToE: "12.15",
     eps: "₹22.76",
     epsDilGrowth: "+15.41%",
     divYield: "2.24%",
     sector: "Utilities",
-    roe: 13.8, // Added ROE value
-    revenueGrowth: "+37.8%", // Revenue Growth %
-    peg: 0.8, // PEG Ratio
+    roe: 13.8,
+    revenueGrowth: "+37.8%",
+    peg: 0.8,
+    index: "Nifty Midcap 150",
+    marketCapCategory: "Mid Cap"
   },
+  {
+    symbol: "RELIANCE INDUSTRIES LTD",
+    price: "₹2,535.50",
+    change: "+0.25%",
+    volume: "1.4 M",
+    marketCap: "₹17.3T",
+    pToE: "35.10",
+    eps: "₹72.32",
+    epsDilGrowth: "+12.3%",
+    divYield: "0.50%",
+    sector: "Energy (Oil & Gas)",
+    roe: 18.7,
+    revenueGrowth: "+8.9%",
+    peg: 1.3,
+    index: "Nifty 50",
+    marketCapCategory: "Large Cap"
+  },
+  {
+    symbol: "TATA CONSULTANCY SERVICES",
+    price: "₹3,725.70",
+    change: "-0.11%",
+    volume: "500 K",
+    marketCap: "₹13.2T",
+    pToE: "30.80",
+    eps: "₹121.50",
+    epsDilGrowth: "+10.5%",
+    divYield: "1.10%",
+    sector: "IT",
+    roe: 27.9,
+    revenueGrowth: "+5.4%",
+    peg: 2.1,
+    index: "Nifty 500",
+    marketCapCategory: "Large Cap"
+  },
+  {
+    symbol: "INFOSYS LIMITED",
+    price: "₹1,466.50",
+    change: "+0.45%",
+    volume: "1.2 M",
+    marketCap: "₹6.5T",
+    pToE: "28.10",
+    eps: "₹52.72",
+    epsDilGrowth: "+8.7%",
+    divYield: "1.45%",
+    sector: "IT",
+    roe: 24.6,
+    revenueGrowth: "+7.2%",
+    peg: 1.6,
+    index: "Nifty Midcap 100",
+    marketCapCategory: "Large Cap"
+  },
+  {
+    symbol: "HDFC BANK LIMITED",
+    price: "₹1,675.90",
+    change: "-0.50%",
+    volume: "2.5 M",
+    marketCap: "₹9.6T",
+    pToE: "22.60",
+    eps: "₹75.80",
+    epsDilGrowth: "+7.9%",
+    divYield: "0.60%",
+    sector: "Financial Services",
+    roe: 18.2,
+    revenueGrowth: "+6.5%",
+    peg: 1.9,
+    index: "Nifty 100",
+    marketCapCategory: "Large Cap"
+  },
+  {
+    symbol: "BAJAJ AUTO LIMITED",
+    price: "₹4,300.50",
+    change: "+1.03%",
+    volume: "102 K",
+    marketCap: "₹1.6T",
+    pToE: "18.89",
+    eps: "₹229.79",
+    epsDilGrowth: "+5.6%",
+    divYield: "2.92%",
+    sector: "Automobile and Auto Components",
+    roe: 19.3,
+    revenueGrowth: "+5.1%",
+    peg: 0.8,
+    index: "Nifty 200",
+    marketCapCategory: "Large Cap"
+  },
+  {
+    symbol: "TATA MOTORS LIMITED",
+    price: "₹640.50",
+    change: "+1.17%",
+    volume: "712.69 K",
+    marketCap: "₹1.1T",
+    pToE: "12.9",
+    eps: "₹49.84",
+    epsDilGrowth: "+2.0%",
+    divYield: "1.30%",
+    sector: "Automobile and Auto Components",
+    roe: 11.8,
+    revenueGrowth: "+7.5%",
+    peg: 1.6,
+    index: "Nifty Midcap 150",
+    marketCapCategory: "Mid Cap"
+  },
+  {
+    symbol: "INDIAN OIL CORPORATION",
+    price: "₹79.35",
+    change: "-0.32%",
+    volume: "4.5 M",
+    marketCap: "₹1.4T",
+    pToE: "6.73",
+    eps: "₹11.80",
+    epsDilGrowth: "+5.12%",
+    divYield: "3.42%",
+    sector: "Energy (Oil & Gas)",
+    roe: 14.4,
+    revenueGrowth: "+3.4%",
+    peg: 0.9,
+    index: "Nifty 200",
+    marketCapCategory: "Mid Cap"
+  },
+  {
+    symbol: "TITAN COMPANY LIMITED",
+    price: "₹3,526.85",
+    change: "-0.15%",
+    volume: "156.25 K",
+    marketCap: "₹2.95T",
+    pToE: "56.41",
+    eps: "₹62.45",
+    epsDilGrowth: "+18.56%",
+    divYield: "0.24%",
+    sector: "Consumer Products",
+    roe: 33.1,
+    revenueGrowth: "+17.8%",
+    peg: 3.3,
+    index: "Nifty 50",
+    marketCapCategory: "Mid Cap"
+  },
+  {
+    symbol: "ASIAN PAINTS LIMITED",
+    price: "₹3,132.80",
+    change: "-0.48%",
+    volume: "224.45 K",
+    marketCap: "₹3.3T",
+    pToE: "74.08",
+    eps: "₹42.31",
+    epsDilGrowth: "+10.4%",
+    divYield: "0.53%",
+    sector: "Consumer Products",
+    roe: 32.8,
+    revenueGrowth: "+8.6%",
+    peg: 7.1,
+    index: "Nifty 100",
+    marketCapCategory: "Large Cap"
+  }
 ];
