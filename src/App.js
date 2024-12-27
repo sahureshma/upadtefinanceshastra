@@ -105,10 +105,12 @@ import ModulecourseDetails from "./Learn/Learnall/Modulelearncourse/Modulelearnc
 import IpoComponent from "./Learn/IPO/Ipopage/Ipopage";
 import IpoDetails from "./Learn/IPO/Ipocarddetail/Ipocarddetail";
 import IpoDetailsubscribe from "./Learn/IPO/Ipoaftersubscribe/Ipoaftersubscribe";
-import QuarterlyEarningdashboard from "./Learn/Quaterlyearning/QuarterlyEarningdashboard/QuarterlyEarningdashboard";
-import Quarterlydeclaredpage from "./Learn/Quaterlyearning/Quaterlydeclaredpage/Quaterlydeclaredpage";
-import Quarterlysector from "./Learn/Quaterlyearning/Quaterlyearningsector/Quaterlyearningsector";
+
 import EarningsInsightLearn from "./Learn/Quaterlyearning/EarningsInsightLearn/EarningsInsightLearn";
+import Earninginsightheader from "./Learn/Quaterlyearning/Earninginsightdetailheader/Earninginsightdetailheader";
+import DataDisplayEarnings from "./Learn/Quaterlyearning/DataDisplayEarnings/DataDisplayEarnings";
+import Quaterlygraphtop from "./Learn/Quaterlyearning/Quaterlygraphtop/Quaterlygraphtop";
+import Nifty50page from "./Stockpages/Nifty50page/Nifty50page";
 
 
 
@@ -216,10 +218,13 @@ function App() {
       <Route path="/ipoComponent" element={<IpoComponent/>}/>
       <Route path="/ipoDetails/:id" element={<IpoDetails/>}/>
       <Route path="/ipoDetailsubscribe" element={<IpoDetailsubscribe/>}/>
-      <Route path="/quarterlyEarningdashboard" element={<QuarterlyEarningdashboard/>}/>
-      <Route path="/quarterlydeclaredpage" element={<Quarterlydeclaredpage/>}/>
-      <Route path="/quarterlysector" element={<Quarterlysector/>}/>
-      <Route path="/earningsInsightLearn" element={<EarningsInsightLearn/>}/>
+      <Route path="/dataDisplayEarnings" element={<DataDisplayEarnings/>}/>
+    
+    
+      <Route path="/earningsInsightLearn" element={<EarningsInsightLearn/>}/> 
+      <Route path="/earninginsightheader" element={<Earninginsightheader/>}/>
+      <Route path="/quaterlygraphtop" element={<Quaterlygraphtop/>}/>
+      <Route path="/nifty50page" element={<Nifty50page/>}/>
     
      
     

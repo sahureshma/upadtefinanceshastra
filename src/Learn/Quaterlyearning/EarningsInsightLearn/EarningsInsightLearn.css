@@ -54,32 +54,9 @@
 
 
 /* Date Picker Section */
-.earnings-insight-learn-date-picker {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 20px;
-    width: 130px;
-    cursor: pointer;
-}
 
-.date-picker-label {
-    font-size: 15px;
-    color: #333;
-    width: 130px;
-    font-weight: bold;
-    
-}
 
-input[type="date"] {
-    padding: 10px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    color: #333;
-    font-weight: bold;
-    margin-right: 40px;
-    cursor: pointer;
-}
+
 
 /* Custom Dropdown Styling (Select Filter) */
 .earnings-insight-learn-dropdown {
@@ -158,7 +135,7 @@ input[type="date"] {
 }
 .earningquterlyrowall {
     display: flex;
-    width: 800px;
+    width: 890px;
     margin-left: 40px;
     gap: 210px;
     margin-bottom: 20px;
@@ -166,7 +143,7 @@ input[type="date"] {
     background-color: #f9f9f9; /* Light background for better contrast */
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    height: 30px;
+    height: 35px;
     box-shadow: 0px 4px 6px rgba(176, 175, 175, 0.886); /* Subtle shadow for depth */
 }
 
@@ -182,44 +159,69 @@ input[type="date"] {
     color:green;
 }
 
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    .earningquterlyrowall {
-        display: flex;
-        width: 100px;
-        margin-left: 40px;
-       
-        margin-bottom: 20px;
-     
-        background-color: #f9f9f9; /* Light background for better contrast */
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        height: 30px;
-        box-shadow: 0px 4px 6px rgba(176, 175, 175, 0.886); /* Subtle shadow for depth */
-    }
-    /* Styling for Tabs (Yesterday, Today, etc.) */
-.earnings-insight-learn-tabs {
-    display: flex;
-    gap: 1px;
-   
+/* General Styling for Date Picker Section */
+
+
+/* Hover Effect for Toggle Button */
+.earnings-insight-learn-date-picker button:hover {
+    background-color: #1a8b5a;
 }
 
-.earnings-insight-learn-tab-button {
-  
+/* Date Picker Container Styling */
+
+
+/* Reset and Apply Buttons Styling */
+.date-picker-container button {
+    background-color: #f1f1f1;
+
+    color: #333;
     font-size: 14px;
-    font-weight: 500;
-    color:#333; /* Default text color */
-    background-color:white; /* Default background */
-    border: 1px solid white;
-    border-radius: 4px;
+  
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: bold;
-  
-}
 }
 
-/* Mobile view for smaller devices */
-@media (max-width: 480px) {
+/* Hover Effect for Reset and Apply Buttons */
+.date-picker-container button:hover {
+    background-color: #ddd;
+}
+
+/* Styling for Reset Button Margin */
+.calendar-icon {
+    display: flex;
+   
+    font-size: 16px; /* Adjust size of the icon */
+    cursor: pointer; /* Make it clickable */
+   
+    /* Round corners for the icon button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-top: 10px;
+}
+.dateinsight{
+    display: flex;
+    border: 1px solid rgb(212, 209, 209);
+    height: 40px;
+    width: 140px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 2px #efeeee; /* Blue outline when focused */
+
     
 }
+
+/* Focus effect for accessibility */
+.calendar-icon:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px #4f94f4; /* Blue outline when focused */
+}
+
+/* Optional: Custom styling for the calendar label and icon */
+.date-picker-label {
+    font-size: 15px; /* Font size for the label */
+    font-weight: 500; /* Weight of the label */
+     /* Space between label and icon */
+     margin-top: 10px;
+     margin-left: 5px;
+}
+
