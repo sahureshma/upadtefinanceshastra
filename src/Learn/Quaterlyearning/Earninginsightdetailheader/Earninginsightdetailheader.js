@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link as ScrollLink } from 'react-scroll';  // For scroll navigation
-import './Earninginsightdetailheader.css'
-
+import { Link as ScrollLink } from 'react-scroll'; // For scroll navigation
+import './Earninginsightdetailheader.css';
 import { Divider } from '@mui/material';
 
 function Earninginsightheader() {
@@ -24,10 +23,10 @@ function Earninginsightheader() {
       second: '2-digit',
     }));
 
-    // Update the current price after the change is applied, ensuring that the values are numbers
-    setCurrentPrice(prevPrice => {
-      const newPrice = parseFloat(prevPrice) + parseFloat(randomChange); // Ensure both values are numbers
-      return newPrice.toFixed(1); // Now .toFixed works on a number
+    // Update the current price after the change is applied
+    setCurrentPrice((prevPrice) => {
+      const newPrice = parseFloat(prevPrice) + parseFloat(randomChange);
+      return newPrice.toFixed(1);
     });
   };
 
@@ -40,60 +39,100 @@ function Earninginsightheader() {
   }, []);
 
   return (
-    <div className="graphcontainerer">
+    <div className="graphcontainer">
       <div className="graphheader">
         <div className="title-container">
           <h1 className="telephone">State Bank Of India</h1>
         </div>
         <div className="graph-price-update">
-        <span className={`graphprice ${change >= 0 ? 'positive' : 'negative'}`}>
-
-            ₹{parseFloat(currentPrice).toLocaleString()} {/* Format the price with ₹ symbol */}
+          <span className={`graphprice ${change >= 0 ? 'positive' : 'negative'}`}>
+            ₹{parseFloat(currentPrice).toLocaleString()}
           </span>
           <span className="graphupdate">Last updated: {lastUpdated}</span>
         </div>
       </div>
 
-      <div className="graphstock-info">
+      <div className="graphstock-infoo">
         <span className="graphnse">NSE : ITI</span>
         <span className="graphsector">Services</span>
       </div>
 
       {/* Navigation Links */}
-      <nav className="graphnavbarr">
+      <nav className="graphnavbar">
         <Divider />
-        <ScrollLink to="overview" smooth={true} duration={500}>
+        <ScrollLink
+          to="overview"
+          smooth={true}
+          duration={500}
+          activeClass="active-link"
+        >
           Overview
         </ScrollLink>
-        <ScrollLink to="stockxray" smooth={true} duration={500}>
-        Financials
+        <ScrollLink
+          to="stockxray"
+          smooth={true}
+          duration={500}
+          activeClass="active-link"
+        >
+          Financials
         </ScrollLink>
-        <ScrollLink to="stockearning" smooth={true} duration={500}>
-        Income Statement
+        <ScrollLink
+          to="stockearning"
+          smooth={true}
+          duration={500}
+          activeClass="active-link"
+        >
+          Income Statement
         </ScrollLink>
-        <ScrollLink to="valuation" smooth={true} duration={500}>
-        Balance Sheet
+        <ScrollLink
+          to="valuation"
+          smooth={true}
+          duration={500}
+          activeClass="active-link"
+        >
+          Balance Sheet
         </ScrollLink>
-        <ScrollLink to="stockanalysis" smooth={true} duration={500}>
-        Cash Flow
+        <ScrollLink
+          to="stockanalysis"
+          smooth={true}
+          duration={500}
+          activeClass="active-link"
+        >
+          Cash Flow
         </ScrollLink>
-        <ScrollLink to="analysis-notes" smooth={true} duration={500}>
-        Ratios
+        <ScrollLink
+          to="analysis-notes"
+          smooth={true}
+          duration={500}
+          activeClass="active-link"
+        >
+          Ratios
         </ScrollLink>
-        <ScrollLink to="stockpeer" smooth={true} duration={500}>
+        <ScrollLink
+          to="stockpeer"
+          smooth={true}
+          duration={500}
+          activeClass="active-link"
+        >
           Peers
         </ScrollLink>
-       
-        <ScrollLink to="news" smooth={true} duration={500}>
+        <ScrollLink
+          to="news"
+          smooth={true}
+          duration={500}
+          activeClass="active-link"
+        >
           News
         </ScrollLink>
-        <ScrollLink to="about" smooth={true} duration={500}>
+        <ScrollLink
+          to="about"
+          smooth={true}
+          duration={500}
+          activeClass="active-link"
+        >
           About
         </ScrollLink>
-        
-        {/* Optional: For routing to other pages */}
         <Divider />
-        
       </nav>
 
       <Divider sx={{ margin: '10px 0' }} />

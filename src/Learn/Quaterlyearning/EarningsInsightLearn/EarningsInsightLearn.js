@@ -13,7 +13,7 @@ const EarningsInsightLearn = () => {
             { 
                 srNo: 1,
                 company: "State Bank of India",
-                url: "/quaterlygraphtop", 
+                url: "/quaterelyOverview", 
                 type: "Declared Results",
                 resultType: "Q2-2024",
                 ltp: "₹200.50",
@@ -23,7 +23,7 @@ const EarningsInsightLearn = () => {
                 grossProfit: "40%",
                 netProfit: "15%",
                 seeFinancial: {
-                    url: "/quaterlygraphtop", 
+                    url: "/quaterelyOverview", 
                     icon: <LuShare2 />
                 },
                 mcap: "₹5,000 Cr"
@@ -41,7 +41,7 @@ const EarningsInsightLearn = () => {
                 grossProfit: "-167", 
                 netProfit: "25.08%", 
                 seeFinancial: {
-                    url: "/quaterlygraphtop", 
+                    url: "/quaterelyOverview", 
                     icon: <LuShare2 />
                 },
                 mcap: "₹1,200 Cr"
@@ -356,7 +356,10 @@ const EarningsInsightLearn = () => {
         setSelectedEarningsTab(tab);
     };
 
- 
+    const toggleCalendar = () => {
+        setCalendarOpen(!calendarOpen);
+    };
+
 
 
     const handleFilterChange = (selectedFilter) => {
@@ -532,7 +535,7 @@ const EarningsInsightLearn = () => {
                     <div className="earnings-insight-learn-date-picker">
                         <div className="dateinsight">
                             <label htmlFor="dateRange" className="date-picker-label">Select Date Range: </label>
-                            <div className="calendar-icon" onClick={() => setCalendarOpen(!calendarOpen)}>
+                            <div className="calendar-icon" onClick={() => setCalendarOpen(!calendarOpen)} >
                                 <FaRegCalendarAlt />
                             </div>
                             </div>
@@ -545,7 +548,7 @@ const EarningsInsightLearn = () => {
                                     selectsRange
                                     inline
                                     dateFormat="yyyy-MM-dd"
-                                    onClickOutside={() => setCalendarOpen(false)}  // Close the calendar if clicked outside
+                                    onClick={() => setCalendarOpen(false)}  // Close the calendar if clicked outside
                                 />
                             )}
                         </div>

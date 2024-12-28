@@ -225,3 +225,188 @@
      margin-left: 5px;
 }
 
+/* Responsive styling for tablets and smaller devices */
+/* Responsive styling for tablets and smaller devices */
+@media (max-width: 768px) {
+    .earnings-insight-learn-wrapper {
+        margin-top: 130px; /* Adjust margin for smaller screens */
+        margin-right: 20px;
+    }
+
+    .earnings-insight-learn-header h1 {
+        font-size: 20px; /* Adjust font size for headers */
+    }
+
+    .earnings-insight-learn-tabs {
+        display: none; /* Hide the tabs */
+    }
+
+    .earnings-insight-learn-table {
+        width:100%; /* Ensure table occupies full width */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        display: block; /* Make table behave as a block element */
+        margin-bottom: 100px;
+        height: 400px;
+    }
+
+    .earnings-insight-learn-table th, 
+    .earnings-insight-learn-table td {
+        padding: 6px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+
+    .earnings-insight-learn-table th {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        font-weight: bold;
+        border-top: 2px solid #24b676;
+        border-bottom: 2px solid #24b676;
+        box-shadow: 4px 4px 5px rgba(36, 182, 118, 0.5);
+        font-size: 15px;
+        z-index: 2; /* Ensure it stays above table content */
+      
+    }
+    
+    .earningquterlyrowall {
+        width: 70px;
+        border: none;
+        box-shadow: none;
+        background-color: white;
+        gap: 12px; /* Reduced gap for mobile */
+     
+    }
+
+    .earnings-insight-learn-dropdown {
+        /* Reduced gap in dropdown for tablets and smaller devices */
+        margin-left: 1px; /* Adjusted margin for better alignment */
+    }
+
+    .calendar-icon {
+        font-size: 14px; /* Adjust icon size */
+    }
+
+    .date-picker-label {
+        font-size: 14px; /* Adjust label size */
+    }
+
+    .earnings-insight-learn-header-row {
+        display: flex;
+        gap: 60px; /* Adjust gap between header elements */
+       
+    }
+
+    .earnings-insight-learn-dropdown {
+        width: 40px; /* Adjust width */
+        margin-right: 40px;
+    }
+  
+    
+    .dateinsight {
+        display: flex;
+        border: 1px solid rgb(212, 209, 209);
+        height: 35px;
+        width: 140px;
+        border-radius: 5px;
+        box-shadow: 0 0 0 2px #efeeee; /* Blue outline when focused */
+        /* Adjust margin to position the date picker outside */
+    }
+    
+  
+    
+   
+}
+
+
+
+/* Responsive styling for mobile devices */
+@media (max-width: 480px) {
+    .earnings-insight-learn-wrapper {
+        margin-top: 130px; /* Adjust margin for smaller screens */
+        margin-right: 20px;
+    }
+
+    .earnings-insight-learn-header h1 {
+        font-size: 20px; /* Adjust font size for headers */
+    }
+
+    .earnings-insight-learn-tabs {
+        display: none; /* Hide the tabs */
+    }
+
+    .earnings-insight-learn-table {
+        width:100%; /* Ensure table occupies full width */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        display: block; /* Make table behave as a block element */
+        margin-bottom: 100px;
+        height: 400px;
+    }
+
+    .earnings-insight-learn-table th, 
+    .earnings-insight-learn-table td {
+        padding: 6px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+
+    .earnings-insight-learn-table th {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        font-weight: bold;
+        border-top: 2px solid #24b676;
+        border-bottom: 2px solid #24b676;
+        box-shadow: 4px 4px 5px rgba(36, 182, 118, 0.5);
+        font-size: 15px;
+        z-index: 2; /* Ensure it stays above table content */
+      
+    }
+    
+    .earningquterlyrowall {
+        width: 70px;
+        border: none;
+        box-shadow: none;
+        background-color: white;
+        gap: 1px; /* Reduced gap for mobile */
+     
+    }
+
+    .earnings-insight-learn-dropdown {
+        /* Reduced gap in dropdown for tablets and smaller devices */
+        margin-left: 1px; /* Adjusted margin for better alignment */
+    }
+
+    .calendar-icon {
+        font-size: 14px; /* Adjust icon size */
+    }
+
+    .date-picker-label {
+        font-size: 14px; /* Adjust label size */
+    }
+
+    .earnings-insight-learn-header-row {
+        display: flex;
+        gap: 43px; /* Adjust gap between header elements */
+       
+    }
+
+    .earnings-insight-learn-dropdown {
+        width: 40px; /* Adjust width */
+        margin-right: 14px;
+    }
+  
+    
+    .dateinsight {
+        display: flex;
+        border: 1px solid rgb(212, 209, 209);
+        height: 35px;
+        width: 120px;
+        border-radius: 5px;
+        box-shadow: 0 0 0 2px #efeeee; /* Blue outline when focused */
+        /* Adjust margin to position the date picker outside */
+    }
+    .date-picker-label{
+        font-size: 12px;
+    }
+  
+}
+

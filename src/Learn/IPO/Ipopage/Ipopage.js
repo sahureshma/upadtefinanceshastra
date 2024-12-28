@@ -97,24 +97,35 @@ const IpoComponent = () => {
       <div className="stockNewsList">
         {newsArticles.map((article) => (
           <div
-            key={article.id}
-            className={`stockNewsItem ${article.highlight ? "highlightedNews" : ""}`}
-            onClick={() => {
-              if (article.id === 1) {
-                handleArticleClick(article.id);
-              } 
-            }}
-            style={{ cursor: "pointer" }}
-          >
-            <img src={article.image} alt={article.title} className="newsThumbnail" />
-            <div className="newsContent">
-              <h3 className="newsTitle">{article.title}</h3>
-              <div className="datetimeipo">
-              <p className="ipopara"><MdDateRange className="dateipo"/>Published Date: {article.date}<GoDotFill className="dotipo"/></p>
-              <p className="ipopara"><CgProfile className="profileipo"/>Author: {article.author}<GoDotFill className="dotipo"/></p>
-              </div>
+          key={article.id}
+          className={`stockNewsItem ${
+            article.highlight ? "highlightedNews" : ""
+          } ${article.id === 4 || article.id === 9 ? "highlight-image" : ""}`}
+          onClick={() => {
+            if (article.id === 1) {
+              handleArticleClick(article.id);
+            }
+          }}
+          style={{ cursor: "pointer" }}
+        >
+          <img src={article.image} alt={article.title} className="newsThumbnail" />
+          <div className="newsContent">
+            <h3 className="newsTitle">{article.title}</h3>
+            <div className="datetimeipo">
+              <p className="ipopara">
+                <MdDateRange className="dateipo" />
+                Published Date: {article.date}
+                <GoDotFill className="dotipo" />
+              </p>
+              <p className="ipopara">
+                <CgProfile className="profileipo" />
+                Author: {article.author}
+                <GoDotFill className="dotipo" />
+              </p>
             </div>
           </div>
+        </div>
+        
         ))}
       </div>
       <Navbar />

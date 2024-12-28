@@ -24,4 +24,50 @@
     font-size: 12px;
     color:green; /* Dot icon color (adjust as needed) */
   }
+ /* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .datetimeipo {
+    gap: 10px; /* Further reduce the gap */
+    margin-top: 5px; /* Adjust spacing */
+  }
+
+  .ipopara {
+    font-size: 12px; /* Smaller text for mobile readability */
+  }
+
+  .dateipo, .profileipo {
+    font-size: 12px; /* Align with mobile text sizes */
+  }
+
+  .dotipo {
+    font-size: 10px; /* Adjust icon size for compact view */
+  }
+}
+@media (max-width: 480px) {
+  .datetimeipo {
+    gap: 5px; /* Minimal spacing for very small screens */
+    margin-top: 3px; /* Compact the margin further */
+  }
+
+  .ipopara {
+    font-size: 11px; /* Further reduce font size */
+  }
+
+  .dateipo, .profileipo {
+    font-size: 11px; /* Keep text readable but compact */
+  }
+
+  .dotipo {
+    font-size: 9px; /* Adjust for smaller dot icons */
+  }
  
+
+    .stockNewsItem.highlight-image .newsThumbnail {
+      width: 190px; /* Larger image size for highlighted articles */
+      height: 120px; /* Maintain aspect ratio */
+    }
+    .stockNewsItem.highlight-image{
+      width: 340px;
+    }
+
+}

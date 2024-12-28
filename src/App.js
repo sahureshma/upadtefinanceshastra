@@ -111,6 +111,13 @@ import Earninginsightheader from "./Learn/Quaterlyearning/Earninginsightdetailhe
 import DataDisplayEarnings from "./Learn/Quaterlyearning/DataDisplayEarnings/DataDisplayEarnings";
 import Quaterlygraphtop from "./Learn/Quaterlyearning/Quaterlygraphtop/Quaterlygraphtop";
 import Nifty50page from "./Stockpages/Nifty50page/Nifty50page";
+import QuaterelyOverview from "./Learn/Quaterlyearning/Quaterlyearningoverview/Quaterlyearningoverview";
+import QuaterlynewsList from "./Learn/Quaterlyearning/Quaterlynews/Quaterlynews";
+import QuarterlyEarningsReport from "./Learn/Quaterlyearning/Quaterlyearningdetailreport/Quaterlyearningdetailreport";
+import QuarterlyEarningdetailincome from "./Learn/Quaterlyearning/Quaterlyearningincome/Quaterlyearningincome";
+import Quarterlybalancesheet from "./Learn/Quaterlyearning/Quaterlyearnbalancesheet/Quaterlyearnbalancesheet";
+import QuarterlyCashflow from "./Learn/Quaterlyearning/Quaterlycashflow/Quaterlycashflow";
+import Quarterlyratio from "./Learn/Quaterlyearning/Quaterlyratio/Quaterlyratio";
 
 
 
@@ -225,6 +232,16 @@ function App() {
       <Route path="/earninginsightheader" element={<Earninginsightheader/>}/>
       <Route path="/quaterlygraphtop" element={<Quaterlygraphtop/>}/>
       <Route path="/nifty50page" element={<Nifty50page/>}/>
+      <Route path="/quaterelyOverview" element={<QuaterelyOverview/>}/>
+      <Route path="/quaterlynewsList" element={<QuaterlynewsList/>}/>
+      <Route path="/qquarterlyEarningsReport" element={<QuarterlyEarningsReport/>}/>
+      <Route path="/quarterlyEarningdetailincome" element={<QuarterlyEarningdetailincome/>}/>
+      <Route path="/quarterlybalancesheet" element={<Quarterlybalancesheet/>}/>
+      <Route path="/quarterlyCashflow" element={<QuarterlyCashflow/>}/>
+      <Route path="/quarterlyratio" element={<Quarterlyratio/>}/>
+    
+
+  
     
      
     

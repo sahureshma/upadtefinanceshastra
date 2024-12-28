@@ -23,6 +23,7 @@ const ShareholdingChart = () => {
   
     return null;
   };
+
   return (
     <div>
       <h2 className='circlechartheader'>Shareholding</h2>
@@ -34,7 +35,7 @@ const ShareholdingChart = () => {
             nameKey="name"
             cx="50%"
             cy="50%"
-            outerRadius={90}
+            outerRadius={90} // Default outer radius
             innerRadius={60}
             minAngle={15}
           >
@@ -65,7 +66,7 @@ const ShareholdingChart = () => {
                       marginLeft: '5px',
                     }}
                   ></div>
-                  <span>{value} - {percentage}%</span>
+                  <span className='valueper'>{value} - {percentage}%</span>
                 </div>
               );
             }}

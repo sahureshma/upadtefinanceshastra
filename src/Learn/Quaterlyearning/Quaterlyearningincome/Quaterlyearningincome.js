@@ -166,10 +166,10 @@ const QuarterlyEarningdetailincome = () => {
     
     return (
         <div>
-            <h2 className="earningheaderr" style={{ marginRight: "520px" }}>
+            <h2 className="earningheaderrpeer" >
                 Income Statement
             </h2>
-            <p className="earningparaa">
+            <p className="earningparaapeer">
                 Consolidated Figures in ₹ Crores / <a style={{ color: '#24b676' }}>View Standalone</a>
             </p>
             <div className="earnings-report">

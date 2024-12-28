@@ -7,7 +7,7 @@
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0px 4px 6px rgba(183, 180, 180, 0.956); /* Soft shadow around the container */
   margin-left: 30px; /* Left margin for spacing */
-  margin-top: 50px; /* Top margin for spacing */
+  margin-top: 5px; /* Top margin for spacing */
   height: 370px;
   
 }
@@ -119,4 +119,93 @@
 /* Add animation to the thumb when moving */
 .thumb {
   transition: left 0.2s ease-out;
+}
+
+/* General Styling for Mobile Views */
+@media (max-width: 768px) {
+  .earnings-container {
+    width: 80%; /* Use full width on mobile */
+  align-items: flex-start; /* Reduce left margin */
+    margin-top: 5px; /* Adjust top margin */
+    padding: 15px; /* Reduce padding */
+    height: 280px; /* Allow flexible height */
+   
+  
+  }
+
+  .alldata {
+    flex-direction: flex; /* Stack the elements vertically */
+    gap: 15px; /* Reduce gap for better spacing */
+  }
+
+  .range {
+    flex-direction: flex; /* Stack range text and slider */
+    /* Align items to the start */
+    gap: 5px; /* Adjust gap between text and slider */
+  }
+
+  .low,
+  .high {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+
+  .slider {
+    height: 10px; /* Reduce slider bar height */
+  }
+
+  .thumb {
+    width: 14px; /* Reduce thumb size */
+    height: 14px;
+  }
+
+  .slider-input {
+    height: 10px; /* Match slider bar height */
+  }
+
+  .value,
+  .current-value {
+    font-size: 12px; /* Adjust text size */
+    margin-top: 3px; /* Reduce spacing above values */
+  }
+}
+
+@media (max-width: 480px) {
+ 
+  .earnings-container {
+    width: 90%; /* Use full width on mobile */
+  align-items: flex-start; /* Reduce left margin */
+    margin-top: 30px; /* Adjust top margin */
+    padding: 15px; /* Reduce padding */
+    height: 280px; /* Allow flexible height */
+    margin-left: 5px;
+   
+  
+  }
+
+  .alldata {
+    gap: 10px; /* Smaller gap for tighter layout */
+  }
+
+  .range {
+    gap: 3px; /* Reduce spacing further */
+  }
+
+  .slider {
+    height: 8px; /* Make slider bar thinner */
+  }
+
+  .thumb {
+    width: 12px; /* Smaller thumb for compact layout */
+    height: 12px;
+  }
+
+  .low,
+  .high {
+    font-size: 12px; /* Smaller text for compact layout */
+  }
+
+  .value,
+  .current-value {
+    font-size: 11px; /* Reduce size for smaller screens */
+  }
 }

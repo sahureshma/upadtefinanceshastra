@@ -6,8 +6,8 @@ import './Quaterlyearningdetailreport.css'
 const QuarterlyEarningdetailreport = () => {
     return (
         <div>
-      <h2 className="earningheaderr"style={{ marginRight: "520px" }}>Quarterly Earnings Report</h2>
-      <p className="earningparaa">
+      <h2 className="earningheaderrpeer">Quarterly Earnings Report</h2>
+      <p className="earningparaapeer">
       Consolidated Figures in ₹ Crores / <a style={{color:'#24b676'}}>View Standalone</a>
     </p>
 

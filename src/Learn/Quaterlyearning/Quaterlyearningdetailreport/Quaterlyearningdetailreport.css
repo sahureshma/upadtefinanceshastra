@@ -1,6 +1,6 @@
 .earnings-tablee {
-    width: 70%; /* Set the table width to 80% for a narrower layout */
- margin-left: 95px;
+    width: 100%; /* Set the table width to 80% for a narrower layout */
+
     border-collapse: collapse;
     border-radius: 10px; /* Rounded corners for the table */
     overflow: hidden; /* Ensures rounded corners are visible */
@@ -52,11 +52,11 @@
 .earningheaderr{
     color: #24b676;
     margin-top: 60px;
-    margin-left: 120px;
+    margin-left: 20px;
     font-size: 26px;
 }
 .earningparaa{
-    margin-left: 120px;
+    margin-left: 2px;
     font-size: 16px;
     font-weight: 600;
     color: #333;
@@ -66,7 +66,7 @@
 }
 .shareholding-sectionn {
     display: flex;
-    margin-left: 100px;
+   gap: 50px;
     margin-top: 50px;
    
   }
@@ -74,7 +74,7 @@
     background-color: rgba(224, 238, 235, 0.59);
 }
   .shareholding-historyy table {
-    width: 95%;
+    width: 100%;
     border-collapse: collapse;
     border-radius: 10px; /* Rounded corners for the table container */
   }
@@ -101,8 +101,79 @@
 .shareholding-historyy {
     flex: 1; /* Allow it to take up equal space */
     margin-right: 10px; /* Optional: Add extra spacing if needed */
+
 }
 
 .shareholding-chart {
     flex: 1; /* Allow it to take up equal space */
+}
+@media (max-width: 768px) {
+  /* Adjust table to allow horizontal scrolling */
+  .earnings-tablee table {
+    width: 100%; /* Make the table fill the width of its container */
+    display: block; /* Make the table block-level to allow scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    table-layout: fixed; /* Fix column widths to prevent stretching */
+    /* Optional: Add a max-height if you want to control the height */
+  }
+  .shareholding-historyy table{
+    width: 100%; /* Make the table fill the width of its container */
+    display: block; /* Make the table block-level to allow scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    table-layout: fixed; /* Fix column widths to prevent stretching */
+    /* Optional: Add a max-height if you want to control the height */
+  }
+
+  /* Adjust table cell padding for smaller screens */
+  .earnings-tablee th,
+  .earnings-tablee td,
+  .shareholding-historyy th,
+  .shareholding-historyy td {
+    padding: 8px; /* Reduce padding */
+  }
+
+  /* Adjust font size for headings on mobile */
+  .earningheaderr {
+    font-size: 20px; /* Slightly smaller heading */
+  }
+
+  .earningparaa {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  /* Stack the sections vertically on smaller screens */
+  .shareholding-sectionn {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Reduce space between stacked elements */
+  }
+
+  /* Adjust chart and table to stack vertically */
+  .shareholding-historyy,
+  .shareholding-chart {
+    flex: 1 1 100%; /* Allow both to take full width */
+  }
+}
+
+/* Mobile View for very small devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .earningheaderr {
+    font-size: 18px; /* Further reduce heading font size */
+  }
+
+  .earningparaa {
+    font-size: 12px; /* Further reduce paragraph font size */
+  }
+
+  /* Further reduce padding for table cells */
+  .earnings-tablee th,
+  .earnings-tablee td,
+  .shareholding-historyy th,
+  .shareholding-historyy td {
+    padding: 6px; /* Further reduce padding */
+  }
+  .shareholding-historyy{
+    width: 100%;
+  }
 }

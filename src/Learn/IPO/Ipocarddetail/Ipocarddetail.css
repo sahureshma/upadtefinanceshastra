@@ -173,3 +173,82 @@ margin-left: 80px;
   .recentall{
     display: flex;
   }
+  @media (max-width: 480px) {
+    .ipoDetailsContainer {
+      padding: 10px;
+    }
+  
+    .ipoNewsTitle {
+      font-size: 20px; /* Smaller title size */
+      text-align: center; /* Center align for better fit */
+    }
+  
+    .ipoNewsSubtitle {
+      font-size: 14px; /* Adjust font size */
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  
+    .ipoImage {
+      width: 100%; /* Full width */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .ipoDetails {
+      display: block; /* Stack items vertically */
+      margin: 0; /* Remove left margin */
+    }
+  
+    .ipoDetailItem {
+      flex-direction: column; /* Stack label and value */
+      gap: 10px; /* Add spacing */
+      font-size: 14px;
+    }
+  
+    .datetimecardipo {
+      flex-direction: column; /* Stack date and author */
+      gap: 10px;
+      margin: 10px 0;
+    }
+  
+    .recentall {
+      flex-direction: column; /* Stack recent items vertically */
+    }
+  }
+  
+  /* Tablet View (max-width: 768px) */
+  @media (max-width: 768px) {
+    .ipoDetailsContainer {
+      padding: 15px;
+    }
+  
+    .ipoNewsTitle {
+      font-size: 22px; /* Slightly larger for tablets */
+    }
+  
+    .ipoDetails {
+      grid-template-columns: 1fr; /* Single-column layout */
+      margin: 0; /* Adjust margins */
+    }
+  
+    .ipoDetailItem {
+      font-size: 15px; /* Adjust font size */
+      gap: 15px;
+    }
+  
+    .ipoImage {
+      width: 100%; /* Full width */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .datetimecardipo {
+      flex-direction: row; /* Align horizontally */
+      gap: 15px; /* Adjust gap */
+      justify-content: center;
+    }
+  
+    .recentall {
+      flex-direction: row; /* Keep items in a row */
+      flex-wrap: wrap; /* Allow wrapping for better fit */
+    }
+  }

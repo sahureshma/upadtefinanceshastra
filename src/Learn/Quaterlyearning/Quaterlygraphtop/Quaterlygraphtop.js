@@ -3,18 +3,8 @@ import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import './Quaterlygraphtop.css'
 import DataDisplayEarnings from '../DataDisplayEarnings/DataDisplayEarnings';
-import Navbar from '../../../Navbar/Navbar';
+import  { QuaterlyCandleStickChart } from '../Quaterlycandlestick/Quaterlycandlestick'
 import QuaterlyKeyIndicators from '../Quaterlykeyindicator/Quaterlykeyindicator';
-import { QuaterlyCandleStickChart } from '../Quaterlycandlestick/Quaterlycandlestick';
-import Earninginsightheader from '../Earninginsightdetailheader/Earninginsightdetailheader';
-import QuarterlyEarningdetailreport from '../Quaterlyearningdetailreport/Quaterlyearningdetailreport';
-import QuarterlyEarningdetailincome from '../Quaterlyearningincome/Quaterlyearningincome';
-import Quarterlybalancesheet from '../Quaterlyearnbalancesheet/Quaterlyearnbalancesheet';
-import Quarterlycashflow from '../Quaterlycashflow/Quaterlycashflow';
-import Quarterlyratio from '../Quaterlyratio/Quaterlyratio';
-import Quarterlypeer from '../Quaterlypeer/Quaterlypeer';
-import QuaterlynewsList from '../Quaterlynews/Quaterlynews';
-import Quaterlyabout from '../Quaterlyabout/Quaterlyabout';
 
 const Quaterlygraphtop = () => {
   const [timeRange, setTimeRange] = useState('1M');
@@ -100,7 +90,7 @@ const Quaterlygraphtop = () => {
   return (
     <div>
   
-    <Earninginsightheader/>
+   <h1 className='overviewqutarely'>Overview</h1>
     <div className='dataquatall'>
         <div className='datadisply'>
         <DataDisplayEarnings/>
@@ -127,17 +117,9 @@ const Quaterlygraphtop = () => {
       </div>
     </div>
     </div>
-    <Navbar/>
-    <QuaterlyKeyIndicators/>
-    <QuaterlyCandleStickChart/>
-    <QuarterlyEarningdetailreport/>
-    <QuarterlyEarningdetailincome/>
-    <Quarterlybalancesheet/>
-    <Quarterlycashflow/>
-    <Quarterlyratio/>
-    <Quarterlypeer/>
-    <QuaterlynewsList/>
-    <Quaterlyabout/>
+   <QuaterlyKeyIndicators/>
+  <QuaterlyCandleStickChart/>
+   
     </div>
   );
 };
