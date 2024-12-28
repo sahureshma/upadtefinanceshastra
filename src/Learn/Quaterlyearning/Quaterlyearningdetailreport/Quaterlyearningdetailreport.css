@@ -103,7 +103,12 @@
     margin-right: 10px; /* Optional: Add extra spacing if needed */
 
 }
-
+.earningparaapeer{
+  margin-left: 20px;
+}
+.earningheaderrpeer{
+  margin-left: 20px;
+}
 .shareholding-chart {
     flex: 1; /* Allow it to take up equal space */
 }
@@ -148,7 +153,12 @@
     flex-direction: column; /* Stack elements vertically */
     gap: 10px; /* Reduce space between stacked elements */
   }
-
+  .earningheaderrpeer{
+    margin-left: 50px;
+  }
+  .earningparaapeer{
+    margin-left: 50px;
+  }
   /* Adjust chart and table to stack vertically */
   .shareholding-historyy,
   .shareholding-chart {

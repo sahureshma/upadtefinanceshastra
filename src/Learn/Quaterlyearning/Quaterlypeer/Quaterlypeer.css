@@ -55,6 +55,9 @@
     background-color: rgba(224, 238, 235, 0.59);
 }
 
+.earningheaderrpeer{
+    margin-left: 20px;
+}
 @media (max-width: 768px) {
     .earnings-insight-learn-tablepeer {
         width: 100%;
