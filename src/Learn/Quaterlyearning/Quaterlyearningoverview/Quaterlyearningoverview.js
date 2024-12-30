@@ -25,99 +25,90 @@ function QuaterelyOverview() {
         maxWidth: '200%',
         overflowX: 'hidden', // Prevent horizontal scrolling
         padding: '0 16px', 
-        marginTop:'300px'
+        marginTop:'270px'
         
       }}
     >
+       <Earninginsightheader/>
       {/* Navbar with scroll links */}
       <Navbar />
 
       {/* Graph Header */}
-     <Earninginsightheader/>
+  
 
     
 
       {/* Navigation Links */}
+     
       <nav>
         <ul>
-            <Link to="overview" smooth={true} duration={500}></Link>
+            <Link to="quaterlygraphtop" smooth={true} duration={500}></Link>
          
-            <Link to="stockxray" smooth={true} duration={500}></Link>
+            <Link to="qquarterlyEarningsReport" smooth={true} duration={500}></Link>
           
-            <Link to="stockearning" smooth={true} duration={500}></Link>
+            <Link to="quarterlyEarningdetailincome" smooth={true} duration={500}></Link>
           
-            <Link to="valuation" smooth={true} duration={500}></Link>
+            <Link to="quarterlybalancesheet" smooth={true} duration={500}></Link>
           
-            <Link to="stockanalysis" smooth={true} duration={500}></Link>
+            <Link to="quarterlyCashflow" smooth={true} duration={500}></Link>
           
-            <Link to="analysis-notes" smooth={true} duration={500}></Link>
+            <Link to="quarterlyratio" smooth={true} duration={500}></Link>
           
           
-            <Link to="stockpeer" smooth={true} duration={500}></Link>
+            <Link to="quarterlypeer" smooth={true} duration={500}></Link>
          
           
-            <Link to="profitloss" smooth={true} duration={500}></Link>
+            <Link to="quaterlynewsList" smooth={true} duration={500}></Link>
           
           
-            <Link to="balance-sheet" smooth={true} duration={500}></Link>
+            <Link to="quaterlyabout" smooth={true} duration={500}></Link>
         
          
-            <Link to="cashflow" smooth={true} duration={500}></Link>
-        
-          
-            <Link to="ratios" smooth={true} duration={500}></Link>
-          
-         
-            <Link to="news" smooth={true} duration={500}></Link>
-        
-         
-            <Link to="about" smooth={true} duration={500}></Link>
-      
         </ul>
       </nav>
 
       {/* Section: Overview */}
-      <Element name="overview">
+      <Element name="quaterlygraphtop">
       <Quaterlygraphtop/>
      
       </Element>
       {/* Section: Stock X-Ray */}
-      <Element name="stockearning">
+      <Element name="qquarterlyEarningsReport">
       <QuarterlyEarningsReport/>
       </Element>
 
       {/* Section: Quarterly Earnings Report */}
-      <Element name="income">
+      <Element name="quarterlyEarningdetailincome">
       <QuarterlyEarningdetailincome/>
       </Element>
 
       {/* Section: Valuation */}
-      <Element name="valuation">
+      <Element name="quarterlybalancesheet">
       <Quarterlybalancesheet/>
       </Element>
 
       {/* Section: Financial Dashboard */}
-      <Element name="stockanalysis">
+      <Element name="quarterlyCashflow">
       <QuarterlyCashflow/>
       </Element>
 
       {/* Section: Analysis Notes */}
-      <Element name="analysis-notes">
+      <Element name="quarterlyratio">
       <Quarterlyratio/>
       </Element>
 
       {/* Section: Peer Analysis */}
-      <Element name="stockpeer">
+      <Element name="quarterlypeer">
       <Quarterlypeer/>
       </Element>
 
       {/* Section: Profit & Loss */}
-      <Element name="new">
+      <Element name="quaterlynewsList">
       <QuaterlynewsList/>
       </Element>
 
       {/* Section: Balance Sheet */}
-      <Element name="about">
+      <Element name="quaterlyabout">
       <Quaterlyabout/>
       </Element>
 

@@ -118,6 +118,9 @@ import QuarterlyEarningdetailincome from "./Learn/Quaterlyearning/Quaterlyearnin
 import Quarterlybalancesheet from "./Learn/Quaterlyearning/Quaterlyearnbalancesheet/Quaterlyearnbalancesheet";
 import QuarterlyCashflow from "./Learn/Quaterlyearning/Quaterlycashflow/Quaterlycashflow";
 import Quarterlyratio from "./Learn/Quaterlyearning/Quaterlyratio/Quaterlyratio";
+import Quarterlypeer from "./Learn/Quaterlyearning/Quaterlypeer/Quaterlypeer";
+import QuaterlyKeyIndicators from "./Learn/Quaterlyearning/Quaterlykeyindicator/Quaterlykeyindicator";
+import Quaterlyabout from "./Learn/Quaterlyearning/Quaterlyabout/Quaterlyabout";
 
 
 
@@ -239,6 +242,10 @@ function App() {
       <Route path="/quarterlybalancesheet" element={<Quarterlybalancesheet/>}/>
       <Route path="/quarterlyCashflow" element={<QuarterlyCashflow/>}/>
       <Route path="/quarterlyratio" element={<Quarterlyratio/>}/>
+      <Route path="/quarterlypeer" element={<Quarterlypeer/>}/>
+      <Route path="/quaterlyKeyIndicators" element={<QuaterlyKeyIndicators/>}/>
+      <Route path="/quaterlyKeyIndicators" element={<QuarterlyEarningdetailincome/>}/>
+      <Route path="/quaterlyabout" element={<Quaterlyabout/>}/>
     
 
   

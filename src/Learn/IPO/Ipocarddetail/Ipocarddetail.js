@@ -67,9 +67,11 @@ const IpoDetails = () => {
         <FaWhatsapp className="shareIcon" />
         <FaEnvelope className="shareIcon" />
       </div>
-      <div>
+      <div className='imageipoalll'>
+        <div >
       <img src={ipoDetails.image} alt="Sanathan Textiles IPO" className="ipoImage" /></div>
       <div><RecentIPOs/></div>
+      </div>
       </div>
     
     

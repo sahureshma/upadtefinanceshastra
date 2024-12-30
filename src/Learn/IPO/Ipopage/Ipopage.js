@@ -112,12 +112,12 @@ const IpoComponent = () => {
           <div className="newsContent">
             <h3 className="newsTitle">{article.title}</h3>
             <div className="datetimeipo">
-              <p className="ipopara">
+              <p className="ipoparaa">
                 <MdDateRange className="dateipo" />
                 Published Date: {article.date}
                 <GoDotFill className="dotipo" />
               </p>
-              <p className="ipopara">
+              <p className="ipoparaa">
                 <CgProfile className="profileipo" />
                 Author: {article.author}
                 <GoDotFill className="dotipo" />

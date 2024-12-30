@@ -1,18 +1,25 @@
 .circleearning {
-  width: 420px;
+  width: 500px;
   border: 1px solid rgb(228, 219, 219);
   margin-left: 40px;
-  margin-top: 18px;
+  margin-top: 10px;
   border-radius: 8px;
   height: 280px;
   box-shadow: 2px 2px 10px rgba(225, 222, 222, 0.956); /* Example shadow */
 }
+.circlechartheader {
+  font-size: 20px; /* Smaller font size for header */
+  margin-right: 350px;
+}
 
+.recharts-pie-sector {
+  transform: scale(1.0); /* Further shrink the chart */
+}
 /* For tablet screens */
 @media (max-width: 768px) {
   .circleearning {
-    width: 100%;
-    margin-left: 20px;
+    width: 103%;
+    margin-left: 8px;
     margin-right: 20px;
     margin-top: 10px;
     height: auto;

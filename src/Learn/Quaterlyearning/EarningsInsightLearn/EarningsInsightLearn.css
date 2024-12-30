@@ -225,16 +225,19 @@
      margin-left: 5px;
 }
 
+
 /* Responsive styling for tablets and smaller devices */
 /* Responsive styling for tablets and smaller devices */
 @media (max-width: 768px) {
     .earnings-insight-learn-wrapper {
-        margin-top: 130px; /* Adjust margin for smaller screens */
-        margin-right: 20px;
+        width: 100%;
+        padding: 0 0.2px;
+        margin-top: 60px;
     }
 
     .earnings-insight-learn-header h1 {
         font-size: 20px; /* Adjust font size for headers */
+        margin-top: 90px;
     }
 
     .earnings-insight-learn-tabs {
@@ -311,6 +314,35 @@
         box-shadow: 0 0 0 2px #efeeee; /* Blue outline when focused */
         /* Adjust margin to position the date picker outside */
     }
+    .react-datepicker {
+        font-size: 0.7rem; /* Smaller font for small screens */
+        /* Ensure the datepicker fits well within the viewport */
+        padding: 0.5rem; /* Add some padding for better touch interaction */
+       
+        top: 40%; /* Place it directly below the triggering element */
+        left: 0; /* Align it to the left of the container */
+        z-index: 1000; /* Ensure it appears above other elements */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 320px; /* Add a subtle shadow for better visibility */
+        justify-content: left;
+    }
+
+    .react-datepicker__header {
+        font-size: 0.8rem; /* Adjust header font size */
+        width: 320px;
+    }
+
+    .react-datepicker__day {
+        padding: 0.3rem; /* Decreased padding for more compact cells */
+        display: inline-block; /* Ensure days remain properly aligned */
+        width: 2rem; /* Optional: Adjust width for uniformity */
+        height: 2rem; /* Optional: Adjust height for uniformity */
+        line-height: 2rem; /* Center align text vertically */
+        text-align: center; /* Center align text horizontally */
+        margin: 0.1rem; /* Optional: Add slight spacing between days */
+        border-radius: 0.2rem; /* Optional: Slight rounding for better aesthetics */
+    }
+    
     
   
     
@@ -322,12 +354,13 @@
 /* Responsive styling for mobile devices */
 @media (max-width: 480px) {
     .earnings-insight-learn-wrapper {
-        margin-top: 130px; /* Adjust margin for smaller screens */
-        margin-right: 20px;
+        padding: 0; 
+        margin-top: 50px;
     }
 
     .earnings-insight-learn-header h1 {
         font-size: 20px; /* Adjust font size for headers */
+        margin-left: 1px;
     }
 
     .earnings-insight-learn-tabs {
@@ -335,11 +368,12 @@
     }
 
     .earnings-insight-learn-table {
-        width:100%; /* Ensure table occupies full width */
+        width:90%; /* Ensure table occupies full width */
         overflow-x: auto; /* Enable horizontal scrolling */
         display: block; /* Make table behave as a block element */
         margin-bottom: 100px;
         height: 400px;
+        margin-left: 1px;
     }
 
     .earnings-insight-learn-table th, 
@@ -367,6 +401,7 @@
         box-shadow: none;
         background-color: white;
         gap: 1px; /* Reduced gap for mobile */
+        margin-left: -10px;
      
     }
 
@@ -407,6 +442,38 @@
     .date-picker-label{
         font-size: 12px;
     }
+    .react-datepicker {
+        font-size: 0.7rem; /* Smaller font for small screens */
+       /* Ensure the datepicker fits well within the viewport */
+        padding: 0.5rem; /* Add some padding for better touch interaction */
+       
+        top: 20%; /* Place it directly below the triggering element */
+        left: 0; /* Align it to the left of the container */
+        z-index: 1000; /* Ensure it appears above other elements */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 260px; /* Add a subtle shadow for better visibility */
+        justify-content: left;
+    }
+
+    .react-datepicker__header {
+        font-size: 0.8rem; /* Adjust header font size */
+        width: 260px;
+    }
+
+    .react-datepicker__day {
+        padding: 1px; /* Decreased padding for more compact cells */
+        display: inline-block; /* Ensure days remain properly aligned */
+        width: 2rem; /* Optional: Adjust width for uniformity */
+        height: 2rem; /* Optional: Adjust height for uniformity */
+        line-height: 2rem; /* Center align text vertically */
+        text-align: center; /* Center align text horizontally */
+        margin: 0.1rem; /* Optional: Add slight spacing between days */
+        border-radius: 0.2rem; /* Optional: Slight rounding for better aesthetics */
+    }
+    .earnings-insight-learnp {
+        color: black;
+        
+        margin-left: 1px;
+    }
   
 }
-

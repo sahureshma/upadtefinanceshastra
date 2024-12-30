@@ -31,4 +31,44 @@
   .recentipo ul li:last-child {
     border-bottom: none;
   }
+  /* Mobile View for screens smaller than 768px */
+@media (max-width: 768px) {
+  .recentipo {
+    width: 93%; /* Reduce width to fit the screen */
+  margin-left: -2px;
+    height: auto; /* Let the height adjust according to content */
+    padding: 12px; /* Reduce padding for better fit */
+    
+  }
+
+  .recentipo h3 {
+    font-size: 18px; /* Adjust font size of title */
+    margin-bottom: 10px; /* Reduce margin for better space usage */
+  }
+
+  .recentipo ul li {
+    font-size: 14px; /* Reduce font size for list items */
+    margin: 6px 0; /* Adjust margin for better space usage */
+  }
+}
+
+/* Mobile View for screens smaller than 480px */
+@media (max-width: 480px) {
+  .recentipo {
+    width: 100%; /* Full width for very small screens */
+    height: auto; /* Let the height adjust according to content */
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .recentipo h3 {
+    font-size: 16px; /* Further reduce font size of title */
+    margin-bottom: 8px; /* Adjust margin for very small screens */
+  }
+
+  .recentipo ul li {
+    font-size: 12px; /* Further reduce font size for list items */
+    margin: 5px 0; /* Adjust margin for very small screens */
+  }
+}
+
   

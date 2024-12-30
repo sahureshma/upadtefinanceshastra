@@ -5,7 +5,7 @@
     margin-top: 10px;
   }
   
-  .ipopara {
+  .ipoparaa {
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -27,47 +27,48 @@
  /* Mobile-specific adjustments */
 @media (max-width: 768px) {
   .datetimeipo {
-    gap: 10px; /* Further reduce the gap */
+    gap: 1px; /* Reduce gap */
     margin-top: 5px; /* Adjust spacing */
-  }
+}
 
-  .ipopara {
-    font-size: 12px; /* Smaller text for mobile readability */
-  }
+.ipoparaa {
+    font-size: 10px; /* Smaller text for mobile readability */
+}
 
-  .dateipo, .profileipo {
-    font-size: 12px; /* Align with mobile text sizes */
-  }
+.dateipo, 
+.profileipo {
+    font-size: 14px; /* Adjust font size for consistency */
+    margin-right: 5px; /* Maintain spacing */
+    margin-bottom: 10px;
+}
 
-  .dotipo {
-    font-size: 10px; /* Adjust icon size for compact view */
-  }
+.dotipo {
+    /* Adjust icon size for compact view */
+    margin-left: 1px; /* Ensure proper alignment */
+    margin-bottom: 10px;
+}
 }
 @media (max-width: 480px) {
   .datetimeipo {
-    gap: 5px; /* Minimal spacing for very small screens */
-    margin-top: 3px; /* Compact the margin further */
-  }
+    gap: 1px; /* Reduce gap */
+    margin-top: 5px; /* Adjust spacing */
+}
 
-  .ipopara {
-    font-size: 11px; /* Further reduce font size */
-  }
+.ipoparaa {
+    font-size: 10px; /* Smaller text for mobile readability */
+}
 
-  .dateipo, .profileipo {
-    font-size: 11px; /* Keep text readable but compact */
-  }
+.dateipo, 
+.profileipo {
+    font-size: 14px; /* Adjust font size for consistency */
+    margin-right: 5px; /* Maintain spacing */
+    margin-bottom: 10px;
+}
 
-  .dotipo {
-    font-size: 9px; /* Adjust for smaller dot icons */
-  }
- 
-
-    .stockNewsItem.highlight-image .newsThumbnail {
-      width: 190px; /* Larger image size for highlighted articles */
-      height: 120px; /* Maintain aspect ratio */
-    }
-    .stockNewsItem.highlight-image{
-      width: 340px;
-    }
+.dotipo {
+    /* Adjust icon size for compact view */
+    margin-left: 1px; /* Ensure proper alignment */
+    margin-bottom: 10px;
+}
 
 }

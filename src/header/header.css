@@ -296,7 +296,13 @@
   .logo-image {
     width: 150px; /* Reduce logo size */
   }
-
+  .graphheader {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
   /* Adjust navbar logo size */
   .navbar-logo {
     font-size: 16px; /* Smaller font size */

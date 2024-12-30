@@ -61,7 +61,7 @@ function Earninginsightheader() {
       <nav className="graphnavbar">
         <Divider />
         <ScrollLink
-          to="overview"
+          to="quaterlygraphtop"
           smooth={true}
           duration={500}
           activeClass="active-link"
@@ -69,7 +69,7 @@ function Earninginsightheader() {
           Overview
         </ScrollLink>
         <ScrollLink
-          to="stockxray"
+          to="qquarterlyEarningsReport"
           smooth={true}
           duration={500}
           activeClass="active-link"
@@ -77,7 +77,7 @@ function Earninginsightheader() {
           Financials
         </ScrollLink>
         <ScrollLink
-          to="stockearning"
+          to="quarterlyEarningdetailincome"
           smooth={true}
           duration={500}
           activeClass="active-link"
@@ -85,7 +85,7 @@ function Earninginsightheader() {
           Income Statement
         </ScrollLink>
         <ScrollLink
-          to="valuation"
+          to="quarterlybalancesheet"
           smooth={true}
           duration={500}
           activeClass="active-link"
@@ -93,7 +93,7 @@ function Earninginsightheader() {
           Balance Sheet
         </ScrollLink>
         <ScrollLink
-          to="stockanalysis"
+          to="quarterlyCashflow"
           smooth={true}
           duration={500}
           activeClass="active-link"
@@ -101,7 +101,7 @@ function Earninginsightheader() {
           Cash Flow
         </ScrollLink>
         <ScrollLink
-          to="analysis-notes"
+          to="quarterlyratio"
           smooth={true}
           duration={500}
           activeClass="active-link"
@@ -109,7 +109,7 @@ function Earninginsightheader() {
           Ratios
         </ScrollLink>
         <ScrollLink
-          to="stockpeer"
+          to="quarterlypeer"
           smooth={true}
           duration={500}
           activeClass="active-link"
@@ -117,7 +117,7 @@ function Earninginsightheader() {
           Peers
         </ScrollLink>
         <ScrollLink
-          to="news"
+          to="quaterlynewsList"
           smooth={true}
           duration={500}
           activeClass="active-link"
@@ -125,7 +125,7 @@ function Earninginsightheader() {
           News
         </ScrollLink>
         <ScrollLink
-          to="about"
+          to="quaterlyabout"
           smooth={true}
           duration={500}
           activeClass="active-link"

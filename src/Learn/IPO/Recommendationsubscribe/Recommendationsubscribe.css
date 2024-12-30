@@ -67,3 +67,83 @@
     font-size: 15px;
     color: black;
   }
+  @media (max-width: 768px) {
+   body{
+    overflow-x: hidden;
+   }
+    .iporecommendation-container {
+      max-width: 380px;
+      
+      font-family: 'calibri';
+   margin-left: 25px;
+   
+    }
+    .iporecommendation-title {
+      font-size: 22px;
+      font-weight: bold;
+      color:#0d64bb;
+      margin-bottom: 10px;
+      margin-top: 30px;
+      margin-left: 10px;
+    }
+    .avoidiposubs {
+      background-color: #e61f11; /* Red color for Avoid */
+      color: white;
+      margin-left: 0px;
+      cursor: pointer;
+    }
+    
+    
+  .avoidiposubs, .applyiposubs {
+  
+   
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+  
+    margin-top: 20px;
+  }
+  }
+  @media (max-width: 480px) {
+    body{
+      overflow-x: hidden;
+     }
+    .iporecommendation-container {
+      max-width: 480px;
+      
+      font-family: 'calibri';
+   margin-left: 25px;
+   
+    }
+    .iporecommendation-title {
+      font-size: 22px;
+      font-weight: bold;
+      color:#0d64bb;
+      margin-bottom: 10px;
+      margin-top: 30px;
+      margin-left: 10px;
+    }
+    .avoidiposubs {
+      background-color: #e61f11; /* Red color for Avoid */
+      color: white;
+      margin-left: 0px;
+      cursor: pointer;
+    }
+    
+    
+  .avoidiposubs, .applyiposubs {
+  
+   
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+  
+    margin-top: 20px;
+  }
+    
+ 
+  }

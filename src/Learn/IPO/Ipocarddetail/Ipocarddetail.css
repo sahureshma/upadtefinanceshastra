@@ -6,6 +6,13 @@ margin-left: 80px;
     color: #333;
     margin-top: 80px;
   }
+  .ipopara{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color:black;
+    margin: 0;
+  }
   
   .ipoNewsTitle {
     font-size: 24px;
@@ -173,82 +180,273 @@ margin-left: 80px;
   .recentall{
     display: flex;
   }
+  .imageipoalll{
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+  }
   @media (max-width: 480px) {
     .ipoDetailsContainer {
-      padding: 10px;
-    }
-  
-    .ipoNewsTitle {
-      font-size: 20px; /* Smaller title size */
-      text-align: center; /* Center align for better fit */
-    }
-  
-    .ipoNewsSubtitle {
-      font-size: 14px; /* Adjust font size */
-      text-align: center;
-      margin-bottom: 15px;
-    }
-  
-    .ipoImage {
-      width: 100%; /* Full width */
-      height: auto; /* Maintain aspect ratio */
-    }
-  
-    .ipoDetails {
-      display: block; /* Stack items vertically */
-      margin: 0; /* Remove left margin */
-    }
-  
-    .ipoDetailItem {
-      flex-direction: column; /* Stack label and value */
-      gap: 10px; /* Add spacing */
-      font-size: 14px;
-    }
-  
-    .datetimecardipo {
-      flex-direction: column; /* Stack date and author */
-      gap: 10px;
-      margin: 10px 0;
-    }
-  
-    .recentall {
-      flex-direction: column; /* Stack recent items vertically */
-    }
+   
+      margin-left: 0px;
+          padding: 20px;
+          font-family: 'calibri';
+          color: #333;
+          margin-top: 80px;
+        
+        }
+        body{
+          overflow-x: hidden;
+        }
+        .ipoImage{
+          width: 380px;
+          height: 350px;
+        }
+        .imageipoalll{
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+        }
+      
+        .iconimageall {
+          display: flex;
+          gap: 5px;
+          
+         
+        }
+        .shareIcon {
+          font-size: 20px; /* Icon size */
+          color: #0159b7; /* Default icon color */
+          cursor: pointer;
+          transition: color 0.3s ease; /* Smooth color transition on hover */
+        
+        }
+        .shareIcons h3 {
+       margin-left: 0px;
+        }
+        .ipopara {
+          display: flex;
+         margin-left: -26px;
+          font-size: 14px;
+          color: black;
+        }
+        .datetimecardipo {
+          display: flex;
+      margin-left: 10px;
+          gap: 17px;
+          margin-bottom: 20px;
+        }
+       
+      
+        .dateipocard, .profileipocard {
+          font-size: 12px; /* Adjust font size for icons */
+          /* Space between icon and text */
+        }
+      
+        /* For the green dot */
+        .GoDotFill {
+          font-size: 10px;
+          color: green;
+          margin-left: 15px; /* Space between text and green dot */
+        }
+        .profileipocard {
+          margin-left: 10px;
+        }
+        .investgg-heading{
+          margin-left: 12px;
+          font-size: 18px;
+        }
+      .investgg-paragraph{
+        margin-left: 42px;
+        font-size: 14px;
+        width: 380px;
+      }
+      .ipodta {
+        margin-left: 35px;
+        border: 1px solid rgb(221, 211, 211);
+        width: 380px;
+        height: 650px;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
+      }
+      
+      .ipoDetails {
+        display: grid;
+          grid-template-columns: repeat(1, 1fr);
+         
+       height: 200px;
+          margin-bottom: 20px;
+          width: 100px;
+          margin-left: 18px;
+          margin-top: 25px;
+      }
+      
+      .ipoDetailItem {
+        display: block; /* Stack label and value vertically */
+       margin-top: 1px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+        gap: 1px; /* Add space between label and value */
+        margin-bottom: 1px; /* Add space between items */
+      width: 320px;
+      }
+      
+      .ipoDetailLabel {
+        font-size: 16px; /* Adjust font size of labels */
+        font-weight: bold;
+      }
+      
+      .ipoDetailValue {
+        font-size: 14px; /* Adjust font size of values */
+        color: #555;
+      }
+      
+        
+      .ipoContent p {
+        margin-bottom: 15px;
+        font-size: 15px;
+        color: black;
+        line-height: 1.4;
+       margin-left: 40px;
+        width: 380px;
+      }
+      .ipoContent h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color:#0d64bb;
+      margin-left: 10px;
+      
+      }
+}
+
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+  .ipoDetailsContainer {
+   
+margin-left: 0px;
+    padding: 20px;
+    font-family: 'calibri';
+    color: #333;
+    margin-top: 80px;
   }
-  
-  /* Tablet View (max-width: 768px) */
-  @media (max-width: 768px) {
-    .ipoDetailsContainer {
-      padding: 15px;
-    }
-  
-    .ipoNewsTitle {
-      font-size: 22px; /* Slightly larger for tablets */
-    }
-  
-    .ipoDetails {
-      grid-template-columns: 1fr; /* Single-column layout */
-      margin: 0; /* Adjust margins */
-    }
-  
-    .ipoDetailItem {
-      font-size: 15px; /* Adjust font size */
-      gap: 15px;
-    }
-  
-    .ipoImage {
-      width: 100%; /* Full width */
-      height: auto; /* Maintain aspect ratio */
-    }
-  
-    .datetimecardipo {
-      flex-direction: row; /* Align horizontally */
-      gap: 15px; /* Adjust gap */
-      justify-content: center;
-    }
-  
-    .recentall {
-      flex-direction: row; /* Keep items in a row */
-      flex-wrap: wrap; /* Allow wrapping for better fit */
-    }
+  .ipoImage{
+    width: 380px;
+    height: 350px;
   }
+  .imageipoalll{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .iconimageall {
+    display: flex;
+    gap: 5px;
+    
+   
+  }
+  .shareIcon {
+    font-size: 20px; /* Icon size */
+    color: #0159b7; /* Default icon color */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  
+  }
+  .shareIcons h3 {
+ margin-left: 0px;
+  }
+  .ipopara {
+    display: flex;
+   margin-left: -26px;
+    font-size: 14px;
+    color: black;
+  }
+  .datetimecardipo {
+    display: flex;
+margin-left: 10px;
+    gap: 17px;
+    margin-bottom: 20px;
+  }
+ 
+
+  .dateipocard, .profileipocard {
+    font-size: 12px; /* Adjust font size for icons */
+    /* Space between icon and text */
+  }
+
+  /* For the green dot */
+  .GoDotFill {
+    font-size: 10px;
+    color: green;
+    margin-left: 15px; /* Space between text and green dot */
+  }
+  .profileipocard {
+    margin-left: 10px;
+  }
+  .investgg-heading{
+    margin-left: 42px;
+    font-size: 18px;
+  }
+.investgg-paragraph{
+  margin-left: 42px;
+  font-size: 14px;
+  width: 380px;
+}
+.ipodta {
+  margin-left: 35px;
+  border: 1px solid rgb(221, 211, 211);
+  width: 380px;
+  height: 650px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
+}
+
+.ipoDetails {
+  display: grid;
+    grid-template-columns: repeat(1, 1fr);
+   
+ height: 200px;
+    margin-bottom: 20px;
+    width: 100px;
+    margin-left: 18px;
+    margin-top: 25px;
+}
+
+.ipoDetailItem {
+  display: block; /* Stack label and value vertically */
+ margin-top: 1px;
+  font-size: 14px; /* Adjust font size for smaller screens */
+  gap: 1px; /* Add space between label and value */
+  margin-bottom: 1px; /* Add space between items */
+width: 320px;
+}
+
+.ipoDetailLabel {
+  font-size: 16px; /* Adjust font size of labels */
+  font-weight: bold;
+}
+
+.ipoDetailValue {
+  font-size: 14px; /* Adjust font size of values */
+  color: #555;
+}
+
+  
+.ipoContent p {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: black;
+  line-height: 1.4;
+ margin-left: 40px;
+  width: 380px;
+}
+.ipoContent h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color:#0d64bb;
+margin-left: 40px;
+
+}
+ 
+}

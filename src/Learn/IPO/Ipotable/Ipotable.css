@@ -11,6 +11,11 @@
   display: inline-block;
   padding-bottom: 5px;
 }
+.investgg-headingg{
+  color: #0d64bb;
+  font-size: 24px;
+  margin-left: 70px;
+}
 
 .key-ratios h2,
 .subscription-status h2 {
@@ -35,7 +40,7 @@
 }
 
 .ipopms-list {
-  margin-left: 70px;
+  margin-left: 48px;
 }
 
 .ipotable th,
@@ -119,4 +124,149 @@
 text-align: left;
   padding: 8px;
   
+}
+
+/* Mobile View for screens smaller than 768px */
+@media (max-width: 768px) {
+  .ipo-container {
+    padding: 10px;
+    font-size: 14px; /* Reduce font size for better mobile readability */
+  }
+
+
+
+  .ipotable {
+    width: 38%; /* Full width for mobile screens */
+    margin-left: 20px; /* Remove left margin */
+    margin-top: 1px;
+  }
+
+  .ipotable th,
+  .ipotable td {
+    font-size: 12px; /* Adjust font size for better fit */
+    padding: 6px; /* Reduce padding for better space usage */
+  }
+
+  .ipotable th {
+    font-size: 14px; /* Increase size of headers */
+    padding: 8px; /* Adjust padding for table headers */
+  }
+
+  .ipotable tr:nth-child(even) {
+    background-color: #f5f5f5; /* Slightly lighter background for readability */
+  }
+
+  .ebitpara {
+  margin-left: 30px;
+  font-size: 12px;
+  margin-top: 20px;
+  }
+
+  .ipodetailItem {
+    flex-direction: column; /* Stack label and value vertically */
+    padding: 10px;
+    font-size: 14px; /* Adjust font size */
+    gap: 10px; /* Adjust gap between label and value */
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(125, 124, 124, 0.345);
+  }
+  .financialIPO-history h2{
+margin-left: 20px;
+font-size: 20px;
+margin-top: 1px;
+  }
+  .key-ratios h2{
+    margin-left: 20px;
+font-size: 20px;
+margin-top: 1px;
+  }
+  .subscription-status h2{
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 1px;
+  }
+  .ipopms-list {
+    margin-left: 1px;
+    width: 380px;
+  }
+  .investgg-headingg{
+    margin-left: 20px;
+    font-size: 22px;
+  }
+
+
+  
+}
+
+/* Mobile View for screens smaller than 480px */
+@media (max-width: 480px) {
+  .ipo-container {
+    padding: 10px;
+    font-size: 14px; /* Reduce font size for better mobile readability */
+  }
+
+
+
+  .ipotable {
+    width: 38%; /* Full width for mobile screens */
+    margin-left: 20px; /* Remove left margin */
+    margin-top: 1px;
+  }
+
+  .ipotable th,
+  .ipotable td {
+    font-size: 12px; /* Adjust font size for better fit */
+    padding: 6px; /* Reduce padding for better space usage */
+  }
+
+  .ipotable th {
+    font-size: 14px; /* Increase size of headers */
+    padding: 8px; /* Adjust padding for table headers */
+  }
+
+  .ipotable tr:nth-child(even) {
+    background-color: #f5f5f5; /* Slightly lighter background for readability */
+  }
+
+  .ebitpara {
+  margin-left: 30px;
+  font-size: 12px;
+  margin-top: 20px;
+  }
+
+  .ipodetailItem {
+    flex-direction: column; /* Stack label and value vertically */
+    padding: 10px;
+    font-size: 14px; /* Adjust font size */
+    gap: 10px; /* Adjust gap between label and value */
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(125, 124, 124, 0.345);
+  }
+  .financialIPO-history h2{
+margin-left: 20px;
+font-size: 20px;
+margin-top: 1px;
+  }
+  .key-ratios h2{
+    margin-left: 20px;
+font-size: 20px;
+margin-top: 1px;
+  }
+  .subscription-status h2{
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 1px;
+  }
+  .ipopms-list {
+    margin-left: 1px;
+    width: 380px;
+  }
+  .investgg-headingg{
+    margin-left: 20px;
+    font-size: 22px;
+  }
+
+
+  
+
 }

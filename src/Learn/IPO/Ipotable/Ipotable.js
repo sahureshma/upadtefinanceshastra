@@ -109,7 +109,7 @@ const  Ipotable = () => {
         </table>
       </section><br/>
     
-      <h2 className="investgg-heading">Corporation and Enterprise</h2>
+      <h2 className="investgg-headingg">Corporation and Enterprise</h2>
       <ul className="ipopms-list">
         <li>
           <strong className="ipopmspara">Has Sanathan Textiles posted earnings before tax of Rs 50 crore or higher in the last 12 months?<br/></strong>
@@ -131,7 +131,7 @@ cultivated enduring relationships with top consumer brands and has partnered wit
       </ul>
 
 
-      <h2 className="investgg-heading">Administration</h2>
+      <h2 className="investgg-headingg">Administration</h2>
       <ul className="ipopms-list">
         <li>
           <strong className="ipopmspara">Do any of the company’s founders still own at least a 5% stake? Or do the promoters hold more than 25% of the company?<br/></strong>
@@ -152,7 +152,7 @@ cultivated enduring relationships with top consumer brands and has partnered wit
         </li>
        
       </ul>
-      <h2 className="investgg-heading">Financial Performance</h2>
+      <h2 className="investgg-headingg">Financial Performance</h2>
       <ul className="ipopms-list">
         <li>
           <strong className="ipopmspara">Has the company reported a current and three-year average return on equity of over 15% and return on capital employed exceeding 18%?<br/></strong>
@@ -182,7 +182,7 @@ cultivated enduring relationships with top consumer brands and has partnered wit
        
       </ul>
 
-      <h2 className="investgg-heading">Valuations</h2>
+      <h2 className="investgg-headingg">Valuations</h2>
       <ul className="ipopms-list">
         <li>
           <strong className="ipopmspara">Is the operating earnings yield on the stock’s enterprise value above 8%?<br/></strong>

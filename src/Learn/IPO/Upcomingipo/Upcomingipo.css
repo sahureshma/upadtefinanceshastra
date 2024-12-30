@@ -29,16 +29,7 @@
   margin-bottom: 16px;
 }
 
-.upcomingipo-table-wrapper {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 95%;
-  height: 220px;
-  box-sizing: border-box; /* Ensures proper spacing */
-  position: relative; /* Align properly within the container */
-}
+
 
 /* Table Styling */
 .upcomingipo-table {
@@ -124,4 +115,105 @@
 }
 .imgipoupcoming img{
   height: 300px;
+}
+@media (max-width: 768px) {
+  /* Container adjustments */
+  .imgipoupcoming img{
+    height: 80px;
+  }
+  .upcomingipo-container {
+    display: flex;
+    background-color: white;
+    gap: 0px;
+    box-shadow: 0 2px 4px rgba(144, 142, 142, 0.723);
+    border: 2px solid rgb(255, 243, 243);
+    width: 400px;
+    height: 320px;
+    border-radius: 8px;
+    margin-left: 20px;
+    position: relative; /* Ensure no content overlaps */
+    box-sizing: border-box; /* Include padding and border in dimensions */
+    font-family: 'calibri';
+    margin-bottom: 40px;
+  }
+  .upcomingipo-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Match the container height */
+    box-sizing: border-box; /* Ensure padding doesn't exceed boundaries */
+  }
+  
+  .upcomingipo-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+
+  /* Table Styling */
+  .upcomingipo-table {
+    width: 90%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .upcomingipo-table th, 
+.upcomingipo-table td {
+    padding: 8px 8px; /* Compact cell padding */
+   
+    /* Align content vertically */
+    text-align: left; /* Align text horizontally */
+}
+  
+}
+@media (max-width: 480px) {
+  .imgipoupcoming img{
+    height: 80px;
+  }
+  .upcomingipo-container {
+    display: flex;
+    background-color: white;
+    gap: 0px;
+    box-shadow: 0 2px 4px rgba(144, 142, 142, 0.723);
+    border: 2px solid rgb(255, 243, 243);
+    width: 400px;
+    height: 320px;
+    border-radius: 8px;
+    margin-left: 20px;
+    position: relative; /* Ensure no content overlaps */
+    box-sizing: border-box; /* Include padding and border in dimensions */
+    font-family: 'calibri';
+    margin-bottom: 40px;
+  }
+  .upcomingipo-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Match the container height */
+    box-sizing: border-box; /* Ensure padding doesn't exceed boundaries */
+  }
+  
+  .upcomingipo-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+
+  /* Table Styling */
+  .upcomingipo-table {
+    width: 90%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .upcomingipo-table th, 
+.upcomingipo-table td {
+    padding: 8px 8px; /* Compact cell padding */
+   
+    /* Align content vertically */
+    text-align: left; /* Align text horizontally */
+}
+.ipoupcomsubs{
+display: none;
+}
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card, CardContent, CardHeader, Divider } from "@mui/material";
 import Chart from "react-apexcharts";
+import './Quaterlycandlestick.css'
 
 const options = {
   xaxis: {
@@ -767,7 +768,7 @@ export const QuaterlyCandleStickChart = () => {
         </div>
         <Divider />
         <CardContent>
-          <h1>State Bank of India</h1>
+          <h1 className="headersbicandle">State Bank of India</h1>
           <Chart
             options={options}
             series={[{ data: data[selectedTimeframe] }]}

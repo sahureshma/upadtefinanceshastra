@@ -15,19 +15,21 @@ const newsData = [
   ];
 const QuaterlynewsList = () => {
   return (
-    <div className="news-listt">
+    <div className="news-listtquaterly">
         
       <h2>State Bank of India News</h2>
-      
+      <div className="newsquaterly">
       <ul>
         {newsData.map((item, index) => (
-          <li key={index} className="news-item">
+          <li key={index} className="news-itemquaterly">
            
-            <span className="news-title">{item.title}</span>
+            <span className="news-titlequaterly">{item.title}</span>
             <span className="news-date">{item.date}</span>
           </li>
         ))}
       </ul>
+      
+      </div>
       </div>
 
     

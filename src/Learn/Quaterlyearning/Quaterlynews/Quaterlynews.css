@@ -1,107 +1,228 @@
 /* General Styling for the News List */
-.news-listt {
-margin-top: 50px;
-  max-width: 1070px;
-  font-family: 'calibri';
-}
-
-.news-listt h2 {
-  font-size: 24px;
- color: #24b676;
-margin-left: 40px;
-margin-top: 20px;
-
-}
-
-/* Styling for the News Items */
-.news-list ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.news-item {
-  display: flex;
-  justify-content: space-between;
- cursor: pointer;
-  padding: 10px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-}
-
-.news-item:hover {
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* News Title Styling */
-.news-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  flex: 1;
-  margin-right: 10px;
-}
-
-/* News Date Styling */
-.news-date {
-  font-size: 14px;
-  color: #666;
-  white-space: nowrap;
-}
-
-/* Responsive Design for Smaller Screens */
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-  .news-listt {
-    padding: 10px; /* Add some padding to the container */
-    max-width: 100%; /* Ensure it takes up full width */
+.news-listtquaterly{
+ 
+    font-family: 'calibri';
   }
+  
+  .news-listtquaterly h2 {
+    font-size: 24px;
+   color: #24b676;
+   margin-left: 20px;
+   margin-top: 20px;
 
-  .news-title {
-    font-size: 14px; /* Smaller font size for news titles */
-    margin-right: 5px;
-  }
-
-  .news-date {
-    font-size: 12px; /* Smaller font size for the date */
-  }
-
-  .news-item {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px; /* Adjust padding for mobile */
   
   }
-
-  .news-item .news-date {
-    margin-top: 5px; /* Add some margin to the date for better spacing */
-  }
-}
-
-/* Further adjustments for smaller screens (480px and below) */
-@media (max-width: 480px) {
-  .news-listt {
-    padding: 8px; /* Further reduce padding on very small screens */
+  .newsquaterly{
+margin-left: 20px;
+    border: 1px solid #ede5e5;  /* Light gray border */
+    box-shadow: 0 2px 4px rgb(224, 221, 221); /* Subtle shadow effect */
+    border-radius: 10px;
+    width: 1060px;
+    cursor: pointer;
   }
 
-  .news-title {
-    font-size: 12px; /* Smaller font size for titles */
+  .news-itemquaterly {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: #fff;
+    margin-right: 30px;
+    transition: box-shadow 0.2s;
   }
-
-  .news-date {
-    font-size: 10px; /* Even smaller font size for dates */
+  
+  .news-itemquaterly:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
-
+  
+  /* Styling for the News Items */
+  
+  
   .news-item {
-    padding: 8px; /* Reduce padding further */
+    display: flex;
+    justify-content: space-between;
+   cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
   }
-
-  .news-item .news-date {
-    margin-top: 4px; /* Adjust spacing on very small screens */
+  
+  .news-item:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-}
+  
+  /* News Title Styling */
+  .news-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  /* News Date Styling */
+  .news-date {
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+  
+    .news-listtquaterly{
+ 
+      font-family: 'calibri';
+    }
+    
+    .news-listtquaterly h2 {
+      font-size: 24px;
+     color: #24b676;
+  
+    
+    }
+    .newsquaterly{
+  margin-left: 20px;
+      border: 1px solid #ede5e5;  /* Light gray border */
+      box-shadow: 0 2px 4px rgb(224, 221, 221); /* Subtle shadow effect */
+      border-radius: 10px;
+      width: 410px;
+    }
+  
+    .news-itemquaterly {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      background-color: #fff;
+      margin-right: 30px;
+      transition: box-shadow 0.2s;
+    }
+    
+    .news-item:hover {
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Styling for the News Items */
+    
+    
+    .news-item {
+      display: flex;
+      justify-content: space-between;
+     cursor: pointer;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fff;
+    }
+    
+    .news-item:hover {
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* News Title Styling */
+    .news-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      flex: 1;
+      margin-right: 10px;
+    }
+    
+    /* News Date Styling */
+    .news-date {
+      font-size: 14px;
+      color: #666;
+      white-space: nowrap;
+    }
+    
+  }
+  
+  /* Further adjustments for smaller screens (480px and below) */
+  @media (max-width: 480px) {
+    
+    .news-listtquaterly{
+ 
+      font-family: 'calibri';
+    }
+    
+    .news-listtquaterly h2 {
+      font-size: 24px;
+     color: #24b676;
+  
+    
+    }
+    .newsquaterly{
+  margin-left: 20px;
+      border: 1px solid #ede5e5;  /* Light gray border */
+      box-shadow: 0 2px 4px rgb(224, 221, 221); /* Subtle shadow effect */
+      border-radius: 10px;
+      width: 410px;
+    }
+  
+    .news-itemquaterly {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      background-color: #fff;
+      margin-right: 30px;
+      transition: box-shadow 0.2s;
+    }
+    
+    .news-item:hover {
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Styling for the News Items */
+    
+    
+    .news-item {
+      display: flex;
+      justify-content: space-between;
+     cursor: pointer;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fff;
+    }
+    
+    .news-item:hover {
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* News Title Styling */
+    .news-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      flex: 1;
+      margin-right: 10px;
+    }
+    
+    /* News Date Styling */
+    .news-date {
+      font-size: 14px;
+      color: #666;
+      white-space: nowrap;
+    }
+    
+  }
