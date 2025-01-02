@@ -50,9 +50,9 @@
 }
 
 .time-rangemutual-button.active {
-    background-color: #22c55e;
+    background-color: #24b676;
     color: white;
-    border-color: #22c55e;
+    border-color: #24b676;
 }
 /* Main container */
 .mutualcandletop {
@@ -123,7 +123,7 @@ margin-top: 150px;
   
   /* Positive Percentage */
   .mutualcandletop__percentage--positive {
-    color: #28a745; /* Green for positive percentages */
+    color: #24b676; /* Green for positive percentages */
   }
   
   /* Negative Percentage */

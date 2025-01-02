@@ -1,0 +1,17 @@
+.clarificationstockcalender-link{
+cursor: pointer;
+color: #24b676;
+}
+.clarificationstockcalender-link:hover{
+color: #24b676;
+}
+.earnings-insight-learn-wrapperr{
+    font-family: 'calibri';
+    margin-right: 100px;
+}
+.DashboardMainPagetable-headerr {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 38px;
+  }

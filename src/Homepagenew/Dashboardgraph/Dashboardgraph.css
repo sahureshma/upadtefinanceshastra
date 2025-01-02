@@ -1,0 +1,138 @@
+.headerdashboardmain{
+    margin-left: 170px;
+}
+.portfoliomutual-containerrnifty{
+    height: 450px;
+  
+}
+.allhead{
+    margin-top: 130px;
+    font-family: 'calibri';
+}
+.headerdashboardmain{
+    font-family: 'calibri';
+}
+.homepagenewdata-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #f9fbfc;
+    box-shadow: 0px 4px 6px rgba(217, 212, 212, 0.925);
+    width: 250px;
+    text-align: center;
+    font-family: 'calibri';
+    height: 50px;
+}
+
+.homepagenewdata-title {
+    font-size: 16px;
+    color: #000000;
+  
+    font-weight: 600;
+   
+}
+
+.homepagenewdata-amount {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.homepagenewdata-change {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 8px;
+    display: flex;
+
+    justify-content: center;
+}
+
+.homepagenewdata-positive {
+    color: #24b676;
+    font-size: 16px;
+}
+
+.homepagenewdata-negative {
+    color: red;
+}
+.hompagetopdata{
+    display:flex;
+    gap: 470px;
+}
+.homepageamountdata{
+    display: flex;
+    gap: 50px;
+
+}
+
+.portfoliomutual-titleport {
+    font-size: 16px;
+    color: #575757;
+    margin: 0; /* Removed the bottom margin */
+   
+}
+
+.portfoliomutual-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin: 4px 0; /* Reduced gap between value and title */
+}
+
+.portfoliomutual-profit {
+    font-size: 14px;
+    color: #333;
+    margin: 0; /* Removed unnecessary margins */
+}
+
+.portfoliomutual-profit span {
+    color: #24b676;
+    font-weight: bold;
+    font-size: 16px;
+}
+.alldatagraphtop{
+display: flex;
+gap: 170px;
+margin-bottom: 10px;
+}
+.portfoliomutual-profitt {
+    font-size: 14px;
+    color:rgb(72, 69, 69);
+    font-weight: 500;
+    margin: 0; /* Removed unnecessary margins */
+}
+.itidata {
+    display: flex;
+    gap: 30px;
+    align-items: center; /* Optional: Align items vertically */
+}
+
+.itidata > div {
+    padding: 0 5px; /* Add some padding for spacing inside */
+}
+
+.itidata > div:not(:last-child) {
+    border-right: 1px solid #ccc; /* Add vertical border except for the last item */
+}
+
+.portfoliomutual-valuee {
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    gap: 8px; /* Add space between the image and text */
+    color: #333;
+    margin: 4px 0;
+   
+}
+
+.portfolio-logo {
+    width: 24px; /* Set the desired width of the image */
+    height: 24px; /* Set the desired height of the image */
+    object-fit: cover; /* Ensure the image is not stretched */
+    border-radius: 4px; /* Optional: Add rounded corners to the image */
+    
+}
+.bestprofitdata{
+    margin-bottom: 22px;
+}

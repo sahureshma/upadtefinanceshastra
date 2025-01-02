@@ -121,6 +121,12 @@ import Quarterlyratio from "./Learn/Quaterlyearning/Quaterlyratio/Quaterlyratio"
 import Quarterlypeer from "./Learn/Quaterlyearning/Quaterlypeer/Quaterlypeer";
 import QuaterlyKeyIndicators from "./Learn/Quaterlyearning/Quaterlykeyindicator/Quaterlykeyindicator";
 import Quaterlyabout from "./Learn/Quaterlyearning/Quaterlyabout/Quaterlyabout";
+import Watchlistdashboardmain from "./Homepagenew/Watchlistdashboardmain/Watchlistdashboardmain";
+import Dashboardchartmain from "./Homepagenew/Dashboardgraph/Dashboardgraph";
+import DashboardMainPagetable from "./Homepagenew/DashboardMainPagetable/DashboardMainPagetable";
+import Stockindexall from "./Homepagenew/Stockindexallpage/Stockindexallpage";
+import Stockcalender from "./Homepagenew/Stockcalender/Stockcalender";
+import Calenderchartmain from "./Homepagenew/Stockcalendergraph/Stockcalendergraph";
 
 
 
@@ -246,7 +252,12 @@ function App() {
       <Route path="/quaterlyKeyIndicators" element={<QuaterlyKeyIndicators/>}/>
       <Route path="/quaterlyKeyIndicators" element={<QuarterlyEarningdetailincome/>}/>
       <Route path="/quaterlyabout" element={<Quaterlyabout/>}/>
-    
+      <Route path="/watchlistdashboardmain" element={<Watchlistdashboardmain/>}/>
+      <Route path="/dashboardMainPagetable" element={<DashboardMainPagetable/>}/>
+      <Route path="/dashboardchartmain" element={<Dashboardchartmain/>}/>
+      <Route path="/stockindexall" element={<Stockindexall/>}/>
+      <Route path="/stockcalender" element={<Stockcalender/>}/>
+      <Route path="/calenderchartmain" element={<Calenderchartmain/>}/>
 
   
     
