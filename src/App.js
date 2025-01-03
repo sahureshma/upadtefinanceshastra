@@ -127,6 +127,8 @@ import DashboardMainPagetable from "./Homepagenew/DashboardMainPagetable/Dashboa
 import Stockindexall from "./Homepagenew/Stockindexallpage/Stockindexallpage";
 import Stockcalender from "./Homepagenew/Stockcalender/Stockcalender";
 import Calenderchartmain from "./Homepagenew/Stockcalendergraph/Stockcalendergraph";
+import Homestockanalyst from "./Homepagenew/Homestockanalyst/Homestockanalyst";
+import Stockanalystall from "./Homepagenew/Homeanalystall/Homeanalystall";
 
 
 
@@ -258,6 +260,8 @@ function App() {
       <Route path="/stockindexall" element={<Stockindexall/>}/>
       <Route path="/stockcalender" element={<Stockcalender/>}/>
       <Route path="/calenderchartmain" element={<Calenderchartmain/>}/>
+      <Route path="/homestockanalyst" element={<Homestockanalyst/>}/>
+      <Route path="/stockanalystall" element={<Stockanalystall/>}/>
 
   
     
