@@ -1,0 +1,91 @@
+.session-history {
+    width: 80%;
+    margin: 20px auto;
+    font-family:'calibri';
+    margin-top: 120px;
+  }
+  
+  .session-history h2 {
+    font-size:22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .session-history p {
+    color: #000000;
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .sessions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .session-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .session-card:hover{
+  transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+  
+  
+  
+  .active-statuss {
+    font-size: 0.9rem;
+    color: #24b676;
+    margin-bottom: 1px;
+    margin-left: 28px;
+
+  }
+  
+  .end-session-button {
+    background-color: #24b676;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+   
+  }
+  
+  .end-session-button:hover {
+    background-color:#1e9360;
+  }
+  .session-details {
+    display: flex; /* Aligns the image and text horizontally */
+    align-items: center; /* Vertically aligns items in the row */
+    gap: 10px; /* Spacing between the image and text */
+    margin-bottom: 20px; /* Adds spacing below each session card */
+  }
+  
+  .device-icon {
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+    object-fit: contain; /* Ensures the icon maintains its aspect ratio */
+    border-radius: 5px; /* Optional: Slightly rounded corners for the icon */
+  }
+  
+  .session-text h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .session-text p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5; /* Adds spacing between lines of text */
+  }
+  

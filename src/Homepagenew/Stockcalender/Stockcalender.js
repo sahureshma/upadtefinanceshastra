@@ -17,7 +17,7 @@ const Stockcalender = () => {
             marketCap: "₹8,168.6 Cr",
             high52W: "791.1",
             low52W: "421.7",
-            date: "30 Dec 2024",
+            date: "2025-01-03",
             currentPE: "19.52",
             clarification: "Know more",
           },
@@ -39,7 +39,7 @@ const Stockcalender = () => {
             marketCap: "₹24,916.8 Cr",
             high52W: "8,480",
             low52W: "2,066",
-            date: "30 Dec 2024",
+            date: "2 Oct 2024",
             currentPE: "27.87",
             clarification: "Know more",
           },
@@ -94,7 +94,7 @@ const Stockcalender = () => {
             marketCap: "₹50,681.3 Cr",
             high52W: "70.66",
             low52W: "39.20",
-            date: "30 Dec 2024",
+            date: "3 Dec 2024",
             currentPE: "23.22",
             clarification: "Know more",
           },
@@ -115,6 +115,7 @@ const Stockcalender = () => {
         const [startDate, setStartDate] = useState(null);
         const [endDate, setEndDate] = useState(null);
         const [calendarOpen, setCalendarOpen] = useState(false);
+      
 
     const handleEarningsTabChange = (tab) => {
         setSelectedEarningsTab(tab);
@@ -124,6 +125,48 @@ const Stockcalender = () => {
         setCalendarOpen(!calendarOpen);
     };
 
+
+   
+    const filterEarningsDataByDate = (earningsData, selectedEarningsTab, today = new Date()) => {
+      return earningsData.filter((data) => {
+        const dataDate = new Date(data.date);
+        dataDate.setHours(0, 0, 0, 0); // Normalize data date to ignore time
+        const normalizedToday = new Date(today);
+        normalizedToday.setHours(0, 0, 0, 0);
+    
+        switch (selectedEarningsTab) {
+          case "Yesterday":
+            const yesterday = new Date(normalizedToday);
+            yesterday.setDate(normalizedToday.getDate() - 1);
+            return dataDate.getTime() === yesterday.getTime();
+    
+          case "Today":
+            return dataDate.getTime() === normalizedToday.getTime();
+    
+          case "Tomorrow":
+            const tomorrow = new Date(normalizedToday);
+            tomorrow.setDate(normalizedToday.getDate() + 1);
+            return dataDate.getTime() === tomorrow.getTime();
+    
+          case "This Week":
+            const startOfWeek = new Date(normalizedToday);
+            startOfWeek.setDate(normalizedToday.getDate() - normalizedToday.getDay()); // Sunday
+            const endOfWeek = new Date(startOfWeek);
+            endOfWeek.setDate(startOfWeek.getDate() + 6); // Saturday
+            return dataDate >= startOfWeek && dataDate <= endOfWeek;
+    
+          case "Next Week":
+            const startOfNextWeek = new Date(normalizedToday);
+            startOfNextWeek.setDate(normalizedToday.getDate() + (7 - normalizedToday.getDay())); // Next Sunday
+            const endOfNextWeek = new Date(startOfNextWeek);
+            endOfNextWeek.setDate(startOfNextWeek.getDate() + 6); // Next Saturday
+            return dataDate >= startOfNextWeek && dataDate <= endOfNextWeek;
+    
+          default:
+            return false;
+        }
+      });
+    };
 
 
     
@@ -198,7 +241,7 @@ const filterData = (startDate, endDate) => {
 };
 
 
-    
+
 
   
     return (
@@ -212,30 +255,30 @@ const filterData = (startDate, endDate) => {
       Stock Index
     </button>
         <button className="DashboardMainPagetable-tab active" onClick={() => navigate("/calenderchartmain")}>Stock Calendar</button>
-        <button className="DashboardMainPagetable-tab">Stock Analyst</button>
+        <button className="DashboardMainPagetable-tab"  onClick={() => navigate("/stockanalystall")}>Stock Analyst</button>
       </div>
         <div className="earnings-insight-learn-wrapperr">
          
 
             <div className="earnings-insight-learn-controls">
                 <div className="earnings-insight-learn-header-row">
-                    <div className="earningquterlyrowall">
+                    <div className="earningquterlyrowalll">
                     <div className="earnings-insight-learn-tabs">
-                        {["Yesterday", "Today", "Tomorrow", "This Week", "Next Week"].map((tab) => (
-                          <button
-                          key={tab}
-                          className={`earnings-insight-learn-tab-button ${
-                              selectedEarningsTab === tab ? "active" : ""
-                          }`}
-                          onClick={() => handleEarningsTabChange(tab)}
-                      >
-                          {tab}
-                      </button>
-                      
-                        ))}
-                    </div>
+  {["Yesterday", "Today", "Tomorrow", "This Week", "Next Week"].map((tab) => (
+    <button
+      key={tab}
+      className={`earnings-insight-learn-tab-button ${
+        selectedEarningsTab === tab ? "active" : ""
+      }`}
+      onClick={() => handleEarningsTabChange(tab)}
+    >
+      {tab}
+    </button>
+  ))}
+</div>
+<div >
                     <div className="earnings-insight-learn-date-picker">
-                        <div className="dateinsight">
+                        <div className="dateinsighttt">
                             <label htmlFor="dateRange" className="date-picker-label">Select Date Range: </label>
                             <div className="calendar-icon" onClick={() => setCalendarOpen(!calendarOpen)} >
                                 <FaRegCalendarAlt />
@@ -261,8 +304,8 @@ const filterData = (startDate, endDate) => {
           
                 </div>
             </div>
-
-            <table className="earnings-insight-learn-table">
+            <div className="DashboardMainPagetable-table-container">
+            <table className="DashboardMainPagetable-table">
                 <thead>
                     <tr>
                       
@@ -296,45 +339,57 @@ const filterData = (startDate, endDate) => {
                         </th>
                     </tr>
                 </thead>
-                <tbody
-                >
-                    {sortedData.map((row, index) => (
-                        <tr key={index}>
-                           
-                            <td>
-    <a href={row.url}>{row.company}</a>
-</td>
+                <tbody>
+  {earningsData.length > 0 ? (
+    sortedData.map((row, index) => (
+      <tr key={index}>
+        <td>
+          <a href={row.url} target="_blank" rel="noopener noreferrer">
+            {row.company}
+          </a>
+        </td>
+        <td>{row.ltp}</td>
+        <td
+          style={{
+            color: row.change.includes("-") ? "red" : "#24b676", // Red for negative, green for positive
+          }}
+        >
+          {row.change}
+        </td>
+        <td>{row.marketCap}</td>
+        <td>{row.high52W}</td>
+        <td>{row.low52W}</td>
+        <td>{row.date}</td>
+        <td>{row.currentPE}</td>
+        <td>
+          <a
+            href={row.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="clarificationstockcalender-link"
+            style={{ color: "#24b676", cursor: "pointer" }}
+          >
+            {row.clarification}
+          </a>
+        </td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan="9" style={{ textAlign: "center" }}>
+        No data available for {selectedEarningsTab}
+      </td>
+    </tr>
+  )}
+</tbody>
 
-                           
-                            <td>{row.ltp}</td>
-                            <td  style={{
-        color: row.change.includes("-") ? "red" : "#24b676", // Red for negative, green for positive
-        // Optional: Make it bold
-    }}>{row.change}</td>
-                            <td>{row.marketCap}</td>
-
-                            <td>{row.high52W}</td>
-                           
-                            <td>{row.low52W}</td>
-                            <td>{row.date}</td>
-                            <td>{row. currentPE}</td>
-                            <td
-                            style={{
-                              color:"#24b676", // Red for negative, green for positive
-                              // Optional: Make it bold
-                          }}>
-                            <a href={row.url} className="clarificationstockcalender-link">
-    {row.clarification}
-</a>
-</td>
-                            
-                        </tr>
-                    ))}
-                </tbody>
             </table>
+            </div>
+            </div>
     <Navbar/>
         </div>
         </div>
+    
     );
 };
 

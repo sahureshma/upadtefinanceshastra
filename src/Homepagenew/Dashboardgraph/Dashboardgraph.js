@@ -102,7 +102,7 @@ const Dashboardchartmain = () => {
        </div>
        <div className="homepagenewdata-card">
        <div className='homepageamountdata'>
-            <div className="homepagenewdata-title">Total Investment<br/><br/>
+            <div className="homepagenewdata-title">Total Investment<br/>
           
             <div className='homepagenewdata-amount' >{totalInvestment}</div>
             </div>
@@ -121,7 +121,7 @@ const Dashboardchartmain = () => {
 
       <div className="dataquatallnifty">
       
-        <div className="portfoliomutual-containerrnifty">
+        <div className="portfoliomutual-containerrniftydashboard">
          
           <div className="portfoliomutual-card">
             <div className='itidata'>
@@ -149,7 +149,7 @@ const Dashboardchartmain = () => {
 </div>
                     </div>
             {/* Time Range Selector */}
-            <div className="time-rangemutual-selectorrnifty">
+            <div className="time-rangemutual-selectorrniftydashboard">
               {['1D', '5D', '1M', '6M', '1Y', '3Y', '5Y', 'Max'].map((range) => (
                 <button
                   key={range}
@@ -163,7 +163,7 @@ const Dashboardchartmain = () => {
             </div>
            
             {/* Line Chart */}
-            <div className="chartmutual-containerr">
+            <div className="chartmutual-containerrdashboard">
               <Line data={chartData} options={chartOptions} />
             </div>
           </div>

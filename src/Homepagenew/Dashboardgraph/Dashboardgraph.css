@@ -1,9 +1,28 @@
 .headerdashboardmain{
     margin-left: 170px;
 }
-.portfoliomutual-containerrnifty{
+.portfoliomutual-containerrniftydashboard{
     height: 450px;
+    font-family: 'calibri';
+    padding: 20px;
+    color: #333;
+  width:620px; /* Set a maximum width */
   
+/* Add left margin to prevent overlap with sidebar */
+    font-family: 'Calibri';
+    margin-top: 5px;
+
+    background-color: #f9f9f9;
+    border: 1px solid #ddd; /* Light grey border */
+    box-shadow: 0px 4px 6px rgba(183, 180, 180, 0.956); /* Soft shadow around the container */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the container's content */
+  
+}
+.chartmutual-containerrdashboard{
+    height: 330px;
+    width: 600px;
 }
 .allhead{
     margin-top: 130px;
@@ -135,4 +154,153 @@ margin-bottom: 10px;
 }
 .bestprofitdata{
     margin-bottom: 22px;
+}
+.time-rangemutual-selectorrniftydashboard{
+        display: flex;
+        gap: 3px;
+        margin-left: 320px;
+        
+    
+}
+
+@media (max-width: 480px) {
+    .headerdashboardmain{
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    .headernifty50{
+        margin-left: 0px;
+        font-size: 20px;
+    }
+    .portfoliomutual-containerrniftydashboard {
+        height: 300px;
+        font-family: 'Calibri';
+        padding: 20px;
+        padding-bottom: 80px;
+        color: #333;
+        width: 30%; /* Adjusted width to take up 90% of the available screen width */
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        box-shadow: 0px 4px 6px rgba(183, 180, 180, 0.956);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    
+      .chartmutual-containerrdashboard {
+        height: 200px;
+        width: 80%; /* Adjusted width for smaller screen */
+      }
+    
+    .hompagetopdata{
+   margin-left: 0px;
+        gap: 70px;
+    }
+    
+    .dataquatallnifty{
+display: flex;
+flex-direction: column;
+margin-left: 0px;
+    }
+    .itidata {
+        display: flex;
+        gap: 0px;
+       margin-top: 0px;
+    }
+    .time-rangemutual-selectorrniftydashboard {
+        display: flex;
+        gap: 3px;
+        margin-left: 0px;
+      margin-right: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+        
+      }
+      .homepageamountdata{
+        display: flex;
+        gap: 10px;
+    
+    }
+    .alldatagraphtop{
+        display: flex;
+        gap: 65px;
+        margin-bottom: 10px;
+        }
+      
+      
+}
+@media (max-width: 768px) {
+    .headerdashboardmain{
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    .headernifty50{
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    
+ 
+      
+    .portfoliomutual-containerrniftydashboard {
+        height: 300px; /* Initial height */
+        font-family: 'Calibri';
+        padding: 20px; /* Adjust inner spacing */
+        padding-bottom: 80px; /* Increase padding at the bottom */
+        color: #333;
+        width: auto; /* Maximum width */
+        margin-top: 5px;
+        margin-left: 10px; /* Left margin adjustment */
+        margin-bottom: 20px; /* Add extra spacing below the container */
+        background-color: #f9f9f9;
+        border: 1px solid #ddd; /* Light grey border */
+        box-shadow: 0px 4px 6px rgba(183, 180, 180, 0.956); /* Soft shadow around the container */
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column-reverse; /* Reverse the container's content */
+      }
+      
+    .chartmutual-containerrdashboard{
+        height: 200px;
+        width: auto;
+       
+     
+    }
+    .hompagetopdata{
+       
+        gap: 20px;
+    }
+    .dataquatallnifty{
+display: flex;
+flex-direction: column;
+margin-left: 0px;
+    }
+    .itidata {
+        display: flex;
+        gap: 0px;
+       margin-top: 0px;
+    }
+    .time-rangemutual-selectorrniftydashboard {
+        display: flex;
+        gap: 3px;
+        margin-left: 30px;
+      
+        text-align: center;
+        margin-bottom: 10px;
+        
+      }
+      .homepageamountdata{
+        display: flex;
+        gap: 10px;
+    
+    }
+    .alldatagraphtop{
+        display: flex;
+        gap: 65px;
+        margin-bottom: 10px;
+        }
+      
+      
 }

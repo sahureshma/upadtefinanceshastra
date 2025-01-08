@@ -9,6 +9,7 @@ import itiimg from '../../../src/assest/iti.png';
 
 
 
+
 const Calenderchartmain= () => {
   const [timeRange, setTimeRange] = useState('1D');
   const [financialData, setFinancialData] = useState({
@@ -102,7 +103,7 @@ const Calenderchartmain= () => {
               </div>
               <div className="homepagenewdata-card">
               <div className='homepageamountdata'>
-                   <div className="homepagenewdata-title">Total Investment<br/><br/>
+                   <div className="homepagenewdata-title">Total Investment<br/>
                  
                    <div className='homepagenewdata-amount' >{totalInvestment}</div>
                    </div>
@@ -121,7 +122,7 @@ const Calenderchartmain= () => {
        
              <div className="dataquatallnifty">
              
-               <div className="portfoliomutual-containerrnifty">
+               <div className="portfoliomutual-containerrniftydashboard">
                 
                  <div className="portfoliomutual-card">
                    <div className='itidata'>
@@ -149,7 +150,7 @@ const Calenderchartmain= () => {
        </div>
                            </div>
                    {/* Time Range Selector */}
-                   <div className="time-rangemutual-selectorrnifty">
+                   <div className="time-rangemutual-selectorrniftydashboard">
                      {['1D', '5D', '1M', '6M', '1Y', '3Y', '5Y', 'Max'].map((range) => (
                        <button
                          key={range}
@@ -164,7 +165,7 @@ const Calenderchartmain= () => {
                   
 
             {/* Line Chart */}
-            <div className="chartmutual-containerr">
+            <div className="chartmutual-containerrdashboard">
               <Line data={chartData} options={chartOptions} />
             </div>
           </div>

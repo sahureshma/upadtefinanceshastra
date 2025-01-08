@@ -28,7 +28,7 @@ const Homestockanalyst = () => {
             roe: '28.85',
             pe: '32.01',
             pbv: '8.74',
-            evEbitda: '119.88',
+            evEbitda: '19.88',
             salesGrowth: '48.71%',
             profitGrowth: '26.62%',
              Clarification:"Know more"
@@ -41,7 +41,7 @@ const Homestockanalyst = () => {
             roe: '14.39',
             pe: '57.28',
             pbv: '0.90',
-            evEbitda: '3.42',
+            evEbitda: '33.42',
             salesGrowth: '23.43%',
             profitGrowth: '48.49%',
              Clarification:"Know more"
@@ -80,7 +80,7 @@ const Homestockanalyst = () => {
             roe: '16.91',
             pe: '66.49',
             pbv: '0.98',
-            evEbitda: '5.16',
+            evEbitda: '35.16',
             salesGrowth: '19.33%',
             profitGrowth: '83.80%',
              Clarification:"Know more"
@@ -152,6 +152,17 @@ const [sortConfig, setSortConfig] = useState({ key: "", direction: "asc" });
         });
         setStocks(sortedByMarketCap);
       }
+      else if (tab === "ROE") {
+        // Sort by ROE in descending order
+        const sortedByROE = [...analystdata].sort((a, b) => {
+          // Extract numeric value from the 'roe' field (removing ₹, commas, and "Cr" if present)
+          const valA = parseFloat(a.roe.replace(/[₹,Cr%]/g, "")) || 0; // Default to 0 if parsing fails
+          const valB = parseFloat(b.roe.replace(/[₹,Cr%]/g, "")) || 0; // Default to 0 if parsing fails
+          return valB - valA; // Descending order
+        });
+        setStocks(sortedByROE);
+      }
+      
       else if (tab === "P/E") {
         // Sort by P/E ratio in descending order
         const sortedByPE = [...analystdata].sort((a, b) => {
@@ -265,11 +276,11 @@ const [sortConfig, setSortConfig] = useState({ key: "", direction: "asc" });
     <div>
       <div className="screener-containerr">
         {/* Tabs */}
-        <div className="tabsnifty50-container">
+        <div className="tabsnifty50-containerdash">
   {["All", "Gainers", "Losers", "LTP", "Change %", "Market Cap", "ROE", "P/E", "P/BV", "EV/EBITDA", "5Y Sales Gr", "5Y Profit Gr"].map((tab) => (
     <button
       key={tab}
-      className={`tabnifty50-button ${activeTab === tab ? "active" : ""}`}
+      className={`tabnifty50-buttondash ${activeTab === tab ? "active" : ""}`}
       onClick={() => handleTabClick(tab)}
     >
       {tab}
@@ -279,64 +290,134 @@ const [sortConfig, setSortConfig] = useState({ key: "", direction: "asc" });
 
 
         {/* Table */}
-        <div className="screener-tablewrapper">
-          <table className="screener-table">
+        <div className="DashboardMainPagetable-table-container">
+          <table className="DashboardMainPagetable-table">
           <thead>
-  
   <tr>
-            <th>Company</th>
-            <th onClick={() => handleSort("ltp")}>
-              LTP (₹) {renderSortIcon("ltp")}
-            </th>
-            <th onClick={() => handleSort("change")}>
-              Change % {renderSortIcon("change")}
-            </th>
-            <th onClick={() => handleSort("marketCap")}>
-              Market Cap (Cr) {renderSortIcon("marketCap")}
-            </th>
-            <th onClick={() => handleSort("roe")}>
-            ROE {renderSortIcon("roe")}
-            </th>
-            <th onClick={() => handleSort("pe")}>
-            P/E {renderSortIcon("pe")}
-            </th>
-            <th onClick={() => handleSort("pbv")}>
-            P/BV {renderSortIcon("pbv")}
-            </th>
-            <th onClick={() => handleSort("evEbitda")}>
-            EV/EBITDA{renderSortIcon("evEbitda")}
-            </th>
-            <th onClick={() => handleSort("salesGrowth")}>
-            5Y Sales Gr. (%) {renderSortIcon("salesGrowth")}
-            </th>
-            <th onClick={() => handleSort("profitGrowth")}>
-            5Y Profit Gr.(%){renderSortIcon("profitGrowth")}
-            </th>
-            <th>Clarification</th>
-          </tr>
-         
-</thead>
-            <tbody>
-  {stocks.map((stock, index) => (
-    
-    <tr key={index}>
-    <td>{stock.company}</td>
-    <td>{stock.ltp}</td>
-    <td style={{ color: parseFloat(stock.change) > 0 ? "#24b676" : "red" }}>{stock.change}</td>
-    <td>{stock.marketCap}</td>
-    <td>{stock.roe}</td>
-    <td>{stock.pe}</td>
-    
-    <td>{stock.evEbitda}</td>
-    <td>{stock.pe}</td>
- 
-    <td>{stock.salesGrowth}</td>
-    <td>{stock.profitGrowth}</td> 
-    <td style={{color:"#24b676",cursor:"pointer"}}>{stock.Clarification}</td>
-
+    <th style={{ height: '40px', padding: '8px', fontSize: '14px' }}>Company</th>
+    <th
+      onClick={() => handleSort("ltp")}
+      style={{ height: '40px', padding: '8px', fontSize: '14px' }}
+    >
+      <span>LTP (₹)</span>
+      {renderSortIcon("ltp")}
+    </th>
+    <th
+      onClick={() => handleSort("change")}
+      style={{ height: '40px', padding: '8px', fontSize: '14px' }}
+    >
+      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        Change % {renderSortIcon("change")}
+      </span>
+    </th>
+    <th
+      onClick={() => handleSort("marketCap")}
+      style={{ height: '40px', padding: '8px', fontSize: '14px' }}
+    >
+      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        Market Cap (Cr) {renderSortIcon("marketCap")}
+      </span>
+    </th>
+    <th
+      onClick={() => handleSort("roe")}
+      style={{ height: '40px', padding: '8px', fontSize: '14px' }}
+    >
+      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        ROE {renderSortIcon("roe")}
+      </span>
+    </th>
+    <th
+      onClick={() => handleSort("pe")}
+      style={{ height: '40px', padding: '8px', fontSize: '14px' }}
+    >
+      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        P/E {renderSortIcon("pe")}
+      </span>
+    </th>
+    <th
+      onClick={() => handleSort("pbv")}
+      style={{ height: '40px', padding: '8px', fontSize: '14px' }}
+    >
+      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        P/BV {renderSortIcon("pbv")}
+      </span>
+    </th>
+    <th
+      onClick={() => handleSort("evEbitda")}
+      style={{ height: '40px', padding: '8px', fontSize: '14px' }}
+    >
+      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        EV/EBITDA {renderSortIcon("evEbitda")}
+      </span>
+    </th>
+    <th
+      onClick={() => handleSort("salesGrowth")}
+      style={{ height: '40px', padding: '8px', fontSize: '14px' }}
+    >
+      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        5Y Sales Gr. (%) {renderSortIcon("salesGrowth")}
+      </span>
+    </th>
+    <th
+      onClick={() => handleSort("profitGrowth")}
+      style={{ height: '40px', padding: '8px', fontSize: '14px' }}
+    >
+      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        5Y Profit Gr.(%) {renderSortIcon("profitGrowth")}
+      </span>
+    </th>
+    <th style={{ height: '40px', padding: '8px', fontSize: '14px' }}>Clarification</th>
   </tr>
+</thead>
+
+<tbody>
+  {stocks.map((stock, index) => (
+    <tr key={index}>
+     <td 
+  className={`${activeTab === "company" ? "active-column" : ""}`}
+>
+  {stock.company}
+</td>
+
+      <td className={activeTab === "LTP" ? "active-column" : ""}>
+        {stock.ltp}
+      </td>
+      <td
+        className={activeTab === "Change %" ? "active-column" : ""}
+        style={{
+          color: parseFloat(stock.change) > 0 ? "#24b676" : "red",
+        }}
+      >
+        {stock.change}
+      </td>
+      <td className={activeTab === "Market Cap" ? "active-column" : ""}>
+        {stock.marketCap}
+      </td>
+      <td className={activeTab === "ROE" ? "active-column" : ""}>
+        {stock.roe}
+      </td>
+      <td className={activeTab === "P/E" ? "active-column" : ""}>
+        {stock.pe}
+      </td>
+      <td className={activeTab === "P/BV" ? "active-column" : ""}>
+        {stock.pbv}
+      </td>
+      <td className={activeTab === "EV/EBITDA" ? "active-column" : ""}>
+        {stock.evEbitda}
+      </td>
+      <td className={activeTab === "5Y Sales Gr" ? "active-column" : ""}>
+        {stock.salesGrowth}
+      </td>
+      <td className={activeTab === "5Y Profit Gr" ? "active-column" : ""}>
+        {stock.profitGrowth}
+      </td>
+      <td style={{ color: "#24b676", cursor: "pointer" }}>
+        {stock.Clarification}
+      </td>
+    </tr>
   ))}
 </tbody>
+
 
           </table>
         </div>

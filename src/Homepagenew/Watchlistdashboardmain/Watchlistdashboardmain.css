@@ -99,3 +99,29 @@
   .Watchlistdashboardmain-change-down {
     color: #dc3545;
   }
+  @media (max-width: 768px) {
+    .Watchlistdashboardmain-container {
+      width: 400px;
+      background: #ffffff;
+      border: 2px solid #e0e0e0; /* Add a border with a light gray color */
+      border-radius: 8px;       /* Rounded corners */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for a more prominent effect */
+      padding: 20px;
+      font-family: 'Calibri';
+      height: 420px;
+      margin-left: 10px;
+    }
+  }
+  @media (max-width: 480px) {
+    .Watchlistdashboardmain-container {
+      width: 300px;
+      background: #ffffff;
+      border: 2px solid #e0e0e0; /* Add a border with a light gray color */
+      border-radius: 8px;       /* Rounded corners */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for a more prominent effect */
+      padding: 20px;
+      font-family: 'Calibri';
+      height: 420px;
+      margin-left: 8px;
+    }
+  }

@@ -143,11 +143,12 @@ const Dashboardstockindex = () => {
         <button className="DashboardMainPagetable-tab"  onClick={() => navigate("/dashboardchartmain")}>Stock Sector</button>
         <button className="DashboardMainPagetable-tab active">Stock Index</button>
         <button className="DashboardMainPagetable-tab" onClick={() => navigate("/calenderchartmain")}>Stock Calendar</button>
-        <button className="DashboardMainPagetable-tab">Stock Analyst</button>
+        <button className="DashboardMainPagetable-tab"  onClick={() => navigate("/stockanalystall")}>Stock Analyst</button>
       </div>
       <div className="DashboardMainPagetable-cards">
   {DashboardPagetable.map((card) => (
-    <div key={card.id} className="DashboardMainPagetable-card">
+    <div  key={card.id}
+    className={`DashboardMainPagetable-card ${card.id === 7 ? "custom-card-size" : ""}`}>
       <div className="DashboardMainPagetable-card-header">
         <div className="DashboardMainPagetable-header-left">
           {/* Replace the blank color circle with actual icons */}
@@ -240,7 +241,7 @@ const Dashboardstockindex = () => {
 </div>
 
 
-
+<div className="DashboardMainPagetable-table-container">
       <table className="DashboardMainPagetable-table">
         <thead>
           <tr>
@@ -296,6 +297,7 @@ const Dashboardstockindex = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };

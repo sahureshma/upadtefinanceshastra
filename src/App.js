@@ -129,6 +129,11 @@ import Stockcalender from "./Homepagenew/Stockcalender/Stockcalender";
 import Calenderchartmain from "./Homepagenew/Stockcalendergraph/Stockcalendergraph";
 import Homestockanalyst from "./Homepagenew/Homestockanalyst/Homestockanalyst";
 import Stockanalystall from "./Homepagenew/Homeanalystall/Homeanalystall";
+import UserDetails from "./Profiledetails/UserDetails/UserDetails";
+import PlanSelection from "./Profiledetails/profileelitepremium/profileelitepremium";
+import SessionHistory from "./Profiledetails/SessionHistory/SessionHistory";
+import AccountSettings from "./Profiledetails/AccountSettings/AccountSettings";
+import OrderTable from "./Profiledetails/OrderTable/OrderTable";
 
 
 
@@ -262,6 +267,11 @@ function App() {
       <Route path="/calenderchartmain" element={<Calenderchartmain/>}/>
       <Route path="/homestockanalyst" element={<Homestockanalyst/>}/>
       <Route path="/stockanalystall" element={<Stockanalystall/>}/>
+      <Route path="/userDetails" element={<UserDetails/>}/>
+      <Route path="/planSelection" element={<PlanSelection/>}/>
+      <Route path="/sessionHistory" element={<SessionHistory/>}/>
+      <Route path="/accountSettings" element={<AccountSettings/>}/>
+      <Route path="/orderTable" element={<OrderTable/>}/>
 
   
     
