@@ -134,6 +134,7 @@ import PlanSelection from "./Profiledetails/profileelitepremium/profileeliteprem
 import SessionHistory from "./Profiledetails/SessionHistory/SessionHistory";
 import AccountSettings from "./Profiledetails/AccountSettings/AccountSettings";
 import OrderTable from "./Profiledetails/OrderTable/OrderTable";
+import Managealert from "./Profiledetails/Managealert/Managealert";
 
 
 
@@ -272,6 +273,7 @@ function App() {
       <Route path="/sessionHistory" element={<SessionHistory/>}/>
       <Route path="/accountSettings" element={<AccountSettings/>}/>
       <Route path="/orderTable" element={<OrderTable/>}/>
+      <Route path="/managealert" element={<Managealert/>}/>
 
   
     
