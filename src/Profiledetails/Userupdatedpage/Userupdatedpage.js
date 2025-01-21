@@ -1,18 +1,20 @@
-import React, { useState } from "react";
-import "./UserDetails.css";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { BiSolidEdit } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
-import williamImage from "../../assest/men3.jpg";
 import { MdOutlineEdit } from "react-icons/md";
+import williamImage from "../../assest/men3.jpg";
 import Navbar from "../../Navbar/Navbar";
+import './Userupdatedpage.css'
 
-const UserDetails = () => {
-  const [profileImage, setProfileImage] = useState(williamImage);
+const UserDetailsupdate = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const personalDetails = {
-    name: "William Rober",
-    username: "williamRober23",
+  // Initial state (can be overwritten by updated data passed through location.state)
+  const [profileImage, setProfileImage] = useState(williamImage);
+  const [personalDetails, setPersonalDetails] = useState({
+    firstName: "William",
+    lastName: "Rober",
     email: "williamRober23@gmail.com",
     gender: "Male",
     dob: "22-04-1997",
@@ -22,32 +24,64 @@ const UserDetails = () => {
     city: "Pune",
     pin: "411012",
     address: "House no. 6, Mantri Lavendula, Mulshi Rd, Beside Barbacoa, Pranjali Patil Nagar, Bavdhan",
-    mobile: "+91 9875864983",
-  };
+    phoneNumber: "9875864983",
+  });
 
-  const professionalDetails = {
+  const [professionalDetails, setProfessionalDetails] = useState({
     occupation: "Business",
     industry: "Banking and Financial Services",
     incomeRange: "15 lacs to 20 lacs",
-  };
+  });
 
-  const investmentDetails = {
+  const [investmentDetails, setInvestmentDetails] = useState({
     householdSavings: "₹1,00,000",
     termInsurance: "₹4,00,000",
     healthInsurance: "₹15,00,000",
     currentInvestments: "₹24,00,500",
     interestedToInvest: "-",
-  };
+  });
+
+  // Update state when new data is passed from EditProfile
+  useEffect(() => {
+    if (location.state && location.state.updatedData) {
+      const { updatedData } = location.state;
+
+      if (updatedData.personal) {
+        setPersonalDetails((prev) => ({ ...prev, ...updatedData.personal }));
+      }
+      if (updatedData.professional) {
+        setProfessionalDetails((prev) => ({ ...prev, ...updatedData.professional }));
+      }
+      if (updatedData.investment) {
+        setInvestmentDetails((prev) => ({ ...prev, ...updatedData.investment }));
+      }
+    }
+  }, [location.state]);
 
   const handleNavigation = (section) => {
-    navigate("/editProfile", { state: { section } });
+    // Pass the updated data to the EditProfile page for further editing
+    navigate("/editProfile", { 
+      state: { 
+        section, 
+        updatedData: { 
+          personal: personalDetails,
+          professional: professionalDetails,
+          investment: investmentDetails
+        } 
+      } 
+    });
   };
 
   return (
     <div className="userDetails">
       <h1 className="profilepage-title">My profile</h1>
       <div className="profilepage-tabsorderusers">
-        <span className="profilepage-tabbbactive">My Account</span>
+        <span className="profilepage-tabb"
+        style={{
+          borderBottom: "2px solid #24b676",
+          fontWeight: "bold",
+          color: "#24b676",
+        }}>My Account</span>
         <span
           className="profilepage-tabb"
           onClick={() => navigate("/orderTable")}
@@ -69,9 +103,10 @@ const UserDetails = () => {
         >
           Password & Security
         </span>
-        <span className="profilepage-tabb">Active Devices</span>
+        <span className="profilepage-tabb"onClick={() => navigate('/sessionHistory')}>Active Devices</span>
         <span className="profilepage-tabb">My referrals</span>
       </div>
+
 
       <div className="profileContainer">
         <div className="userwilliamimg">
@@ -98,7 +133,7 @@ const UserDetails = () => {
           />
         </div>
         <div className="profileInfo">
-          <h1 className="profileName">William Rober</h1>
+          <h1 className="profileName"> {personalDetails.firstName} {personalDetails.lastName}</h1>
           <p className="profileOccupation">Businessman</p>
         </div>
       </div>
@@ -118,17 +153,14 @@ const UserDetails = () => {
             </p>
           ))}
         </div>
-        <div
-          className="editiconprofile"
-          onClick={() => handleNavigation("Personal Details")}
-        >
+        <div className="editiconprofile" onClick={() => handleNavigation("Personal")}>
           <BiSolidEdit />
         </div>
       </div>
 
       {/* Professional Details Section */}
       <h2 className="sectionTitle">Professional Details</h2>
-      <div className="allpersonal">
+      <div className="allpersonall">
         <div className="personalDetailAll">
           {Object.entries(professionalDetails).map(([key, value]) => (
             <p key={key} className="detailRow">
@@ -141,10 +173,7 @@ const UserDetails = () => {
             </p>
           ))}
         </div>
-        <div
-          className="editiconprofileee"
-          onClick={() => handleNavigation("Professional Details")}
-        >
+        <div className="editiconprofileee" onClick={() => handleNavigation("Professional")}>
           <BiSolidEdit />
         </div>
       </div>
@@ -164,16 +193,14 @@ const UserDetails = () => {
             </p>
           ))}
         </div>
-        <div
-          className="editiconprofilee"
-          onClick={() => handleNavigation("Investment Details")}
-        >
+        <div className="editiconprofilee" onClick={() => handleNavigation("Investment")}>
           <BiSolidEdit />
         </div>
       </div>
-      <Navbar/>
+
+      <Navbar />
     </div>
   );
 };
 
-export default UserDetails;
+export default UserDetailsupdate;

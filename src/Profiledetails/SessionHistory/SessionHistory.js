@@ -2,8 +2,10 @@ import React from "react";
 import "./SessionHistory.css"; // Add styles if needed
 import systemimg from '../../assest/comp.svg';
 import Navbar from "../../Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const SessionHistory = () => {
+    const navigate = useNavigate();
   const sessions = [
     {
       id: 1,
@@ -27,7 +29,41 @@ const SessionHistory = () => {
 
   return (
     <div className="session-history">
-      <h2>Session History</h2>
+       <h1 className="profilepage-titlesession">My Account</h1>
+      <div className="profilepage-tabsorderuserss">
+        <span className="profilepage-tabb"
+        onClick={() => navigate("/userDetailsupdate")}>My Account</span>
+        <span
+          className="profilepage-tabb"
+          onClick={() => navigate("/orderTable")}
+        >
+          Orders
+        </span>
+        <span className="profilepage-tabb">Billing & Subscription</span>
+        <span className="profilepage-tabb">Risk Profile Report</span>
+        <span
+          className="profilepage-tabb"
+          onClick={() => navigate("/managealert")}
+        >
+          Manage Alert
+        </span>
+
+        <span
+          className="profilepage-tabb"
+          onClick={() => navigate("/accountSettings")}
+        >
+          Password & Security
+        </span>
+        <span className="profilepage-tabb"style={{
+  borderBottom: "2px solid #24b676",
+  fontWeight: "bold",
+  color: "#24b676",
+}}
+>Active Devices</span>
+        <span className="profilepage-tabb">My referrals</span>
+      </div>
+
+      <h2 >Session History</h2>
       <p>
         Sessions track your account activity, including login times and devices.
         This helps you identify and prevent unauthorized access.

@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './Managealert.css'; // Add your styles here
 import Navbar from '../../Navbar/Navbar';
 import { IoIosClose } from "react-icons/io";
+import {useNavigate} from "react-router-dom";
 
 const Managealert = () => {
+   const navigate = useNavigate();
     const [activeNotification, setActiveNotification] = useState(null); 
     const [subscribedItems, setSubscribedItems] = useState({});
   const subscriptionData = [
@@ -31,63 +33,68 @@ const Managealert = () => {
       ...prevState,
       [item]: !prevState[item], // Toggle the subscription state
     }));
+  
+    // Set a timeout for handling notifications (e.g., hide notification after 4 seconds)
+    setTimeout(() => {
+      // Optional: You can clear the notification after 4 seconds
+      handleNotificationClose(item);
+    }, 6000);
   };
-
+  
   const handleNotificationClose = (item) => {
-    setSubscribedItems((prevState) => ({
-      ...prevState,
-      [item]: undefined, // Clear the notification for the specific item
-    }));
+    setSubscribedItems((prevState) => {
+      const newState = { ...prevState };
+      delete newState[item]; // Remove the item from the state after the notification
+      return newState;
+    });
   };
+ 
   return (
     <div className="managealertalldata">
      <h1 className="profilepage-titleorder">Manage Alert</h1>
       <div className="profilepage-tabsorder">
-        <span className="profilepage-tabb">My Account</span>
-        <span className="profilepage-tabb">Orders</span>
+        <span className="profilepage-tabb"  onClick={() => navigate("/userDetailsupdate")}>My Account</span>
+        <span className="profilepage-tabb" onClick={() => navigate("/orderTable")}>Orders</span>
         <span className="profilepage-tabb">Billing & Subscription</span>
         <span className="profilepage-tabb">Risk Profile Report</span>
-        <span className="profilepage-tabbbactive">Manage Alert</span>
+        <span className="profilepage-tabbbactive"onClick={() => navigate("/managealert")}>Manage Alert</span>
 
-        <span className="profilepage-tabb">Password & Security</span>
-        <span className="profilepage-tabb">Active Devices</span>
+        <span className="profilepage-tabb"onClick={() => navigate("/accountSettings")}>Password & Security</span>
+        <span className="profilepage-tabb"onClick={() => navigate('/sessionHistory')}>Active Devices</span>
         <span className="profilepage-tabb">My referrals</span>
       </div>
       <p className="descriptionnalert">
         You may unsubscribe from any Email/SMS alerts' category by clicking on the <br/>respective links below. If you have any query, feel free to{' '}
-        <a href="/contact" className="contact-link">contact us</a>.
+        <a href="/contactFormmanagealert" className="contact-link">contact us</a>.
       </p>
       {subscriptionData.map((category, index) => (
         <div key={index} className="subscription-category">
           <h2 className="category-title">{category.title}</h2>
           {category.items.map((item, idx) => (
             <div key={idx} className="subscription-item">
+              <div className='subscriptionitemmboth'>
               <span className="item-name">{item}</span>
               {subscribedItems[item] !== undefined && (
-                <div className="notification-alert"
-                style={{
-                    backgroundColor: subscribedItems[item] ? "#e0f7e0" : "#ffe6e6", // Green for subscribe, red for unsubscribe
-                    border: subscribedItems[item] ? "1px solid #24b676" : "1px solid #ff4d4d", // Border color
-                    color: subscribedItems[item] ? "#2e7d32" : "#d32f2f", // Text color
-                  }}>
+                <div className="notification-alert">
                   {subscribedItems[item] ? (
                    <div className='subscribersuccesful'>
                    You have successfully subscribed to "{item}"!
                  </div>
                ) : (
-                <div className='subscribersuccesful'>
+                <div className='unsubscribersuccesful'>
                    You have successfully unsubscribed from "{item}"!
                  </div>
                )}
                <span
-                 style={{ marginLeft: '3px', cursor: 'pointer', color: 'black' }}
-                 onClick={() => handleNotificationClose(item)}
-               >
-                 <IoIosClose />
-               </span>
+                    className="close-notification"
+                    onClick={() => handleNotificationClose(item)}
+                  >
+                    
+                  </span>
                  
                 </div>
               )}
+              </div>
               <button
                 className={
                   subscribedItems[item] ? 'unsubscribe-button' : 'subscribe-buttonmanage'

@@ -1,4 +1,17 @@
-.userDetails {
+.allpersonall {
+    display: flex;
+    flex-direction: row; /* Aligns child elements vertically */
+    border: 1px solid rgb(208, 206, 206);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: white;
+    width: 700px;
+    gap: 80px; /* Adds spacing between child elements */
+    margin-left: 300px;
+    box-shadow: 0px 4px 8px rgb(208, 206, 206); /* Adds a subtle shadow effect */
+  }
+  .userDetails {
     font-family: 'calibri';
 margin-top: 120px;
     width: 1190px;
@@ -78,6 +91,7 @@ margin-top: 120px;
     margin-bottom: 20px;
     
   }
+  
 
   
   .profilepage-tab {
@@ -159,8 +173,9 @@ margin-left: 240px;
   
   .profileOccupation {
     font-size: 16px;
-    color: gray;
+    color: #333;
     margin: 0;
+    font-weight: 900;
   }
   
   
@@ -178,6 +193,7 @@ margin-left: 240px;
         margin-left: 10px;
       }
       
+    
       /* Tabs */
       .profilepage-tabs {
         display: flex;
@@ -185,6 +201,7 @@ margin-left: 240px;
         margin-bottom: 20px;
         margin-left: 0px;
       }
+      
       .profilepage-tab {
         padding: 1px 10px;
         cursor: pointer;
@@ -192,6 +209,50 @@ margin-left: 240px;
         color: #333;
       }
       
+      .profileContainer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        border: 1px solid  rgb(208, 206, 206);
+        height:150px;
+        padding: 20px;
+        margin-left: 3px;
+        width: 400px;
+        box-shadow: 0px 4px 8px rgb(208, 206, 206);
+        border-radius: 8px;
+      }
+      
+      .allpersonall {
+        display: flex;
+        flex-direction: row; /* Aligns child elements vertically */
+        border: 1px solid rgb(208, 206, 206);
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        background-color: white;
+        width: 410px;
+        gap: 80px; /* Adds spacing between child elements */
+        margin-left: 3px;
+        box-shadow: 0px 4px 8px rgb(208, 206, 206); /* Adds a subtle shadow effect */
+      }
+      .profileImage {
+        width: 110px;
+        height: 90px;
+        border-radius: 50%;
+        margin: auto;
+      }
+      
+      .userwilliamimg {
+        position: relative;
+        width: 170px;
+        height: 120px;
+        background: linear-gradient(90deg, #24b676, #238486);
+       border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 8px;
+      }
       
       .allpersonal {
         display: flex;
@@ -217,13 +278,31 @@ margin-left: 240px;
       }
       .editiconprofileee{
         color: #24b676;
-        margin-left: 150px;
+        margin-left: 10px;
       }
       .sectionTitle {
         font-size: 20px;
         margin-bottom: 10px;
         color: #24b676;
         margin-left: 15px;
+      }
+      .profilepage-tabbbactive{
+        padding: 8px 5px;
+            font-size: 14px;
+            margin-left: -10px;
+        }
+      
+      .profilepage-tabsorderusers{
+       overflow-x: scroll; /* Stack tabs vertically */
+        border-bottom: none; /* Remove unnecessary border */
+        margin-left: 10px;
+        margin-bottom: 15px; /* Adjust spacing */
+        width: 470px;
+      }
+      .profilepage-tabbbactive{
+        display: flex;
+        border-bottom: 1px solid #ccc;
+    
       }
   }
   @media (max-width: 480px) {

@@ -7,6 +7,7 @@ import './Dashboardgraph.css'
 import Navbar from '../../Navbar/Navbar';
 import Watchlistdashboardmain from '../Watchlistdashboardmain/Watchlistdashboardmain';
 import DashboardMainPagetable from '../DashboardMainPagetable/DashboardMainPagetable';
+import Sidebar from '../../Sidebar/Sidebar';
 
 
 
@@ -97,7 +98,7 @@ const Dashboardchartmain = () => {
     <div className='allhead'>
       <div className='hompagetopdata'>
    <div>
-      <h1 className='headernifty50'>Welcome back, William</h1>
+      <h1 className='headernifty5000'>Welcome back, William</h1>
        <p className='headerdashboardmain'>Track your finance and achieve your financial goals.</p>
        </div>
        <div className="homepagenewdata-card">
@@ -169,12 +170,13 @@ const Dashboardchartmain = () => {
           </div>
         </div>
         <div className="datadisstock">
-          <Watchlistdashboardmain/>
-        
-          <Navbar/>
-        
-        </div>
-       
+  <Sidebar />
+  <div className="main-content">
+    <Navbar />
+    <Watchlistdashboardmain />
+  </div>
+</div>
+
       </div>
       <DashboardMainPagetable/>
     </div>

@@ -9,8 +9,19 @@
     font-size:22px;
     margin-bottom: 10px;
     font-weight: bold;
+
   }
-  
+  .profilepage-titlesession{
+font-size: 24px;
+font-family:'calibri';
+margin-left: 7px;
+  }
+  .profilepage-tabsorderuserss {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    
+  }
   .session-history p {
     color: #000000;
     font-size: 15px;
@@ -41,7 +52,7 @@
   
   
   .active-statuss {
-    font-size: 0.9rem;
+    font-size: 20px;
     color: #24b676;
     margin-bottom: 1px;
     margin-left: 28px;
@@ -56,6 +67,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
+
    
   }
   
@@ -88,4 +100,130 @@
     font-size: 0.9rem;
     line-height: 1.5; /* Adds spacing between lines of text */
   }
+  /* Mobile-friendly styles for 768px and below */
+@media (max-width: 768px) {
+  .session-history {
+    width: 90%; /* Reduce width for smaller screens */
+    margin-top: 100px; /* Adjust top margin */
+  }
   
+  .session-history h2 {
+    font-size: 20px; /* Slightly smaller heading */
+  }
+  
+  .profilepage-titlesession {
+    font-size: 22px; /* Reduce font size */
+    margin-left: 5px; /* Adjust margin */
+  }
+  .profilepagetabactivee{
+    padding: 8px 5px;
+        font-size: 14px;
+        margin-left: -10px;
+    }
+  
+  .profilepage-tabsorderuserss {
+   overflow-x: scroll; /* Stack tabs vertically */
+    border-bottom: none; /* Remove unnecessary border */
+    margin-bottom: 15px; /* Adjust spacing */
+  }
+  .profilepage-tabbbactive{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+
+  }
+  
+  .session-history p {
+    font-size: 14px; /* Adjust font size */
+  }
+  
+  .sessions-list {
+    gap: 15px; /* Reduce spacing between cards */
+  }
+  
+  .session-card {
+    flex-direction: row; /* Stack card content vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+  
+  .end-session-button {
+    font-size: 14px; /* Reduce button font size */
+    padding: 8px 34px; /* Adjust padding */
+  }
+  
+  .device-icon {
+    width: 35px; /* Smaller icon size */
+    height: 35px;
+  }
+  
+  .session-text h3 {
+    font-size: 1rem; /* Reduce font size */
+  }
+  
+  .session-text p {
+    font-size: 15px; /* Slightly smaller text */
+  }
+}
+
+/* Mobile-friendly styles for 480px and below */
+@media (max-width: 480px) {
+  .session-history {
+    width: 90%; /* Reduce width for smaller screens */
+    margin-top: 100px; /* Adjust top margin */
+  }
+  
+  .session-history h2 {
+    font-size: 20px; /* Slightly smaller heading */
+  }
+  
+  .profilepage-titlesession {
+    font-size: 22px; /* Reduce font size */
+    margin-left: 5px; /* Adjust margin */
+  }
+  .profilepagetabactivee{
+    padding: 8px 5px;
+        font-size: 14px;
+        margin-left: -10px;
+    }
+  
+  .profilepage-tabsorderuserss {
+   overflow-x: scroll; /* Stack tabs vertically */
+    border-bottom: none; /* Remove unnecessary border */
+    margin-bottom: 15px; /* Adjust spacing */
+  }
+  .profilepage-tabbbactive{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+
+  }
+  
+  .session-history p {
+    font-size: 14px; /* Adjust font size */
+  }
+  
+  .sessions-list {
+    gap: 15px; /* Reduce spacing between cards */
+  }
+  
+  .session-card {
+    flex-direction: row; /* Stack card content vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+  
+  .end-session-button {
+    font-size: 14px; /* Reduce button font size */
+    padding: 8px 22px; /* Adjust padding */
+  }
+  
+  .device-icon {
+    width: 35px; /* Smaller icon size */
+    height: 35px;
+  }
+  
+  .session-text h3 {
+    font-size: 1rem; /* Reduce font size */
+  }
+  
+  .session-text p {
+    font-size: 0.85rem; /* Slightly smaller text */
+  }
+}

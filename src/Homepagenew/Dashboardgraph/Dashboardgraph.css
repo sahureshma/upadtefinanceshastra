@@ -6,12 +6,12 @@
     font-family: 'calibri';
     padding: 20px;
     color: #333;
-  width:620px; /* Set a maximum width */
+  width:630px; /* Set a maximum width */
   
 /* Add left margin to prevent overlap with sidebar */
     font-family: 'Calibri';
     margin-top: 5px;
-
+margin-left: 150px;
     background-color: #f9f9f9;
     border: 1px solid #ddd; /* Light grey border */
     box-shadow: 0px 4px 6px rgba(183, 180, 180, 0.956); /* Soft shadow around the container */
@@ -22,14 +22,16 @@
 }
 .chartmutual-containerrdashboard{
     height: 330px;
-    width: 600px;
+    width: 610px;
 }
+
 .allhead{
     margin-top: 130px;
     font-family: 'calibri';
 }
 .headerdashboardmain{
     font-family: 'calibri';
+    margin-left: 280px;
 }
 .homepagenewdata-card {
     border: 1px solid #e0e0e0;
@@ -163,13 +165,28 @@ margin-bottom: 10px;
     
 }
 
+  .sidebar {
+    width: 190px; /* Fixed width for the sidebar */
+    background-color: #f4f4f4; /* Example background color */
+    height: 100%; /* Full height to match parent */
+    position: fixed; /* Keeps the sidebar fixed */
+    left: 0;
+    top: 0;
+  }
+  
+ .headernifty5000{
+    margin-left: 280px;
+    font-size: 25px;
+ }
+  
+
 @media (max-width: 480px) {
     .headerdashboardmain{
         margin-left: 10px;
         font-size: 12px;
     }
-    .headernifty50{
-        margin-left: 0px;
+    .headernifty5000{
+        margin-left:-10px;
         font-size: 20px;
     }
     .portfoliomutual-containerrniftydashboard {

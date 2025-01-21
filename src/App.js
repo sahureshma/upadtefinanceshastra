@@ -135,6 +135,9 @@ import SessionHistory from "./Profiledetails/SessionHistory/SessionHistory";
 import AccountSettings from "./Profiledetails/AccountSettings/AccountSettings";
 import OrderTable from "./Profiledetails/OrderTable/OrderTable";
 import Managealert from "./Profiledetails/Managealert/Managealert";
+import ContactFormmanagealert from "./Profiledetails/ContactFormmanagealert/ContactFormmanagealert";
+import EditProfile from "./Profiledetails/EditProfile/EditProfile";
+import UserDetailsupdate from "./Profiledetails/Userupdatedpage/Userupdatedpage";
 
 
 
@@ -274,6 +277,10 @@ function App() {
       <Route path="/accountSettings" element={<AccountSettings/>}/>
       <Route path="/orderTable" element={<OrderTable/>}/>
       <Route path="/managealert" element={<Managealert/>}/>
+    
+      <Route path="/contactFormmanagealert" element={<ContactFormmanagealert/>}/>
+      <Route path="/editProfile" element={<EditProfile/>} /> 
+      <Route path="/userDetailsupdate" element={<UserDetailsupdate/>} />
 
   
     

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './AccountSettings.css';
 import { FiEye } from "react-icons/fi";
 import Navbar from "../../Navbar/Navbar";
+import { useNavigate } from 'react-router-dom';
 
 const AccountSettings = () => {
   const [passwordData, setPasswordData] = useState({
@@ -78,16 +79,32 @@ const AccountSettings = () => {
     setLinkedAccounts(linkedAccounts.filter((account) => account.platform !== platform));
     alert(`${platform} account removed.`);
   };
-
+  const navigate = useNavigate();
   return (
     
     <div className="profilesettingpassword-container">
       <h1 className="profilepage-titlee">Password & Security</h1>
-      <div className="profilepage-tabss">
-        <span className="profilepage-tab ">Profile</span>
-        <span className="profilepage-tab">Account and Billing</span>
-        <span className="profilepage-tab active">Password & Security</span>
-        <span className="profilepage-tab">Active Devices</span>
+      <div className="profilepage-tabsss">
+        <span className="profilepage-tabb" onClick={() => navigate("/userDetailsupdate")}>My Account</span>
+        <span
+      className="profilepage-tabb"
+      onClick={() => navigate('/orderTable')}
+    >
+      Orders
+    </span>
+        <span className="profilepage-tabb">Billing & Subscription</span>
+        <span className="profilepage-tabb">Risk Profile Report</span>
+        <span className="profilepage-tabb"
+         onClick={() => navigate('/managealert')}>Manage Alert</span>
+
+<span className="profilepage-tabb"style={{
+  borderBottom: "2px solid #24b676",
+  fontWeight: "bold",
+  color: "#24b676",
+}}
+         onClick={() => navigate('/accountSettings')}>Password & Security</span>
+        <span className="profilepage-tabb"  onClick={() => navigate('/sessionHistory')} >Active Devices</span>
+        <span className="profilepage-tabb">My referrals</span>
       </div>
          {/* Popup Notification */}
          <section className={`profilesettingpassword-content ${isPopupVisible ? "blur" : ""}`}>
@@ -96,12 +113,12 @@ const AccountSettings = () => {
 
          {isPopupVisible && (
   <div className="popup-overlay">
-    <div className="popup">
+    
       <div className="popup-content">
         <span className="popup-icon">✔</span>
         <p>Your Password has been updated successfully!</p>
       </div>
-    </div>
+  
   </div>
 )}
 

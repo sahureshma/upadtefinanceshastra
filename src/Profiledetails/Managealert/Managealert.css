@@ -111,16 +111,24 @@
 
   }
   
-  .notification-alert {
+  .subscribersuccesful {
     margin-top: 10px; /* Adds some space between the button and notification */
-    background-color: #e0f7e0; /* Light green background for success message */
-    border: 1px solid #24b676;
+    background-color: white; /* Light green background for success message */
+    border: 1px solid white;
     color: #24b676;
-    padding: 8px 12px;
+  
     border-radius: 5px;
     font-size: 14px;
   }
+  .unsubscribersuccesful{
+    margin-top: 10px; /* Adds some space between the button and notification */
+    background-color: white; /* Light green background for success message */
+    border: 1px solid white;
+    color: red;
   
+    border-radius: 5px;
+    font-size: 14px;
+  }
   
   @keyframes fade-in {
     from {
@@ -275,16 +283,7 @@
     
       }
       
-      .notification-alert {
-        margin-top: 10px; /* Adds some space between the button and notification */
-        background-color: #e0f7e0; /* Light green background for success message */
-        border: 1px solid #24b676;
-        color: #24b676;
-        padding: 2px 10px;
-        border-radius: 5px;
-        font-size: 14px;
-      }
-      
+    
       
       @keyframes fade-in {
         from {
@@ -309,7 +308,22 @@
         background-color: #e60000;
         border: 1px solid #cc0000;
       }
-      .subscribersuccesful{
-        font-size: 12px;
+      .subscribersuccesful {
+        margin-top: 10px; /* Adds some space between the button and notification */
+        background-color: white; /* Light green background for success message */
+        border: 1px solid white;
+        color: #24b676;
+      
+        border-radius: 5px;
+        font-size: 14px;
+      }
+      .unsubscribersuccesful{
+        margin-top: 10px; /* Adds some space between the button and notification */
+        background-color: white; /* Light green background for success message */
+        border: 1px solid white;
+        color: red;
+      
+        border-radius: 5px;
+        font-size: 13px;
       }
   }

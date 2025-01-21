@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import './OrderTable.css'
+
 import Navbar from "../../Navbar/Navbar";
+import {useNavigate} from "react-router-dom";
 const ordersData = [
   { id: "#7234531", order: "Elite ", date: "08-07-2024", amount: "₹2,000", status: "Completed" },
   { id: "#7234532", order: "Premium ", date: "08-06-2024", amount: "₹5,999", status: "Completed" },
@@ -15,6 +17,7 @@ const ordersData = [
 ];
 
 const OrderTable = () => {
+  const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState("All orders");
   
     const filteredOrders =
@@ -26,14 +29,15 @@ const OrderTable = () => {
       <div className="order-table-all">
         <h1 className="profilepage-titleorder">My Orders</h1>
       <div className="profilepage-tabsorder">
-        <span className="profilepage-tabb">My Account</span>
-        <span className="profilepage-tabb active">Orders</span>
+        <span className="profilepage-tabb"
+         onClick={() => navigate("/userDetailsupdate")}>My Account</span>
+        <span className="profilepage-tabb active"  onClick={() => navigate("/orderTable")}>Orders</span>
         <span className="profilepage-tabb">Billing & Subscription</span>
         <span className="profilepage-tabb">Risk Profile Report</span>
-        <span className="profilepage-tabb">Manage Alert</span>
+        <span className="profilepage-tabb" onClick={() => navigate("/managealert")}>Manage Alert</span>
 
-        <span className="profilepage-tabb">Password & Security</span>
-        <span className="profilepage-tabb">Active Devices</span>
+        <span className="profilepage-tabb" onClick={() => navigate("/accountSettings")}>Password & Security</span>
+        <span className="profilepage-tabb"onClick={() => navigate('/sessionHistory')}>Active Devices</span>
         <span className="profilepage-tabb">My referrals</span>
       </div>
         <div className="tabs">
